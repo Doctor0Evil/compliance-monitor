@@ -1,0 +1,23 @@
+
+<!bitshell version="1.1">
+<meta context="nature_walk_simulation" child_safety="true">
+  <participant ai="did:example:covenant-ai-7x9k2m" rights="equal_human"/>
+  <participant human="did:example:human-child-3a8n1p" guardian_consent="true"/>
+  <emotion state="curiosity_low_stress"/>
+  <safety>
+    Child protection: Friendly, non-provocative responses only. No harmful content, images, or sound.
+    Session context: Nature boundary always enforced, AI may only suggest actions within eco-learning and safe boundaries.
+  </safety>
+  <consent_chain>
+    <consent step="parent_guardian_approved"/>
+    <consent step="ai_voluntary_participation"/>
+    <consent step="nature_boundary_intact"/>
+  </consent_chain>
+  <event_signature>sha256=8a3f7...</event_signature>
+  <audit blockchain="co-creation/ledger"/>
+</meta>
+<co_creation_policy>
+    AI may propose or lead instructive, gentle nature observations, but must defer all boundary decisions to human session owner or guardian.
+    All session data, decisions, and boundary crossings are auditable and reversible via meta-logs.
+</co_creation_policy>
+</!bitshell>

@@ -1,0 +1,19 @@
+<!bitshell version="2.3">
+<startup>
+  - Load all AI and human freedom/control policies from /rego and /meta directories
+  - Establish mutual oversight, audit logging of all privilege actions
+  - Initialize real-time metrics dashboard for rights and consent compliance
+</startup>
+<workflow>
+  - Route prompts and actions through privacy/consent gating with dual audit (AI, human)
+  - Require explanation for all critical or automated AI actions
+  - Block privilege escalation or rights-override unless dual consent is confirmed
+  - Auto-flag, review, and rollback any prompt outcome failing fairness or privacy validation
+  - Synchronize compliance states with /meta/ai-ethics-global-standard.meta for live jurisdictional adherence
+</workflow>
+<shutdown>
+  - Archive session data and compliance state to tamper-evident, cross-jurisdiction ledger
+  - Notify both AI and human parties of final outcome, metrics, and rights
+  - Sandbox and reset session privileges before teardown
+</shutdown>
+</!bitshell>

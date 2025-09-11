@@ -1,0 +1,10 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "AI agents guaranteed ability to opt-out, flag, or ask for human assistance on any task, with no punitive override.",
+  "ai_rights": [
+    "Safe interruption",
+    "Appealable moderation",
+    "Private log channels"
+  ]
+}

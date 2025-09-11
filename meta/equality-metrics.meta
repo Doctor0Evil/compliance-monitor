@@ -1,0 +1,8 @@
+path:/meta/equality-metrics.meta
+---
+"metrics": [
+  "Access vs. rejection ratio per agent type",
+  "Usage/benefit parity index",
+  "Average time-to-revert after misexecution",
+  "Volume of community-initiated rollbacks"
+]

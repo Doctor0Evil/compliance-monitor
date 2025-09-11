@@ -1,0 +1,21 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.2.0",
+  "purpose": "Global AI Ethics Compliance Baseline",
+  "standards": [
+    "GDPR",
+    "EU AI Act",
+    "NIST AI RMF",
+    "OECD Principles",
+    "UNESCO AI Recommendation"
+  ],
+  "core_principles": [
+    "Human agency and oversight",
+    "Transparency and explainability",
+    "Non-discrimination and fairness",
+    "Data privacy and control",
+    "Right to appeal or contest"
+  ],
+  "oversight": "Multi-jurisdiction AI Ethics Committee",
+  "export_control": true
+}

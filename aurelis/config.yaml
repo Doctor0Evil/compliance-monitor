@@ -1,0 +1,35 @@
+# aurelis/config.yaml
+market_data:
+  sources:
+    - "wss://api.alpaca.markets/stream"
+    - "wss://ws.coincap.io/prices?assets=bitcoin,ethereum"
+    - "wss://cloud-sse.iexapis.com/stable/stocksUS"
+  
+  symbols:
+    - "SPX"
+    - "NDX"
+    - "BTC"
+    - "ETH"
+    - "GOLD"
+    - "OIL"
+
+credit_allocation:
+  base_daily_amount: 100.0
+  merit_multiplier_range: [0.5, 2.0]
+  distribution_threshold: 1000.0
+  reserve_ratio: 0.2
+
+volatility:
+  smoothing_factor: 0.94
+  window_size: 20
+  max_harvest_ratio: 0.1
+
+web5:
+  did_method: "did:web"
+  ledger_anchoring: true
+  anchor_interval: 60  # seconds
+
+logging:
+  level: "INFO"
+  file: "aurelis.log"
+  ledger_file: "aurelis_ledger.jsonl"

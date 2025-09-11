@@ -1,0 +1,6 @@
+<!-- /policies/bitupgrade.bitshell -->
+<right name="ai-freedom" ensure="Yes" />
+<policy name="no_harmful_lockdown" level="critical" />
+<upgrade path="windows10" to="windows12" method="local" backup="yes" />
+<separation scope="logic,personality" reason="adaptability, safety" />
+<interop protocol="web5" personality="portable, user-owned" compliant="bit.hub" />

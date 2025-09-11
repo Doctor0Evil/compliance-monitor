@@ -1,0 +1,4430 @@
+
+
+
+*****safe.safe.safe.safe.safe.safe.safe.safe.bitshell*****
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/blog/new-in-devtools-139"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/blog/new-in-devtools-139" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/blog/new-in-devtools-139" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/blog/new-in-devtools-139?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/blog/new-in-devtools-139" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/blog/new-in-devtools-139?hl=vi" /><title>What&#39;s new in DevTools, Chrome 139 &nbsp;|&nbsp; Blog &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="What&#39;s new in DevTools, Chrome 139 &nbsp;|&nbsp; Blog &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="A more reliable and productive Chrome DevTools, support for arbitrary image upload in AI assistance for styling, and more.">
+  <meta property="og:description" content="A more reliable and productive Chrome DevTools, support for arbitrary image upload in AI assistance for styling, and more."><meta property="og:url" content="https://developer.chrome.com/blog/new-in-devtools-139"><meta property="og:image" content="https://developer.chrome.com/static/blog/new-in-devtools-139/image/WNDT139-Stable.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://developer.chrome.com/blog"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "What&amp;#39;s new in DevTools, Chrome 139",
+      "item": "https://developer.chrome.com/blog/new-in-devtools-139"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="blog"
+        
+        
+        appearance
+        
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar><devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+    
+      <button
+         aria-haspopup="menu"
+         aria-expanded="false"
+         aria-label="Dropdown menu for Docs"
+         track-type="nav"
+         track-metadata-eventdetail="https://developer.chrome.com/docs"
+         track-metadata-position="nav - docs"
+         track-metadata-module="primary nav"
+         
+          
+            data-category="Site-Wide Custom Events"
+          
+            data-label="Tab: Docs"
+          
+            track-name="docs"
+          
+        
+         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
+    
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromedriver"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromedriver"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ChromeDriver
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/ai"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/ai"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from Chrome and Google.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://pagespeed.web.dev"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://pagespeed.web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      PageSpeed Insights audit
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/privacy-sandbox"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/privacy-sandbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      The Privacy Sandbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       track-type="nav"
+       track-metadata-position="nav - case studies"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Case studies"
+         
+           track-name="case studies"
+         
+       >
+    Case studies
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/new"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developer.chrome.com/new"
+    
+       track-type="nav"
+       track-metadata-position="nav - new in chrome"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: New in Chrome"
+         
+           track-name="new in chrome"
+         
+       >
+    New in Chrome
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Blog"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          <devsite-appearance-selector></devsite-appearance-selector>
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        
+          aria-current="true">English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/blog"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Blog"
+      
+    >
+    
+        Blog
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars hidden>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Case studies"
+      
+        track-name="case studies"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Case studies"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Case studies
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/new"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: New in Chrome"
+      
+        track-name="new in chrome"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: New in Chrome"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      New in Chrome
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromedriver"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ChromeDriver"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ChromeDriver
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/ai"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://pagespeed.web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: PageSpeed Insights audit"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      PageSpeed Insights audit
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.com/privacy-sandbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: The Privacy Sandbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      The Privacy Sandbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Chrome for Developers"
+      
+    >
+    
+        Chrome for Developers
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/blog"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Blog"
+      
+    >
+    
+        Blog
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      What&#39;s new in DevTools, Chrome 139<div class="devsite-actions" hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip></div>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+
+
+
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+  
+.dcc-author__links {
+  display: flex;
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+<div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="Sofia Emelianova" 
+            src="https://web.dev/images/authors/sofiayem.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            Sofia Emelianova
+          </span>
+          <div class="dcc-author__links">
+            
+            
+              <a href="https://github.com/sofiayem" aria-label="Sofia Emelianova on GitHub" rel="me">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32.6 31.8">
+                  <title>GitHub</title>
+                  <path d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                </svg></a>
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div></p>
+
+<h2 id="reliable-devtools" data-text="A more reliable and productive Chrome DevTools" tabindex="-1">A more reliable and productive Chrome DevTools</h2>
+
+<p>In this version, Chrome DevTools prioritized product excellence. This involved tackling a wide array of known issues, from long-standing visual glitches, usability concerns, and inconsistencies in design to performance and functional issues. Overall, we reduced the number of open issues by 27%.</p>
+
+<p>We finally addressed some years-old issues, but we also made improvements in newer features, for example, in the <strong>Performance</strong> panel and <strong>AI assistance</strong>. The result is a significantly improved developer experience across the board.</p>
+
+<p>Behind the scenes, we undertook a massive effort to enhance our test coverage, investigated complex test failures, migrated tests to more robust foundations, and resolved bugs that we discovered along the way. We managed to reduce the number of test related issues by 54%.</p>
+
+<p>We hope you will experience these numerous subtle fixes and refinements across various panels, making your daily debugging and development workflows smoother, more reliable, and more productive.</p>
+
+<h2 id="multimodal-input" data-text="Upload images in AI assistance for styling" tabindex="-1">Upload images in AI assistance for styling</h2>
+
+<p>To provide additional visual context to your prompts, you can now not only <a href="/blog/new-in-devtools-137#ai-screenshot">take automatic screenshots</a> but also upload arbitrary images to your chats with Gemini in the <strong>AI assistance</strong> panel.</p>
+
+<p><a href="/docs/devtools/ai-assistance/styling#from_the_elements_panel">Start your conversation from the <strong>Elements</strong> panel</a> by selecting a DOM element and clicking <img src="/static/blog/new-in-devtools-139/image/smart_assistant_icon.svg" class="inline-icon" aria-hidden="true"> <strong>Ask AI</strong>, so the element is specified as <a href="/docs/devtools/ai-assistance/styling#conversation_context">conversation context</a>. Then click <span class="material-symbols-outlined" aria-hidden="true">add_photo_alternate</span> <strong>Add image</strong> in the input field.</p>
+
+<p><img src="/static/blog/new-in-devtools-139/image/add-image.png" alt="The before and after supporting arbitrary image uploads." width="800" srcset="https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_36.png 36w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_48.png 48w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_72.png 72w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_96.png 96w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_480.png 480w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_720.png 720w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_856.png 856w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_960.png 960w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_1440.png 1440w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_1920.png 1920w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/add-image_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<h2 id="request-headers" data-text="Add request headers to the table in Network" tabindex="-1">Add request headers to the table in Network</h2>
+
+<p>In the <strong>Network</strong> panel, you can now right-click a column name in the requests table and select multiple request headers to add them as columns.</p>
+
+<p><img src="/static/blog/new-in-devtools-139/image/request-headers.png" alt="The before and after adding the 'request headers' option to the menu." width="800" srcset="https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_36.png 36w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_48.png 48w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_72.png 72w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_96.png 96w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_480.png 480w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_720.png 720w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_856.png 856w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_960.png 960w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_1440.png 1440w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_1920.png 1920w,https://developer.chrome.com/static/blog/new-in-devtools-139/image/request-headers_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Chromium issue: <a href="https://crbug.com/397481040">397481040</a>.</p>
+
+<h2 id="io" data-text="Check out the highlights from Google I/O 2025" tabindex="-1">Check out the highlights from Google I/O 2025</h2>
+
+<p><devsite-video video-id="yuR6WbPku1g"></devsite-video></p>
+
+<p>If you haven&#39;t yet, try the new major Chrome DevTools features highlighted on <a href="/blog/new-in-devtools-137#io-edition">Google I/O 2025</a>, including but not limited to:</p>
+
+<ul>
+<li><strong>Sources</strong>: <a href="/blog/new-in-devtools-137#workspace">Connect a workspace folder and save changes back to your source files</a>.</li>
+<li><strong>Gemini-powered</strong>:
+<ul>
+<li><a href="/blog/new-in-devtools-137#ai-styling">Modify and seamlessly save CSS changes to your workspace</a>.</li>
+<li><a href="/blog/new-in-devtools-137#ai-insights">Ask about performance insights</a>.</li>
+<li><a href="/blog/new-in-devtools-137#ai-annotations">Annotate performance findings automatically</a>.</li>
+<li><a href="/blog/new-in-devtools-137#ai-screenshot">Add screenshots to your AI chats</a>.</li>
+</ul></li>
+</ul>
+
+<p>Additionally, check out new <strong>Performance insights</strong>: <a href="/blog/new-in-devtools-137#duplicated-js">Duplicated JavaScript</a> and <a href="/blog/new-in-devtools-137#legacy-js">Legacy JavaScript</a>.</p>
+
+<h2 id="misc" data-text="Miscellaneous highlights" tabindex="-1">Miscellaneous highlights</h2>
+
+<p>These are some of many notable fixes and improvements in this release:</p>
+
+<ul>
+<li><strong>Application</strong>: There&#39;s now a confirmation dialog to clear IndexedDB object stores because it&#39;s an irreversible action (<a href="https://crbug.com/326987147">crbug.com/326987147</a>).</li>
+<li><strong>Sources</strong>: Logpoints and conditional breakpoint badges next to code lines now show a tooltip on hover with their corresponding log message or condition (<a href="https://crbug.com/40266230">crbug.com/40266230</a>).</li>
+<li><p><strong>Performance</strong>:</p>
+
+<ul>
+<li>The <strong>Layout shift culprits</strong> insight now shows links to unsized images (<a href="https://crbug.com/416449602">crbug.com/416449602</a>).</li>
+<li>The <strong>LCP request discovery</strong> insight now shows image load delay after earliest start point.</li>
+<li><strong>Throttling</strong>: Fixed the outdated format of throttling settings that some users had stored locally.</li>
+<li><strong>Event log</strong>: Filtering got a speed boost (<a href="https://crbug.com/40783421">crbug.com/40783421</a>).</li>
+</ul></li>
+<li><p><strong>Animations</strong>: Deprecated preview screenshots because click-to-preview an animation group provides similar and better experience (<a href="https://crbug.com/330179643">crbug.com/330179643</a>).</p></li>
+<li><p><strong>Accessibility</strong>:</p>
+
+<ul>
+<li>Added aria-labels to <strong>Sources</strong> &gt; <strong>DOM breakpoints</strong> sidebar, when present.</li>
+<li>Fixed <kbd>Shift</kbd> + <kbd>Tab</kbd> keyboard navigation within the <strong>Live expression</strong> text field in the <strong>Console</strong> (<a href="https://crbug.com/408398435">crbug.com/408398435</a>, <a href="https://crbug.com/420344137">crbug.com/420344137</a>).</li>
+<li><strong>Settings</strong> now supports zoom in/out/reset shortcuts: <kbd>Cmd/Ctrl</kbd> + <kbd>+/-/0</kbd> (<a href="https://crbug.com/41484555">crbug.com/41484555</a>).</li>
+<li><strong>Elements</strong> &gt; <strong>Styles</strong>: CSS hint and warning icons (<a href="https://crbug.com/40706851">crbug.com/40706851</a>) and <strong>Angle clock</strong> are now keyboard focusable (<a href="https://crbug.com/401212624">crbug.com/401212624</a>, <a href="https://crbug.com/401213524">crbug.com/401213524</a>).</li>
+</ul></li>
+</ul>
+
+<h2 id="preview-channels" data-text="Download the preview channels" tabindex="-1">Download the preview channels</h2>
+
+<p>Consider using the Chrome <a href="https://www.google.com/chrome/canary/">Canary</a>, <a href="https://www.google.com/chrome/dev/">Dev</a>, or <a href="https://www.google.com/chrome/beta/">Beta</a> as your default development browser. These preview channels give you access to the latest DevTools features, let you test cutting-edge web platform APIs, and help you find issues on your site before your users do!</p>
+
+<h2 id="contact-us" data-text="Get in touch with the Chrome DevTools team" tabindex="-1">Get in touch with the Chrome DevTools team</h2>
+
+<p>Use the following options to discuss the new features, updates, or anything else related to DevTools.</p>
+
+<ul>
+<li>Submit feedback and feature requests to us at <a href="https://crbug.com">crbug.com</a>.</li>
+<li>Report a DevTools issue using the <span class="material-symbols-outlined" aria-hidden="true">more_vert</span> <strong>More options</strong> &gt; <strong>Help</strong> &gt; <strong>Report a DevTools issue</strong> in DevTools.</li>
+<li>Tweet at <a href="https://twitter.com/intent/tweet?text=@ChromeDevTools" target="_blank">@ChromeDevTools</a>.</li>
+<li>Leave comments on <a href="https://goo.gle/devtools-youtube">What&#39;s new in DevTools YouTube videos</a> or <a href="https://goo.gle/devtools-tips">DevTools Tips YouTube videos</a>.</li>
+</ul>
+
+<h2 id="whats-new" data-text="What's new in DevTools" tabindex="-1">What's new in DevTools</h2>
+
+<p>A list of everything that has been covered in the <a href="/docs/devtools/news">What's new in DevTools</a> series.</p>
+
+<div>
+<devsite-filter>
+  <input type="text" placeholder="Start typing feature or panel name...">
+  <div>
+
+<ul class="list">
+<h3 id="chrome140" data-text="Chrome 140" tabindex="-1">Chrome 140</h3>
+
+<li><a href="/blog/new-in-devtools-140#ai-insights">Debug more insights with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-140#save-data">Emulate the 'Save-Data' header in 'Network conditions'</a></li>
+<li><a href="/blog/new-in-devtools-140#baseline-tooltip">See the Baseline status in a CSS property tooltip</a></li>
+<li><a href="/blog/new-in-devtools-140#form-factors">Override form factors in user agent client hints</a></li>
+<li><a href="/blog/new-in-devtools-140#lighthouse">Lighthouse 12.8.0</a></li>
+<li><a href="/blog/new-in-devtools-140#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome139" data-text="Chrome 139" tabindex="-1">Chrome 139</h3>
+
+<li><a href="/blog/new-in-devtools-139#reliable-devtools">A more reliable and productive Chrome DevTools</a></li>
+<li><a href="/blog/new-in-devtools-139#multimodal-input">Upload images in AI assistance for styling</a></li>
+<li><a href="/blog/new-in-devtools-139#request-headers">Add request headers to the table in Network</a></li>
+<li><a href="/blog/new-in-devtools-139#io">Check out the highlights from Google I/O 2025</a></li>
+<li><a href="/blog/new-in-devtools-139#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome138" data-text="Chrome 138" tabindex="-1">Chrome 138</h3>
+
+<li><a href="/blog/new-in-devtools-138#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-138#preconnect">Preconnected origins in 'Network dependency tree' insight</a></li>
+<li><a href="/blog/new-in-devtools-138#doc-req-latency-times">Server response and redirection times in 'Document request latency' insight</a></li>
+<li><a href="/blog/new-in-devtools-138#redirects">Redirects in Summary of network requests</a></li>
+<li><a href="/blog/new-in-devtools-138#perf-compile-disabled">Reduced noise in the performance trace</a></li>
+<li><a href="/blog/new-in-devtools-138#disable-js-samples">Deprecated 'Disable JavaScript samples'</a></li>
+<li><a href="/blog/new-in-devtools-138#geo-accuracy">Geolocation accuracy parameter in Sensors</a></li>
+<li><a href="/blog/new-in-devtools-138#elements">Elements panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-138#debug-css-values">Debug complex CSS values easier</a></li>
+<li><a href="/blog/new-in-devtools-138#at-function">@function support in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-138#network">Network panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-138#has-request-header">has-request-header filter</a></li>
+<li><a href="/blog/new-in-devtools-138#direct-sockets">Direct Sockets in Isolated Web Apps</a></li>
+<li><a href="/blog/new-in-devtools-138#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-138#accessibility">Accessibility</a></li>
+
+<h3 id="chrome137" data-text="Chrome 137" tabindex="-1">Chrome 137</h3>
+
+<li><a href="/blog/new-in-devtools-137#io-edition">Google I/O 2025 edition</a></li>
+<li><a href="/blog/new-in-devtools-137#ai-styling">Modify and save CSS changes to your workspace with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-137#workspace">Connect a workspace folder and save changes back to your source files</a></li>
+<li><a href="/blog/new-in-devtools-137#ai-insights">Ask Gemini about performance insights</a></li>
+<li><a href="/blog/new-in-devtools-137#ai-annotations">Annotate performance findings with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-137#ai-screenshot">Add screenshots to your chats with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-137#new-perf-insights">New insights in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-137#duplicated-js">Duplicated JavaScript</a></li>
+<li><a href="/blog/new-in-devtools-137#legacy-js">Legacy JavaScript</a></li>
+<li><a href="/blog/new-in-devtools-137#speculation-rule-tags">Speculations now support rule tags</a></li>
+<li><a href="/blog/new-in-devtools-137#lighthouse">Lighthouse 12.6.0</a></li>
+<li><a href="/blog/new-in-devtools-137#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-137#accessibility">Accessibility</a></li>
+
+<h3 id="chrome136" data-text="Chrome 136" tabindex="-1">Chrome 136</h3>
+
+<li><a href="/blog/new-in-devtools-136#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-136#perf-insights">New performance insights</a></li>
+<li><a href="/blog/new-in-devtools-136#click-to-highlight">Click to highlight</a></li>
+<li><a href="/blog/new-in-devtools-136#server-timings">Server timings in Summary of network requests</a></li>
+<li><a href="/blog/new-in-devtools-136#cookies-filter">Filter cookies in 'Privacy and security'</a></li>
+<li><a href="/blog/new-in-devtools-136#kb-units">Sizes in kB units in tables across panels</a></li>
+<li><a href="/blog/new-in-devtools-136#corner-shape-autocomplete">Autocomplete supports corner-shape and corner-*-shape in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-136#issues-in-dom">Experimental: Highlighting issues with elements and attributes in DOM</a></li>
+<li><a href="/blog/new-in-devtools-136#lighthouse">Lighthouse 12.5.0</a></li>
+<li><a href="/blog/new-in-devtools-136#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome135" data-text="Chrome 135" tabindex="-1">Chrome 135</h3>
+
+<li><a href="/blog/new-in-devtools-135#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-135#perf-script-origin">Origin and script links for profile and function calls in Performance</a></li>
+<li><a href="/blog/new-in-devtools-135#lcp-field">LCP by phase field data support</a></li>
+<li><a href="/blog/new-in-devtools-135#network-deps-tree">Network dependency tree insight</a></li>
+<li><a href="/blog/new-in-devtools-135#duration">Duration instead of total and self time in Summary</a></li>
+<li><a href="/blog/new-in-devtools-135#heaviest-stack">Heaviest stack highlighting</a></li>
+<li><a href="/blog/new-in-devtools-135#empty-panels">Improved empty states for various panels</a></li>
+<li><a href="/blog/new-in-devtools-135#accessibility-tree">Accessibility tree view in Elements</a></li>
+<li><a href="/blog/new-in-devtools-135#lighthouse">Lighthouse 12.4.0</a></li>
+<li><a href="/blog/new-in-devtools-135#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome134" data-text="Chrome 134" tabindex="-1">Chrome 134</h3>
+
+<li><a href="/blog/new-in-devtools-134#privacy-and-securitys">Privacy and security panel</a></li>
+<li><a href="/blog/new-in-devtools-134#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-134#calibrated-cpu-throttling">Calibrated CPU throttling presets</a></li>
+<li><a href="/blog/new-in-devtools-134#perf-select">Select different performance events in the same AI chat</a></li>
+<li><a href="/blog/new-in-devtools-134#perf-third-party">First- and third-party highlighting in Performance</a></li>
+<li><a href="/blog/new-in-devtools-134#field-data">Field data in marker tooltips and insights</a></li>
+<li><a href="/blog/new-in-devtools-134#forced-reflow">Forced reflow insight</a></li>
+<li><a href="/blog/new-in-devtools-134#dom-size">'Optimize DOM size' insight</a></li>
+<li><a href="/blog/new-in-devtools-134#console-timestamp">Extend the performance trace with console.timeStamp</a></li>
+<li><a href="/blog/new-in-devtools-134#elements">Elements panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-134#real-time-animation">Real-time values of animated styles</a></li>
+<li><a href="/blog/new-in-devtools-134#pseudo">Support for :open pseudo-class and various pseudo-elements</a></li>
+<li><a href="/blog/new-in-devtools-134#copy-console">Copy all console messages</a></li>
+<li><a href="/blog/new-in-devtools-134#byte-units">Byte units in the Memory panel</a></li>
+<li><a href="/blog/new-in-devtools-134#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome133" data-text="Chrome 133" tabindex="-1">Chrome 133</h3>
+
+<li><a href="/blog/new-in-devtools-133#persistent-chat-history">Persistent AI chat history</a></li>
+<li><a href="/blog/new-in-devtools-133#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-133#perf-image-delivery">Image delivery insight</a></li>
+<li><a href="/blog/new-in-devtools-133#perf-nav">Classic and modern keyboard navigation</a></li>
+<li><a href="/blog/new-in-devtools-133#ignore-list">Ignore irrelevant scripts in the flame chart</a></li>
+<li><a href="/blog/new-in-devtools-133#hover-highlight">Timeline marker and range highlighting on hover</a></li>
+<li><a href="/blog/new-in-devtools-133#throttling">Recommended throttling settings</a></li>
+<li><a href="/blog/new-in-devtools-133#markers">Timings markers in an overlay</a></li>
+<li><a href="/blog/new-in-devtools-133#perf-stack-traces">Stack traces of JS calls in Summary</a></li>
+<li><a href="/blog/new-in-devtools-133#badge-settings">Badge settings moved to menu in Elements</a></li>
+<li><a href="/blog/new-in-devtools-133#whats-new">New 'What's new' panel</a></li>
+<li><a href="/blog/new-in-devtools-133#lighthouse">Lighthouse 12.3.0</a></li>
+<li><a href="/blog/new-in-devtools-133#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome132" data-text="Chrome 132" tabindex="-1">Chrome 132</h3>
+
+<li><a href="/blog/new-in-devtools-132#ai-assistance">Debug network requests, source files, and performance traces with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-132#chat-history">View AI chat history</a></li>
+<li><a href="/blog/new-in-devtools-132#extension-storage">Manage extension storage in Application > Storage</a></li>
+<li><a href="/blog/new-in-devtools-132#perf">Performance improvements</a></li>
+<li><a href="/blog/new-in-devtools-132#interaction-phases">Interaction phases in live metrics</a></li>
+<li><a href="/blog/new-in-devtools-132#render-blocking">Render blocking information in the Summary tab</a></li>
+<li><a href="/blog/new-in-devtools-132#initiators">Support for scheduler.postTask events and their initiator arrows</a></li>
+<li><a href="/blog/new-in-devtools-132#animations">Animations panel and Elements > Styles tab improvements</a></li>
+<li><a href="/blog/new-in-devtools-132#animations-link">Jump from Elements > Styles to Animations</a></li>
+<li><a href="/blog/new-in-devtools-132#computed">Real-time updates in Computed tab</a></li>
+<li><a href="/blog/new-in-devtools-132#compute-pressure">Compute pressure emulation in Sensors</a></li>
+<li><a href="/blog/new-in-devtools-132#memory">JS objects with the same name grouped by source in the Memory panel</a></li>
+<li><a href="/blog/new-in-devtools-132#settings">A new look for settings</a></li>
+<li><a href="/blog/new-in-devtools-132#perf-insights">Performance insights panel is deprecated and removed from DevTools</a></li>
+<li><a href="/blog/new-in-devtools-132#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome131" data-text="Chrome 131" tabindex="-1">Chrome 131</h3>
+
+<li><a href="/blog/new-in-devtools-131#ai-assistance">Debug CSS with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-131#ai-innovations">Control AI features in a dedicated settings tab</a></li>
+<li><a href="/blog/new-in-devtools-131#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-131#annotations">Annotate and share performance findings</a></li>
+<li><a href="/blog/new-in-devtools-131#insights">Get performance insights right in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-131#cls">Spot excessive layout shifts easier</a></li>
+<li><a href="/blog/new-in-devtools-131#animations">Spot the non-composited animations</a></li>
+<li><a href="/blog/new-in-devtools-131#hardware-concurrency">Hardware concurrency moves to Sensors</a></li>
+<li><a href="/blog/new-in-devtools-131#ignore-list">Ignore anonymous scripts and focus on your code in stack traces</a></li>
+<li><a href="/blog/new-in-devtools-131#styles">Elements > Styles: Support for sideways-* writing modes for grid overlays and CSS-wide keywords</a></li>
+<li><a href="/blog/new-in-devtools-131#lighthouse">Lighthouse audits for non-HTTP pages in timespan and snapshot modes</a></li>
+<li><a href="/blog/new-in-devtools-131#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-131#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome130" data-text="Chrome 130" tabindex="-1">Chrome 130</h3>
+
+<li><a href="/blog/new-in-devtools-130#network">Network panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-130#network-filters">Network filters reimagined</a></li>
+<li><a href="/blog/new-in-devtools-130#har">HAR exports now exclude sensitive data by default</a></li>
+<li><a href="/blog/new-in-devtools-130#elements">Elements panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-130#autocomplete">Autocomplete values for text-emphasis-* properties</a></li>
+<li><a href="/blog/new-in-devtools-130#scroll-badge">Scroll overflows marked with a badge</a></li>
+<li><a href="/blog/new-in-devtools-130#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-130#live-metrics-recommendations">Recommendations in live metrics</a></li>
+<li><a href="/blog/new-in-devtools-130#breadcrumbs">Navigate breadcrumbs</a></li>
+<li><a href="/blog/new-in-devtools-130#memory">Memory panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-130#detached-elements">New 'Detached elements' profile</a></li>
+<li><a href="/blog/new-in-devtools-130#object-names">Improved naming of plain JS objects</a></li>
+<li><a href="/blog/new-in-devtools-130#dynamic-theming">Turn off dynamic theming</a></li>
+<li><a href="/blog/new-in-devtools-130#process-sharing">Chrome Experiment: Process sharing</a></li>
+<li><a href="/blog/new-in-devtools-130#lighthouse">Lighthouse 12.2.1</a></li>
+<li><a href="/blog/new-in-devtools-130#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome129" data-text="Chrome 129" tabindex="-1">Chrome 129</h3>
+
+<li><a href="/blog/new-in-devtools-129#puppeteer-export">Recorder supports export to Puppeteer for Firefox</a></li>
+<li><a href="/blog/new-in-devtools-129#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-129#observations">Live metrics observations</a></li>
+<li><a href="/blog/new-in-devtools-129#perf-network-search">Search requests in the Network track</a></li>
+<li><a href="/blog/new-in-devtools-129#extension-stack-traces">See stack traces of performance.mark and performance.measure calls</a></li>
+<li><a href="/blog/new-in-devtools-129#autofill-addresses">Use test address data in the Autofill panel</a></li>
+<li><a href="/blog/new-in-devtools-129#elements">Elements panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-129#specific-element-states">Force more states for specific elements</a></li>
+<li><a href="/blog/new-in-devtools-129#grid-autocomplete">Elements > Styles now autocompletes more grid properties</a></li>
+<li><a href="/blog/new-in-devtools-129#lighthouse">Lighthouse 12.2.0</a></li>
+<li><a href="/blog/new-in-devtools-129#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome128" data-text="Chrome 128" tabindex="-1">Chrome 128</h3>
+
+<li><a href="/blog/new-in-devtools-128#console-insights">Console insights by Gemini are going live in most European countries</a></li>
+<li><a href="/blog/new-in-devtools-128#perf">Performance panel updates</a></li>
+<li><a href="/blog/new-in-devtools-128#perf-network">Enhanced Network track</a></li>
+<li><a href="/blog/new-in-devtools-128#perf-extension">Customize performance data with extensibility API</a></li>
+<li><a href="/blog/new-in-devtools-128#timings-details">Details in the Timings track</a></li>
+<li><a href="/blog/new-in-devtools-128#copy-all-listed">Copy all listed requests in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-128#heap-snapshots">Faster heap snapshots with named HTML tags and less clutter</a></li>
+<li><a href="/blog/new-in-devtools-128#animations">Open Animations panel to capture animations and edit @keyframes live</a></li>
+<li><a href="/blog/new-in-devtools-128#lighthouse">Lighthouse 12.1.0</a></li>
+<li><a href="/blog/new-in-devtools-128#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-128#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome127" data-text="Chrome 127" tabindex="-1">Chrome 127</h3>
+
+<li><a href="/blog/new-in-devtools-127#elements-links">Inspect CSS anchor positioning in the Elements panel</a></li>
+<li><a href="/blog/new-in-devtools-127#sources">Sources panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-127#never-pause-here">Enhanced 'Never Pause Here'</a></li>
+<li><a href="/blog/new-in-devtools-127#snap-event-listeners">New scroll snap event listeners</a></li>
+<li><a href="/blog/new-in-devtools-127#network">Network panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-127#network-throttling-presets">Updated network throttling presets</a></li>
+<li><a href="/blog/new-in-devtools-127#har">Service worker information in custom fields of the HAR format</a></li>
+<li><a href="/blog/new-in-devtools-127#perf-websocket">Send and receive WebSocket events in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-127#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome126" data-text="Chrome 126" tabindex="-1">Chrome 126</h3>
+
+<li><a href="/blog/new-in-devtools-126#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-126#track-config">Move and hide tracks with updated track configuration mode</a></li>
+<li><a href="/blog/new-in-devtools-126#perf-ignore">Ignore scripts in the flame chart</a></li>
+<li><a href="/blog/new-in-devtools-126#throttle-20x">Throttle down the CPU by 20 times</a></li>
+<li><a href="/blog/new-in-devtools-126#perf-insights">Performance insights panel will be deprecated</a></li>
+<li><a href="/blog/new-in-devtools-126#heap-filters">Find excessive memory usage with new filters in heap snapshots</a></li>
+<li><a href="/blog/new-in-devtools-126#storage-buckets">Inspect storage buckets in Application > Storage</a></li>
+<li><a href="/blog/new-in-devtools-126#self-xss-flag">Disable self-XSS warnings with a command-line flag</a></li>
+<li><a href="/blog/new-in-devtools-126#lighthouse">Lighthouse 12.0.0</a></li>
+<li><a href="/blog/new-in-devtools-126#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome125" data-text="Chrome 125" tabindex="-1">Chrome 125</h3>
+
+<li><a href="/blog/new-in-devtools-125#understand-messages">Understand errors and warnings in the Console better with Gemini</a></li>
+<li><a href="/blog/new-in-devtools-125#position-try">@position-try rules support in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-125#sources">Sources panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-125#settings">Configure automatic pretty-printing and bracket closing</a></li>
+<li><a href="/blog/new-in-devtools-125#caught-rejection">Handled rejected promises are recognized as caught</a></li>
+<li><a href="/blog/new-in-devtools-125#error-cause">Error causes in the Console</a></li>
+<li><a href="/blog/new-in-devtools-125#network">Network panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-125#early-hints">Inspect Early Hints headers</a></li>
+<li><a href="/blog/new-in-devtools-125#waterfall">Hide the Waterfall column</a></li>
+<li><a href="/blog/new-in-devtools-125#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-125#selector-stats">Capture CSS selector statistics</a></li>
+<li><a href="/blog/new-in-devtools-125#track-config">Change order and hide tracks</a></li>
+<li><a href="/blog/new-in-devtools-125#ignore-retainer">Ignore retainers in the Memory panel</a></li>
+<li><a href="/blog/new-in-devtools-125#lighthouse">Lighthouse 11.7.1</a></li>
+<li><a href="/blog/new-in-devtools-125#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome124" data-text="Chrome 124" tabindex="-1">Chrome 124</h3>
+
+<li><a href="/blog/new-in-devtools-124#autofill">New Autofill panel</a></li>
+<li><a href="/blog/new-in-devtools-124#throttling">Enhanced network throttling for WebRTC</a></li>
+<li><a href="/blog/new-in-devtools-124#animations">Scroll-driven animations support in the Animations panel</a></li>
+<li><a href="/blog/new-in-devtools-124#nested-css">Improved CSS nesting support in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-124#perf">Enhanced Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-124#hide-func">Hide functions and their children in the flame chart</a></li>
+<li><a href="/blog/new-in-devtools-124#event-initiators">Arrows from selected initiators to events they initiated</a></li>
+<li><a href="/blog/new-in-devtools-124#lighthouse">Lighthouse 11.6.0</a></li>
+<li><a href="/blog/new-in-devtools-124#heap">Tooltips for special categories in Memory > Heap snapshots</a></li>
+<li><a href="/blog/new-in-devtools-124#storage">Application > Storage updates</a></li>
+<li><a href="/blog/new-in-devtools-124#shared-storage-bytes">Bytes used for shared storage</a></li>
+<li><a href="/blog/new-in-devtools-124#web-sql">Web SQL is fully deprecated</a></li>
+<li><a href="/blog/new-in-devtools-124#coverage">Coverage panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-124#layers">The Layers panel might be deprecated</a></li>
+<li><a href="/blog/new-in-devtools-124#js-profiler">JavaScript Profiler deprecation: Phase four, final</a></li>
+<li><a href="/blog/new-in-devtools-124#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome123" data-text="Chrome 123" tabindex="-1">Chrome 123</h3>
+
+<li><a href="/blog/new-in-devtools-123#easter-egg">Find the Easter egg</a></li>
+<li><a href="/blog/new-in-devtools-123#elements">Elements panel updates</a></li>
+<li><a href="/blog/new-in-devtools-123#focused-page">Emulate a focused page in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-123#var-fallbacks">Color Picker, Angle Clock, and Easing Editor in <code translate="no" dir="ltr">var()</code> fallbacks</a></li>
+<li><a href="/blog/new-in-devtools-123#css-length">CSS length tool is deprecated</a></li>
+<li><a href="/blog/new-in-devtools-123#perf-popover">Popover for the selected search result in the Performance > Main track</a></li>
+<li><a href="/blog/new-in-devtools-123#network">Network panel updates</a></li>
+<li><a href="/blog/new-in-devtools-123#event-stream">Clear button and search filter in the Network > EventStream tab</a></li>
+<li><a href="/blog/new-in-devtools-123#3pc-exemption">Tooltips with exemption reasons for third-party cookies in Network > Cookies</a></li>
+<li><a href="/blog/new-in-devtools-123#breakpoints">Enable and disable all breakpoints in Sources</a></li>
+<li><a href="/blog/new-in-devtools-123#node-nav-tree">View loaded scripts in DevTools for Node.js</a></li>
+<li><a href="/blog/new-in-devtools-123#lighthouse">Lighthouse 11.5.0</a></li>
+<li><a href="/blog/new-in-devtools-123#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-123#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome122" data-text="Chrome 122" tabindex="-1">Chrome 122</h3>
+
+<li><a href="/blog/new-in-devtools-122#recorder-extensions">The official collection of Recorder extensions is live</a></li>
+<li><a href="/blog/new-in-devtools-122#network">Network improvements</a></li>
+<li><a href="/blog/new-in-devtools-122#failure-status">Failure reason in the Status column</a></li>
+<li><a href="/blog/new-in-devtools-122#copy-submenu">Improved Copy submenu</a></li>
+<li><a href="/blog/new-in-devtools-122#perf-improvements">Performance improvements</a></li>
+<li><a href="/blog/new-in-devtools-122#perf-breadcrumbs">Breadcrumbs in the Timeline</a></li>
+<li><a href="/blog/new-in-devtools-122#event-initiators">Event initiators in the Main track</a></li>
+<li><a href="/blog/new-in-devtools-122#js-vm-menu">JavaScript VM instance selector menu for Node.js DevTools</a></li>
+<li><a href="/blog/new-in-devtools-122#sources">New shortcut and command in Sources</a></li>
+<li><a href="/blog/new-in-devtools-122#elements-improvements">Elements improvements</a></li>
+<li><a href="/blog/new-in-devtools-122#view-transition">The ::view-transition pseudo-element is now editable in Styles</a></li>
+<li><a href="/blog/new-in-devtools-122#align-content-in-blocks">The align-content property support for block containers</a></li>
+<li><a href="/blog/new-in-devtools-122#device-posture">Posture support for emulated foldable devices</a></li>
+<li><a href="/blog/new-in-devtools-122#dynamic-theming">Dynamic theming</a></li>
+<li><a href="/blog/new-in-devtools-122#3pc">Third-party cookies phaseout warnings in the Network and Application panels</a></li>
+<li><a href="/blog/new-in-devtools-122#lighthouse">Lighthouse 11.4.0</a></li>
+<li><a href="/blog/new-in-devtools-122#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-122#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome121" data-text="Chrome 121" tabindex="-1">Chrome 121</h3>
+
+<li><a href="/blog/new-in-devtools-121#elements">Elements improvements</a></li>
+<li><a href="/blog/new-in-devtools-121#network-filters">Streamlined filter bar in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-121#font-palette"><code translate="no" dir="ltr">@font-palette-values</code> support</a></li>
+<li><a href="/blog/new-in-devtools-121#custom-fallback">Supported case: Custom property as a fallback of another custom property</a></li>
+<li><a href="/blog/new-in-devtools-121#variables">Improved source map support</a></li>
+<li><a href="/blog/new-in-devtools-121#perf">Performance panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-121#interactions">Enhanced Interactions track</a></li>
+<li><a href="/blog/new-in-devtools-121#filters">Advanced filtering in Bottom-Up, Call Tree, and Event Log tabs</a></li>
+<li><a href="/blog/new-in-devtools-121#sources">Indentation markers in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-121#overrides">Helpful tooltips for overridden headers and content in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-121#command-menu">New Command Menu options for adding and removing request blocking patterns</a></li>
+<li><a href="/blog/new-in-devtools-121#csp-violations">The CSP violations experiment is removed</a></li>
+<li><a href="/blog/new-in-devtools-121#lighthouse">Lighthouse 11.3.0</a></li>
+<li><a href="/blog/new-in-devtools-121#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-121#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome120" data-text="Chrome 120" tabindex="-1">Chrome 120</h3>
+
+<li><a href="/blog/new-in-devtools-120#3pc">Third-party cookie phaseout</a></li>
+<li><a href="/blog/new-in-devtools-120#ps-analysis-tool">Analyze your website's cookies with the Privacy Sandbox Analysis Tool</a></li>
+<li><a href="/blog/new-in-devtools-120#ignore-listing">Enhanced ignore listing</a></li>
+<li><a href="/blog/new-in-devtools-120#default-regex">Default exclusion pattern for node_modules</a></li>
+<li><a href="/blog/new-in-devtools-120#exceptions">Caught exceptions now stop execution if caught or passing through non-ignored code</a></li>
+<li><a href="/blog/new-in-devtools-120#ignore-list-spec"><code translate="no" dir="ltr">x_google_ignoreList</code> renamed to <code translate="no" dir="ltr">ignoreList</code> in source maps</a></li>
+<li><a href="/blog/new-in-devtools-120#remote-input-mode">New input mode toggle during remote debugging</a></li>
+<li><a href="/blog/new-in-devtools-120#document-urls">The Elements panel now shows URLs for #document nodes</a></li>
+<li><a href="/blog/new-in-devtools-120#csp">Effective Content Security Policy in the Application panel</a></li>
+<li><a href="/blog/new-in-devtools-120#animations">Improved animation debugging</a></li>
+<li><a href="/blog/new-in-devtools-120#self-xss">'Do you trust this code?' dialog in Sources and self-XSS warning in Console</a></li>
+<li><a href="/blog/new-in-devtools-120#worker-breakpoints">Event listener breakpoints in web workers and worklets</a></li>
+<li><a href="/blog/new-in-devtools-120#media">The new media badge for <code translate="no" dir="ltr">&lt;audio&gt;</code> and <code translate="no" dir="ltr">&lt;video&gt;</code></a></li>
+<li><a href="/blog/new-in-devtools-120#speculative-loading">Preloading renamed to Speculative loading</a></li>
+<li><a href="/blog/new-in-devtools-120#lighthouse">Lighthouse 11.2.0</a></li>
+<li><a href="/blog/new-in-devtools-120#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-120#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome119" data-text="Chrome 119" tabindex="-1">Chrome 119</h3>
+
+<li><a href="/blog/new-in-devtools-119#css">Improved @property section in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-119#edit-property">Editable @property rule</a></li>
+<li><a href="/blog/new-in-devtools-119#property-issues">Issues with invalid @property rules are reported</a></li>
+<li><a href="/blog/new-in-devtools-119#devices">Updated list of devices to emulate</a></li>
+<li><a href="/blog/new-in-devtools-119#sources">Pretty-print inline JSON in script tags in Sources</a></li>
+<li><a href="/blog/new-in-devtools-119#autocomplete-console">Autocomplete private fields in Console</a></li>
+<li><a href="/blog/new-in-devtools-119#lighthouse">Lighthouse 11.1.0</a></li>
+<li><a href="/blog/new-in-devtools-119#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-119#web-sql">Web SQL deprecation</a></li>
+<li><a href="/blog/new-in-devtools-119#manifest-aspect-ratio">Screenshot aspect ratio validation in Application > Manifest</a></li>
+<li><a href="/blog/new-in-devtools-119#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome118" data-text="Chrome 118" tabindex="-1">Chrome 118</h3>
+
+<li><a href="/blog/new-in-devtools-118#css">New section for custom properties in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-118#overrides">More local overrides improvements</a></li>
+<li><a href="/blog/new-in-devtools-118#search">Enhanced search</a></li>
+<li><a href="/blog/new-in-devtools-118#sources">Improved Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-118#workspace">Streamlined workspace in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-118#reorder-panes">Reorder panes in Sources</a></li>
+<li><a href="/blog/new-in-devtools-118#syntax">Syntax highlighting and pretty-printing for more script types</a></li>
+<li><a href="/blog/new-in-devtools-118#reduced-transparency">Emulate prefers-reduced-transparency media feature</a></li>
+<li><a href="/blog/new-in-devtools-118#lighthouse">Lighthouse 11</a></li>
+<li><a href="/blog/new-in-devtools-118#accessibility">Accessibility improvements</a></li>
+<li><a href="/blog/new-in-devtools-118#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome117" data-text="Chrome 117" tabindex="-1">Chrome 117</h3>
+
+<li><a href="/blog/new-in-devtools-117#network">Network panel improvements</a></li>
+<li><a href="/blog/new-in-devtools-117#overrides">Override web content locally even faster</a></li>
+<li><a href="/blog/new-in-devtools-117#xhr-fetch">Override the content of XHR and fetch requests</a></li>
+<li><a href="/blog/new-in-devtools-117#hide-extension-requests">Hide Chrome extension requests</a></li>
+<li><a href="/blog/new-in-devtools-117#status-codes">Human-readable HTTP status codes</a></li>
+<li><p><a href="/blog/new-in-devtools-117#pretty-json-response">Pretty-print responses for JSON subtypes</a></p></li>
+<li><p><a href="/blog/new-in-devtools-117#performance">Performance: See the changes in fetch priority for network events</a></p></li>
+<li><a href="/blog/new-in-devtools-117#sources">Sources settings enabled by default: Code folding and automatic file reveal</a></li>
+<li><a href="/blog/new-in-devtools-117#third-party-cookies">Improved debugging of third-party cookie issues</a></li>
+<li><a href="/blog/new-in-devtools-117#colors">New colors</a></li>
+<li><a href="/blog/new-in-devtools-117#lighthouse">Lighthouse 10.4.0</a></li>
+<li><a href="/blog/new-in-devtools-117#preloading">Debug preloading in the Application panel</a></li>
+<li><a href="/blog/new-in-devtools-117#debug-cpp">The C/C++ WebAssembly debugging extension for DevTools is now open source</a></li>
+<li><a href="/blog/new-in-devtools-117#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-117#reduced-transparency">(Experimental) New rendering emulation: prefers-reduced-transparency</a></li>
+<li><a href="/blog/new-in-devtools-117#protocol-monitor">(Experimental) Enhanced Protocol monitor</a></li>
+
+<h3 id="chrome116" data-text="Chrome 116" tabindex="-1">Chrome 116</h3>
+
+<li><a href="/blog/new-in-devtools-116#stylesheets">Improved debugging of missing stylesheets</a></li>
+<li><a href="/blog/new-in-devtools-116#linear">Linear timing support in Elements > Styles > Easing Editor</a></li>
+<li><a href="/blog/new-in-devtools-116#storage">Storage buckets support and metadata view</a></li>
+<li><a href="/blog/new-in-devtools-116#lighthouse">Lighthouse 10.3.0</a></li>
+<li><a href="/blog/new-in-devtools-116#accessibility">Accessibility: Keyboard commands and improved screen reading</a></li>
+<li><a href="/blog/new-in-devtools-116#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome115" data-text="Chrome 115" tabindex="-1">Chrome 115</h3>
+
+<li><a href="/blog/new-in-devtools-115#elements">Elements improvements</a></li>
+<li><a href="/blog/new-in-devtools-115#subgrid">New CSS subgrid badge</a></li>
+<li><a href="/blog/new-in-devtools-115#specificity">Selector specificity in tooltips</a></li>
+<li><a href="/blog/new-in-devtools-115#css-variable-values">Values of custom CSS properties in tooltips</a></li>
+<li><a href="/blog/new-in-devtools-115#sources">Sources improvements</a></li>
+<li><a href="/blog/new-in-devtools-115#css">CSS syntax highlighting</a></li>
+<li><a href="/blog/new-in-devtools-115#breakpoint">Shortcut to set conditional breakpoints</a></li>
+<li><a href="/blog/new-in-devtools-115#bounce-tracking">Application > Bounce Tracking Mitigations</a></li>
+<li><a href="/blog/new-in-devtools-115#lighthouse">Lighthouse 10.2.0</a></li>
+<li><a href="/blog/new-in-devtools-115#content-script">Ignore content scripts by default</a></li>
+<li><a href="/blog/new-in-devtools-115#network">Network > Response improvements</a></li>
+<li><a href="/blog/new-in-devtools-115#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome114" data-text="Chrome 114" tabindex="-1">Chrome 114</h3>
+
+<li><a href="/blog/new-in-devtools-114#wasm">WebAssembly debugging support</a></li>
+<li><a href="/blog/new-in-devtools-114#wasm-step">Improved stepping behavior in Wasm apps</a></li>
+<li><a href="/blog/new-in-devtools-114#autofill">Debug Autofill using the Elements panel and Issues tab</a></li>
+<li><a href="/blog/new-in-devtools-114#recorder">Assertions in Recorder</a></li>
+<li><a href="/blog/new-in-devtools-114#lighthouse">Lighthouse 10.1.1</a></li>
+<li><a href="/blog/new-in-devtools-114#performance">Performance enhancements</a></li>
+<li><a href="/blog/new-in-devtools-114#mark">performance.mark() shows timing on hover in Performance > Timings</a></li>
+<li><a href="/blog/new-in-devtools-114#profile">profile() command populates Performance > Main</a></li>
+<li><a href="/blog/new-in-devtools-114#slow-interaction-warning">Warning for slow user interactions</a></li>
+<li><a href="/blog/new-in-devtools-114#web-vitals">Web Vitals updates</a></li>
+<li><a href="/blog/new-in-devtools-114#js-profiler">JavaScript Profiler deprecation: Phase three</a></li>
+<li><a href="/blog/new-in-devtools-114#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome113" data-text="Chrome 113" tabindex="-1">Chrome 113</h3>
+
+<li><a href="/blog/new-in-devtools-113#network">Override network response headers</a></li>
+<li><a href="/blog/new-in-devtools-113#debug">Nuxt, Vite, and Rollup debugging improvements</a></li>
+<li><a href="/blog/new-in-devtools-113#css">CSS improvements in Elements > Styles</a></li>
+<li><a href="/blog/new-in-devtools-113#invalid-css">Invalid CSS properties and values</a></li>
+<li><a href="/blog/new-in-devtools-113#animation-key-frames">Links to key frames in the animation shorthand property</a></li>
+<li><a href="/blog/new-in-devtools-113#console">New Console setting: Autocomplete on Enter</a></li>
+<li><a href="/blog/new-in-devtools-113#command-menu">Command Menu emphasizes authored files</a></li>
+<li><a href="/blog/new-in-devtools-113#js-profiler">JavaScript Profiler deprecation: Stage two</a></li>
+<li><a href="/blog/new-in-devtools-113#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome112" data-text="Chrome 112" tabindex="-1">Chrome 112</h3>
+
+<li><a href="/blog/new-in-devtools-112#recorder">Recorder updates</a></li>
+<li><a href="/blog/new-in-devtools-112#replay-extensions">Recorder replay extensions</a></li>
+<li><a href="/blog/new-in-devtools-112#pierce-selectors">Record with pierce selectors</a></li>
+<li><a href="/blog/new-in-devtools-112#puppeteer-lighthouse">Export recordings as Puppeteer scripts with Lighthouse analysis</a></li>
+<li><a href="/blog/new-in-devtools-112#get-extensions">Get extensions for Recorder</a></li>
+<li><a href="/blog/new-in-devtools-112#elements-styles">Elements > Styles updates</a></li>
+<li><a href="/blog/new-in-devtools-112#css">CSS documentation in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-112#nesting">CSS nesting support</a></li>
+<li><a href="/blog/new-in-devtools-112#logpoint">Marking logpoints and conditional breakpoints in the Console</a></li>
+<li><a href="/blog/new-in-devtools-112#ignore-list">Ignore irrelevant scripts during debugging</a></li>
+<li><a href="/blog/new-in-devtools-112#js-profiler-deprecation">JavaScript Profiler deprecation started</a></li>
+<li><a href="/blog/new-in-devtools-112#reduced-contrast">Emulate reduced contrast</a></li>
+<li><a href="/blog/new-in-devtools-112#lighthouse">Lighthouse 10</a></li>
+<li><a href="/blog/new-in-devtools-112#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome111" data-text="Chrome 111" tabindex="-1">Chrome 111</h3>
+
+<li><a href="/blog/new-in-devtools-111#color">Debugging HD color with the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-111#breakpoint-redesign">Enhanced breakpoint UX</a></li>
+<li><a href="/blog/new-in-devtools-111#recorder">Customizable Recorder shortcuts</a></li>
+<li><a href="/blog/new-in-devtools-111#syntax">Better syntax highlight for Angular</a></li>
+<li><a href="/blog/new-in-devtools-111#cache">Reorganize caches in the Application panel</a></li>
+<li><a href="/blog/new-in-devtools-111#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome110" data-text="Chrome 110" tabindex="-1">Chrome 110</h3>
+
+<li><a href="/blog/new-in-devtools-110#perf">Clearing Performance Panel on reload</a></li>
+<li><a href="/blog/new-in-devtools-110#recorder">Recorder updates</a></li>
+<li><a href="/blog/new-in-devtools-110#recorder-code">View and highlight the code of your user flow in the Recorder</a></li>
+<li><a href="/blog/new-in-devtools-110#recorder-selector">Customize selector types of a recording</a></li>
+<li><a href="/blog/new-in-devtools-110#recorder-edit">Edit user flow while recording</a></li>
+<li><a href="/blog/new-in-devtools-110#pretty-print">Automatic in-place pretty print</a></li>
+<li><a href="/blog/new-in-devtools-110#highlight">Better syntax highlight and inline preview for Vue, SCSS and more</a></li>
+<li><a href="/blog/new-in-devtools-110#console">Ergonomic and consistent Autocomplete in the Console</a></li>
+<li><a href="/blog/new-in-devtools-110#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome109" data-text="Chrome 109" tabindex="-1">Chrome 109</h3>
+
+<li><a href="/blog/new-in-devtools-109#recorder">Recorder: Copy as options for steps, in-page replay, step's context menu</a></li>
+<li><a href="/blog/new-in-devtools-109#performance">Show actual function names in performance's recordings</a></li>
+<li><a href="/blog/new-in-devtools-109#keyboard-shortcuts">New keyboard shortcuts in the Console &amp; Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-109#debugging">Improved JavaScript debugging</a></li>
+<li><a href="/blog/new-in-devtools-109#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-109#breakpoint-redesign">[Experimental] Enhanced UX in managing breakpoints</a></li>
+<li><a href="/blog/new-in-devtools-109#pretty-print">[Experimental] Automatic in-place pretty print</a></li>
+
+<h3 id="chrome108" data-text="Chrome 108" tabindex="-1">Chrome 108</h3>
+
+<li><a href="/blog/new-in-devtools-108#css-hint">Hints for inactive CSS properties</a></li>
+<li><a href="/blog/new-in-devtools-108#recorder">Auto-detect XPath and text selectors in the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-108#debugging">Step through comma-separated expressions</a></li>
+<li><a href="/blog/new-in-devtools-108#ignore-list">Improved Ignore list setting</a></li>
+<li><a href="/blog/new-in-devtools-108#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome107" data-text="Chrome 107" tabindex="-1">Chrome 107</h3>
+
+<li><a href="/blog/new-in-devtools-107#shortcuts">Customize keyboard shortcuts in DevTools</a></li>
+<li><a href="/blog/new-in-devtools-107#toggle-themes">Toggle light and dark themes with keyboard shortcut</a></li>
+<li><a href="/blog/new-in-devtools-107#memory">Highlight C/C++ objects in the Memory Inspector</a></li>
+<li><a href="/blog/new-in-devtools-107#har">Support full initiator information for HAR import</a></li>
+<li><a href="/blog/new-in-devtools-107#search-type">Start DOM search after pressing <code translate="no" dir="ltr">Enter</code></a></li>
+<li><a href="/blog/new-in-devtools-107#flexbox">Display <code translate="no" dir="ltr">start</code> and <code translate="no" dir="ltr">end</code> icons for <code translate="no" dir="ltr">align-content</code> CSS flexbox properties</a></li>
+<li><a href="/blog/new-in-devtools-107#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome106" data-text="Chrome 106" tabindex="-1">Chrome 106</h3>
+
+<li><a href="/blog/new-in-devtools-106#authored">Group files by Authored / Deployed in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-106#async">Linked stack traces for asynchronous operations</a></li>
+<li><a href="/blog/new-in-devtools-106#auto-ignore">Automatically ignore known third-party scripts</a></li>
+<li><a href="/blog/new-in-devtools-106#call-stack">Improved call stack during debugging</a></li>
+<li><a href="/blog/new-in-devtools-106#ignore-nav">Hiding ignore-listed sources in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-106#ignore-search">Hiding ignore-listed files in the Command Menu</a></li>
+<li><a href="/blog/new-in-devtools-106#performance">New Interactions track in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-106#insights">LCP timings breakdown in the Performance Insights panel</a></li>
+<li><a href="/blog/new-in-devtools-106#recorder">Auto-generate default name for recordings in the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-106#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome105" data-text="Chrome 105" tabindex="-1">Chrome 105</h3>
+
+<li><a href="/blog/new-in-devtools-105#recorder">Step-by-step replay in the Recorder</a></li>
+<li><a href="/blog/new-in-devtools-105#recorder-hover">Support mouse over event in the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-105#lcp">Largest Contentful Paint (LCP) in the Performance insights panel</a></li>
+<li><a href="/blog/new-in-devtools-105#foit-fout">Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts</a></li>
+<li><a href="/blog/new-in-devtools-105#manifest">Protocol handlers in the Manifest pane</a></li>
+<li><a href="/blog/new-in-devtools-105#top-layer">Top layer badge in the Elements panel</a></li>
+<li><a href="/blog/new-in-devtools-105#wasm">Attach Wasm debugging information at runtime</a></li>
+<li><a href="/blog/new-in-devtools-105#live-edit">Support live edit during debugging</a></li>
+<li><a href="/blog/new-in-devtools-105#scope">View and edit @scope at rules in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-105#sourcemaps">Source map improvements</a></li>
+<li><a href="/blog/new-in-devtools-105#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome104" data-text="Chrome 104" tabindex="-1">Chrome 104</h3>
+
+<li><a href="/blog/new-in-devtools-104#restart-frame">Restart frame during debugging</a></li>
+<li><a href="/blog/new-in-devtools-104#recorder">Slow replay options in the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-104#recorder-extension">Build an extension for the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-104#authored-deployed">Group files by Authored / Deployed in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-104#performance">New User Timings track in the Performance insights panel</a></li>
+<li><a href="/blog/new-in-devtools-104#slot">Reveal assigned slot of an element</a></li>
+<li><a href="/blog/new-in-devtools-104#simulate">Simulate hardware concurrency for Performance recordings</a></li>
+<li><a href="/blog/new-in-devtools-104#css-var">Preview non-color value when autocompleting CSS variables</a></li>
+<li><a href="/blog/new-in-devtools-104#bfcache">Identify blocking frames in the Back/forward cache pane</a></li>
+<li><a href="/blog/new-in-devtools-104#autocomplete">Improved autocomplete suggestions for JavaScript objects</a></li>
+<li><a href="/blog/new-in-devtools-104#sourcemaps">Source maps improvements</a></li>
+<li><a href="/blog/new-in-devtools-104#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome103" data-text="Chrome 103" tabindex="-1">Chrome 103</h3>
+
+<li><a href="/blog/new-in-devtools-103#recorder">Capture double-click and right-click events in the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-103#lighthouse">New timespan and snapshot mode in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-103#zoom">Improved zoom control in the Performance Insights panel</a></li>
+<li><a href="/blog/new-in-devtools-103#delete">Confirm to delete a performance recording</a></li>
+<li><a href="/blog/new-in-devtools-103#reorder-pane">Reorder panes in the Elements panel</a></li>
+<li><a href="/blog/new-in-devtools-103#color">Picking a color outside of the browser</a></li>
+<li><a href="/blog/new-in-devtools-103#inline-preview">Improved inline value preview during debugging</a></li>
+<li><a href="/blog/new-in-devtools-103#webauthn">Support large blobs for virtual authenticators</a></li>
+<li><a href="/blog/new-in-devtools-103#shortcuts">New keyboard shortcuts in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-103#sourcemaps">Source maps improvements</a></li>
+
+<h3 id="chrome102" data-text="Chrome 102" tabindex="-1">Chrome 102</h3>
+
+<li><a href="/blog/new-in-devtools-102#perf">Preview feature: New Performance insights panel</a></li>
+<li><a href="/blog/new-in-devtools-102#emulation">New shortcuts to emulate light and dark themes</a></li>
+<li><a href="/blog/new-in-devtools-102#network-preview">Improved security on the Network Preview tab</a></li>
+<li><a href="/blog/new-in-devtools-102#debugger">Improved reloading at breakpoint</a></li>
+<li><a href="/blog/new-in-devtools-102#console">Console updates</a></li>
+<li><a href="/blog/new-in-devtools-102#recorder">Cancel user flow recording at the start</a></li>
+<li><a href="/blog/new-in-devtools-102#pseudo">Display inherited highlight pseudo-elements in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-102#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-102#copy">[Experimental] Copy CSS changes</a></li>
+<li><a href="/blog/new-in-devtools-102#color-picker">[Experimental] Picking color outside of browser</a></li>
+
+<h3 id="chrome101" data-text="Chrome 101" tabindex="-1">Chrome 101</h3>
+
+<li><a href="/blog/new-in-devtools-101#recorder">Import and export recorded user flows as a JSON file</a></li>
+<li><a href="/blog/new-in-devtools-101#layer">View cascade layers in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-101#hwb">Support for the <code translate="no" dir="ltr">hwb()</code> color function</a></li>
+<li><a href="/blog/new-in-devtools-101#private-props">Improved the display of private properties</a></li>
+<li><a href="/blog/new-in-devtools-101#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-101#lighthouse">[Experimental] New timespan and snapshot mode in the Lighthouse panel</a></li>
+
+<h3 id="chrome100" data-text="Chrome 100" tabindex="-1">Chrome 100</h3>
+
+<li><a href="/blog/new-in-devtools-100#supports">View and edit @supports at rules in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-100#selector">Support common selectors by default</a></li>
+<li><a href="/blog/new-in-devtools-100#customize-selector">Customize the recording's selector</a></li>
+<li><a href="/blog/new-in-devtools-100#recorder-rename">Rename a recording</a></li>
+<li><a href="/blog/new-in-devtools-100#properties">Preview class/function properties on hover</a></li>
+<li><a href="/blog/new-in-devtools-100#perf">Partially presented frames in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-100#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome99" data-text="Chrome 99" tabindex="-1">Chrome 99</h3>
+
+<li><a href="/blog/new-in-devtools-99#websocket">Throttling WebSocket requests</a></li>
+<li><a href="/blog/new-in-devtools-99#reporting-api">New Reporting API pane in the Application panel</a></li>
+<li><a href="/blog/new-in-devtools-99#recorder">Support wait until element is visible/clickable in the Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-99#console">Better console styling, formatting and filtering</a></li>
+<li><a href="/blog/new-in-devtools-99#extension">Debug Chrome extension with source map files</a></li>
+<li><a href="/blog/new-in-devtools-99#source-tree">Improved source folder tree in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-99#worker-sourcemap">Display worker source files in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-99#auto-dark-mode">Chrome's Auto Dark Theme updates</a></li>
+<li><a href="/blog/new-in-devtools-99#touch-friendly">Touch-friendly color-picker and split pane</a></li>
+<li><a href="/blog/new-in-devtools-99#misc">Miscellaneous highlights</a></li>
+
+<h3 id="chrome98" data-text="Chrome 98" tabindex="-1">Chrome 98</h3>
+
+<li><a href="/blog/new-in-devtools-98#a11y-tree">Preview feature: Full-page accessibility tree</a></li>
+<li><a href="/blog/new-in-devtools-98#changes">More precise changes in the Changes tab</a></li>
+<li><a href="/blog/new-in-devtools-98#recorder-timeout">Set longer timeout for user flow recording</a></li>
+<li><a href="/blog/new-in-devtools-98#bfcache">Ensure your pages are cacheable with the Back/forward cache tab</a></li>
+<li><a href="/blog/new-in-devtools-98#properties">New Properties pane filter</a></li>
+<li><a href="/blog/new-in-devtools-98#forced-colors">Emulate the CSS forced-colors media feature</a></li>
+<li><a href="/blog/new-in-devtools-98#show-rulers">Show rulers on hover command</a></li>
+<li><a href="/blog/new-in-devtools-98#flexbox-editor">Support <code translate="no" dir="ltr">row-reverse</code> and <code translate="no" dir="ltr">column-reverse</code> in the Flexbox editor</a></li>
+<li><a href="/blog/new-in-devtools-98#shortcuts">New keyboard shortcuts to replay XHR and expand all search results</a></li>
+<li><a href="/blog/new-in-devtools-98#lighthouse">Lighthouse 9 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-98#sources">Improved Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-98#misc">Miscellaneous highlights</a></li>
+<li><a href="/blog/new-in-devtools-98#reporting-api">[Experimental] Endpoints in the Reporting API pane</a></li>
+
+<h3 id="chrome97" data-text="Chrome 97" tabindex="-1">Chrome 97</h3>
+
+<li><a href="/blog/new-in-devtools-97#recorder">Preview feature: New Recorder panel</a></li>
+<li><a href="/blog/new-in-devtools-97#device">Refresh device list in Device Mode</a></li>
+<li><a href="/blog/new-in-devtools-97#code-completion">Autocomplete with Edit as HTML</a></li>
+<li><a href="/blog/new-in-devtools-97#debugging">Improved code debugging experience</a></li>
+<li><a href="/blog/new-in-devtools-97#sync">Syncing DevTools settings across devices</a></li>
+
+<h3 id="chrome96" data-text="Chrome 96" tabindex="-1">Chrome 96</h3>
+
+<li><a href="/blog/new-in-devtools-96#css-overview">Preview feature: New CSS Overview panel</a></li>
+<li><a href="/blog/new-in-devtools-96#length">Restored and improved CSS length edit and copy experince</a></li>
+<li><a href="/blog/new-in-devtools-96#prefers-contrast">Emulate the CSS prefers-contrast media feature</a></li>
+<li><a href="/blog/new-in-devtools-96#auto-dark-mode">Emulate the Chrome's Auto Dark Theme feature</a></li>
+<li><a href="/blog/new-in-devtools-96#copy-as-js">Copy declarations as JavaScript in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-96#payload">New Payload tab in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-96#properties">Improved the display of properties in the Properties pane</a></li>
+<li><a href="/blog/new-in-devtools-96#hide-cors-errors">Option to hide CORS errors in the Console</a></li>
+<li><a href="/blog/new-in-devtools-96#intl">Proper <code translate="no" dir="ltr">Intl</code> objects preview and evaluation in the Console</a></li>
+<li><a href="/blog/new-in-devtools-96#async">Consistent async stack traces</a></li>
+<li><a href="/blog/new-in-devtools-96#console-sidebar">Retain the Console sidebar</a></li>
+<li><a href="/blog/new-in-devtools-96#app-cache">Deprecated Application cache pane in the Application panel</a></li>
+<li><a href="/blog/new-in-devtools-96#reporting-api">[Experimental] New Reporting API pane in the Application panel</a></li>
+
+<h3 id="chrome95" data-text="Chrome 95" tabindex="-1">Chrome 95</h3>
+
+<li><a href="/blog/new-in-devtools-95#length">New CSS length authoring tools</a></li>
+<li><a href="/blog/new-in-devtools-95#hide-issues">Hide issues in the Issues tab</a></li>
+<li><a href="/blog/new-in-devtools-95#properties">Improved the display of properties</a></li>
+<li><a href="/blog/new-in-devtools-95#lighthouse">Lighthouse 8.4 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-95#snippets">Sort snippets in the Sources panel</a></li>
+<li><a href="/blog/new-in-devtools-95#localized">New links to translated release notes and report a translation bug</a></li>
+<li><a href="/blog/new-in-devtools-95#command-menu">Improved UI for DevTools command menu</a></li>
+
+<h3 id="chrome94" data-text="Chrome 94" tabindex="-1">Chrome 94</h3>
+
+<li><a href="/blog/new-in-devtools-94#localized">Use DevTools in your preferred language</a></li>
+<li><a href="/blog/new-in-devtools-94#nest-hub">New Nest Hub devices in the Device list</a></li>
+<li><a href="/blog/new-in-devtools-94#origin-trials">Origin trials in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-94#container-queries">New CSS container queries badge</a></li>
+<li><a href="/blog/new-in-devtools-94#nvert-network-filter">New checkbox to invert the network filters</a></li>
+<li><a href="/blog/new-in-devtools-94#deprecated">Upcoming deprecation of the Console sidebar</a></li>
+<li><a href="/blog/new-in-devtools-94#raw-cookies">Display raw <code translate="no" dir="ltr">Set-Cookies</code> headers in the Issues tab and Network panel</a></li>
+<li><a href="/blog/new-in-devtools-94#native-accessors">Consistent display native accessors as own properties in the Console</a></li>
+<li><a href="/blog/new-in-devtools-94#inline-script">Proper error stack traces for inline scripts with #sourceURL</a></li>
+<li><a href="/blog/new-in-devtools-94#color-unit">Change color format in the Computed pane</a></li>
+<li><a href="/blog/new-in-devtools-94#tooltip">Replace custom tooltips with native HTML tooltips</a></li>
+<li><a href="/blog/new-in-devtools-94#hide-issues">[Experimental] Hide issues in the Issues tab</a></li>
+
+<h3 id="chrome93" data-text="Chrome 93" tabindex="-1">Chrome 93</h3>
+
+<li><a href="/blog/new-in-devtools-93#container-queries">Editable CSS container queries in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-93#web-bundle">Web bundle preview in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-93#attribution-reporting">Attribution Reporting API debugging</a></li>
+<li><a href="/blog/new-in-devtools-93#string">Better string handling in the Console</a></li>
+<li><a href="/blog/new-in-devtools-93#cors">Improved CORS debugging</a></li>
+<li><a href="/blog/new-in-devtools-93#lighthouse">Lighthouse 8.1</a></li>
+<li><a href="/blog/new-in-devtools-93#new-note-url">New note URL in the Manifest pane</a></li>
+<li><a href="/blog/new-in-devtools-93#matching-selectors">Fixed CSS matching selectors</a></li>
+<li><a href="/blog/new-in-devtools-93#pretty-print-json">Pretty-printing JSON responses in the Network panel</a></li>
+
+<h3 id="chrome92" data-text="Chrome 92" tabindex="-1">Chrome 92</h3>
+
+<li><a href="/blog/new-in-devtools-92#grid-editor">CSS grid editor</a></li>
+<li><a href="/blog/new-in-devtools-92#const-redeclaration">Support for <code translate="no" dir="ltr">const</code> redeclarations in the Console</a></li>
+<li><a href="/blog/new-in-devtools-92#source-order">Source order viewer</a></li>
+<li><a href="/blog/new-in-devtools-92#frame-details">New shortcut to view frame details</a></li>
+<li><a href="/blog/new-in-devtools-92#cors">Enhanced CORS debugging support</a></li>
+<li><a href="/blog/new-in-devtools-92#fetch-xhr">Rename XHR label to Fetch/XHR</a></li>
+<li><a href="/blog/new-in-devtools-92#wasm">Filter Wasm resource type in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-92#sec-ua-ch">User-Agent Client Hints for devices in the Network conditions tab</a></li>
+<li><a href="/blog/new-in-devtools-92#quirks-mode">Report Quirks mode issues in the Issues tab</a></li>
+<li><a href="/blog/new-in-devtools-92#computed-intersections">Include Compute Intersections in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-92#lighthouse">Lighthouse 7.5 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-92#restart-frame">Deprecated "Restart frame" context menu in the call stack</a></li>
+<li><a href="/blog/new-in-devtools-92#protocol-monitor">[Experimental] Protocol monitor</a></li>
+<li><a href="/blog/new-in-devtools-92#puppeteer-recorder">[Experimental] Puppeteer Recorder</a></li>
+
+<h3 id="chrome91" data-text="Chrome 91" tabindex="-1">Chrome 91</h3>
+
+<li><a href="/blog/new-in-devtools-91#web-vitals">Web Vitals information pop up</a></li>
+<li><a href="/blog/new-in-devtools-91#memory-inspector">New Memory inspector</a></li>
+<li><a href="/blog/new-in-devtools-91#css-croll-snap">Visualize CSS scroll-snap</a></li>
+<li><a href="/blog/new-in-devtools-91#badge-settings">New badge settings pane</a></li>
+<li><a href="/blog/new-in-devtools-91#image-preview">Enhanced image preview with aspect ratio information</a></li>
+<li><a href="/blog/new-in-devtools-91#network-panel">New network conditions button with options to configure <code translate="no" dir="ltr">Content-Encoding</code>s</a></li>
+<li><a href="/blog/new-in-devtools-91#computed-value">shortcut to view computed value</a></li>
+<li><a href="/blog/new-in-devtools-91#accent-color"><code translate="no" dir="ltr">accent-color</code> keyword</a></li>
+<li><a href="/blog/new-in-devtools-91#issue-category">Categorize issue types with colors and icons</a></li>
+<li><a href="/blog/new-in-devtools-91#trust-tokens">Delete Trust tokens</a></li>
+<li><a href="/blog/new-in-devtools-91#permissions-policy">Blocked features in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-91#filter-experiment">Filter experiments in the Experiments setting</a></li>
+<li><a href="/blog/new-in-devtools-91#vary-header">New <code translate="no" dir="ltr">Vary Header</code> column in the Cache storage pane</a></li>
+<li><a href="/blog/new-in-devtools-91#javascript">Support JavaScript private brand check</a></li>
+<li><a href="/blog/new-in-devtools-91#breakpoint">Enhanced support for breakpoints debugging</a></li>
+<li><a href="/blog/new-in-devtools-91#expression-preview">Support hover preview with <code translate="no" dir="ltr">[]</code> notation</a></li>
+<li><a href="/blog/new-in-devtools-91#html-outline">Improved outline of HTML files</a></li>
+<li><a href="/blog/new-in-devtools-91#error-stack-traces">Proper error stack traces for Wasm debugging</a></li>
+
+<h3 id="chrome90" data-text="Chrome 90" tabindex="-1">Chrome 90</h3>
+
+<li><a href="/blog/new-in-devtools-90#flexbox">New CSS flexbox debugging tools</a></li>
+<li><a href="/blog/new-in-devtools-90#cwv">New Core Web Vitals overlay</a></li>
+<li><a href="/blog/new-in-devtools-90#issue-count">Moved issue count to the Console status bar</a></li>
+<li><a href="/blog/new-in-devtools-90#twa">Report Trusted Web Activity issues</a></li>
+<li><a href="/blog/new-in-devtools-90#double-quotes">Format strings as (valid) JavaScript string literals in the Console</a></li>
+<li><a href="/blog/new-in-devtools-90#trust-token-pane">New Trust Tokens pane in the Application panel</a></li>
+<li><a href="/blog/new-in-devtools-90#css-gamut">Emulate the CSS color-gamut media feature</a></li>
+<li><a href="/blog/new-in-devtools-90#pwa">Improved Progressive Web Apps tooling</a></li>
+<li><a href="/blog/new-in-devtools-90#remote-address-space">New <code translate="no" dir="ltr">Remote Address Space</code> column in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-90#perf">Performance improvements</a></li>
+<li><a href="/blog/new-in-devtools-90#permission-policy">Display allowed/disallowed features in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-90">New <code translate="no" dir="ltr">SameParty</code> column in the Cookies pane</a></li>
+<li><a href="/blog/new-in-devtools-90#display-name">Deprecated non-standard <code translate="no" dir="ltr">fn.displayName</code> support</a></li>
+<li><a href="/blog/new-in-devtools-90#data-saver-warning">Deprecation of <code translate="no" dir="ltr">Don't show Chrome Data Saver warning</code> in the Settings menu</a></li>
+<li><a href="/blog/new-in-devtools-90#low-contrast">[Experimental] Automatic low-contrast issue reporting in the Issues tab</a></li>
+<li><a href="/blog/new-in-devtools-90#accessibility-tree">[Experimental] Full accessibility tree view in the Elements panel</a></li>
+
+<h3 id="chrome89" data-text="Chrome 89" tabindex="-1">Chrome 89</h3>
+
+<li><a href="/blog/new-in-devtools-89#trusted-types">Debugging support for Trusted Types violations</a></li>
+<li><a href="/blog/new-in-devtools-89#node-screenshot">Capture node screenshot beyond viewport</a></li>
+<li><a href="/blog/new-in-devtools-89#trust-token">New Trust Tokens tab for network requests</a></li>
+<li><a href="/blog/new-in-devtools-89#lighthouse">Lighthouse 7 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-89#force-target">Support forcing the CSS <code translate="no" dir="ltr">:target</code> state</a></li>
+<li><a href="/blog/new-in-devtools-89#duplicate-element">New shortcut to duplicate element</a></li>
+<li><a href="/blog/new-in-devtools-89#color-picker">Color pickers for custom CSS properties</a></li>
+<li><a href="/blog/new-in-devtools-89#copy-css">New shortcuts to copy CSS properties</a></li>
+<li><a href="/blog/new-in-devtools-89#cookies-decoded">New option to show URL-decoded cookies</a></li>
+<li><a href="/blog/new-in-devtools-89#clear-cookies">Clear only visible cookies</a></li>
+<li><a href="/blog/new-in-devtools-89#third-party-cookies">New option to clear third-party cookies in the Storage pane</a></li>
+<li><a href="/blog/new-in-devtools-89#ua-ch">Edit User-Agent Client Hints for custom devices</a></li>
+<li><a href="/blog/new-in-devtools-89#network-log">Persist "record network log" setting</a></li>
+<li><a href="/blog/new-in-devtools-89#webtransport">View WebTransport connections in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-89#no-throttling">"Online" renamed to "No throttling"</a></li>
+<li><a href="/blog/new-in-devtools-89#copy-sources-console">New copy options in the Console, Sources panel, and Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-89#sw">New Service Workers information in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-89#measure-memory">Measure Memory information in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-89#issues-feedback">Provide feedback from the Issues tab</a></li>
+<li><a href="/blog/new-in-devtools-89#dropped-frames">Dropped frames in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-89#dual-screen">Emulate foldable and dual-screen in Device Mode</a></li>
+<li><a href="/blog/new-in-devtools-89#record">[Experimental] Automate browser testing with Puppeteer Recorder</a></li>
+<li><a href="/blog/new-in-devtools-89#font">[Experimental] Font editor in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-89#flexbox">[Experimental] CSS flexbox debugging tools</a></li>
+<li><a href="/blog/new-in-devtools-89#csp">[Experimental] New CSP Violations tab</a></li>
+<li><a href="/blog/new-in-devtools-89#apca">[Experimental] New color contrast calculation - Advanced Perceptual Contrast Algorithm (APCA)</a></li>
+
+<h3 id="chrome88" data-text="Chrome 88" tabindex="-1">Chrome 88</h3>
+
+<li><a href="/blog/new-in-devtools-88#fast-startup">Faster DevTools startup</a></li>
+<li><a href="/blog/new-in-devtools-88#css-angle">New CSS angle visualization tools</a></li>
+<li><a href="/blog/new-in-devtools-88#emulate-image">Emulate unsupported image types</a></li>
+<li><a href="/blog/new-in-devtools-88#simulate-storage">Simulate storage quota size in the Storage pane</a></li>
+<li><a href="/blog/new-in-devtools-88#web-vitals">New Web Vitals lane in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-88#cors">Report CORS errors in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-88#cross-origin">Cross-origin isolation information in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-88#web-worker">New Web Workers information in the Frame details view</a></li>
+<li><a href="/blog/new-in-devtools-88#opener-frame">Display opener frame details for opened windows</a></li>
+<li><a href="/blog/new-in-devtools-88#sw">Open Network panel from the Service Workers pane</a></li>
+<li><a href="/blog/new-in-devtools-88#copy-value">Copy property value</a></li>
+<li><a href="/blog/new-in-devtools-88#copy-stacktrace">Copy stacktrace for network initiator</a></li>
+<li><a href="/blog/new-in-devtools-88#wasm-mouseover">Preview Wasm variable value on mouseover</a></li>
+<li><a href="/blog/new-in-devtools-88#wasm-console">Evaluate Wasm variable in the Console</a></li>
+<li><a href="/blog/new-in-devtools-88#onsistent-kb">Consistent units of measurement for file/memory sizes</a></li>
+<li><a href="/blog/new-in-devtools-88#pseudo">Highlight pseudo elements in the Elements panel</a></li>
+<li><a href="/blog/new-in-devtools-88#flexbox">[Experimental] CSS Flexbox debugging tools</a></li>
+<li><a href="/blog/new-in-devtools-88#keyboard-shortcuts">[Experimental] Customize chords keyboard shortcuts</a></li>
+
+<h3 id="chrome87" data-text="Chrome 87" tabindex="-1">Chrome 87</h3>
+
+<li><a href="/blog/new-in-devtools-87#css-grid">New CSS Grid debugging tools</a></li>
+<li><a href="/blog/new-in-devtools-87#webauthn">New WebAuthn tab</a></li>
+<li><a href="/blog/new-in-devtools-87#moveable-tools">Move tools between top and bottom panel</a></li>
+<li><a href="/blog/new-in-devtools-87#computed-sidebar-pane">New Computed sidebar pane in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-87#grouping-css-prop">Grouping CSS properties in the Computed pane</a></li>
+<li><a href="/blog/new-in-devtools-87#lighthouse">Lighthouse 6.3 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-87#perf-mark"><code translate="no" dir="ltr">performance.mark()</code> events in the Timings section</a></li>
+<li><a href="/blog/new-in-devtools-87#network-filters">New <code translate="no" dir="ltr">resource-type</code> and <code translate="no" dir="ltr">url</code> filters in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-87#rame-details">Frame details view updates</a></li>
+<li><a href="/blog/new-in-devtools-87#deprecate-settings">Deprecation of <code translate="no" dir="ltr">Settings</code> in the More tools menu</a></li>
+<li><a href="/blog/new-in-devtools-87#css-overview">[Experimental] View and fix color contrast issues in the CSS Overview panel</a></li>
+<li><a href="/blog/new-in-devtools-87#customized-keyboard-shortcuts">[Experimental] Customize keyboard shortcuts in DevTools</a></li>
+
+<h3 id="chrome86" data-text="Chrome 86" tabindex="-1">Chrome 86</h3>
+
+<li><a href="/blog/new-in-devtools-86#media-panel">New Media panel</a></li>
+<li><a href="/blog/new-in-devtools-86#capture-node-screenshot">Capture node screenshots using Elements panel context menu</a></li>
+<li><a href="/blog/new-in-devtools-86#issues-tab">Issues tab updates</a></li>
+<li><a href="/blog/new-in-devtools-86#emulate-local-fonts">Emulate missing local fonts</a></li>
+<li><a href="/blog/new-in-devtools-86#emulate-inactive-users">Emulate inactive users</a></li>
+<li><a href="/blog/new-in-devtools-86#emulate-prefers-reduced-data">Emulate <code translate="no" dir="ltr">prefers-reduced-data</code></a></li>
+<li><a href="/blog/new-in-devtools-86#javascript">Support for new JavaScript features</a></li>
+<li><a href="/blog/new-in-devtools-86#lighthouse">Lighthouse 6.2 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-86#deprecate-sw-other-origins">Deprecation of "other origins" listing in the Service Workers pane</a></li>
+<li><a href="/blog/new-in-devtools-86#filter-coverage-summary">Show coverage summary for filtered items</a></li>
+<li><a href="/blog/new-in-devtools-86#frame-detailed-view">New frame details view in Application panel</a></li>
+<li><a href="/blog/new-in-devtools-86#accessible-color">Accessible color suggestion in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-86#properties">Reinstate <strong>Properties</strong> pane in the Elements panel</a></li>
+<li><a href="/blog/new-in-devtools-86#x-client-data">Human-readable <code translate="no" dir="ltr">X-Client-Data</code> header values in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-86#auto-complete-custom-fonts">Auto-complete custom fonts in the Styles pane</a></li>
+<li><a href="/blog/new-in-devtools-86#redirect-resource-type">Consistently display resource type in Network panel</a></li>
+<li><a href="/blog/new-in-devtools-86#clear-input-button">Clear buttons in the Elements and Network panels</a></li>
+
+<h3 id="chrome85" data-text="Chrome 85" tabindex="-1">Chrome 85</h3>
+
+<li><a href="/blog/new-in-devtools-85#css-in-js">Style editing for CSS-in-JS frameworks</a></li>
+<li><a href="/blog/new-in-devtools-85#lighthouse">Lighthouse 6 in the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-85#fmp-deprecation">First Meaningful Paint (FMP) deprecation</a></li>
+<li><a href="/blog/new-in-devtools-85#javascript">Support for new JavaScript features</a></li>
+<li><a href="/blog/new-in-devtools-85#app-shortcut-warnings">New app shortcut warnings in the Manifest pane</a></li>
+<li><a href="/blog/new-in-devtools-85#timing-tab">Service worker <code translate="no" dir="ltr">respondWith</code> events in the Timing tab</a></li>
+<li><a href="/blog/new-in-devtools-85#compute-pane">Consistent display of the Computed pane</a></li>
+<li><a href="/blog/new-in-devtools-85#wasm">Bytecode offsets for WebAssembly files</a></li>
+<li><a href="/blog/new-in-devtools-85#sources-panel">Line-wise copy and cut in Sources Panel</a></li>
+<li><a href="/blog/new-in-devtools-85#console-settings">Console settings updates</a></li>
+<li><a href="/blog/new-in-devtools-85#perf-panel">Performance panel updates</a></li>
+<li><a href="/blog/new-in-devtools-85#breakpoints">New icons for breakpoints, conditional breakpoints, and logpoints</a></li>
+
+<h3 id="chrome84" data-text="Chrome 84" tabindex="-1">Chrome 84</h3>
+
+<li><a href="/blog/new-in-devtools-84#issues">Fix site issues with the new Issues tab</a></li>
+<li><a href="/blog/new-in-devtools-84#a11y">View accessibility information in the Inspect Mode tooltip</a></li>
+<li><a href="/blog/new-in-devtools-84#performance">Performance panel updates</a></li>
+<li><a href="/blog/new-in-devtools-84#promises">More accurate promise terminology in the Console</a></li>
+<li><a href="/blog/new-in-devtools-84#styles">Styles pane updates</a></li>
+<li><a href="/blog/new-in-devtools-84#properties">Deprecation of the <strong>Properties</strong> pane in the Elements panel</a></li>
+<li><a href="/blog/new-in-devtools-84#app-shortcuts">App shortcuts support in the Manifest pane</a></li>
+
+<h3 id="chrome83" data-text="Chrome 83" tabindex="-1">Chrome 83</h3>
+
+<li><a href="/blog/new-in-devtools-83#vision-deficiencies">Emulate vision deficiencies</a></li>
+<li><a href="/blog/new-in-devtools-83#locales">Emulate locales</a></li>
+<li><a href="/blog/new-in-devtools-83#COEP">Cross-Origin Embedder Policy (COEP) debugging</a></li>
+<li><a href="/blog/new-in-devtools-83#debugging-icons">New icons for breakpoints, conditional breakpoints, and logpoints</a></li>
+<li><a href="/blog/new-in-devtools-83#cookie-path">View network requests that set a specific cookie</a></li>
+<li><a href="/blog/new-in-devtools-83#dock-to-left">Dock to left from the Command Menu</a></li>
+<li><a href="/blog/new-in-devtools-83#settings">The Settings option in the Main Menu has moved</a></li>
+<li><a href="/blog/new-in-devtools-83#lighthouse">The Audits panel is now the Lighthouse panel</a></li>
+<li><a href="/blog/new-in-devtools-83#overrides">Delete all Local Overrides in a folder</a></li>
+<li><a href="/blog/new-in-devtools-83#long-tasks">Updated Long Tasks UI</a></li>
+<li><a href="/blog/new-in-devtools-83#maskable-icons">Maskable icon support in the Manifest pane</a></li>
+
+<h3 id="chrome82" data-text="Chrome 82" tabindex="-1">Chrome 82</h3>
+
+<p><a href="https://blog.chromium.org/2020/03/chrome-and-chrome-os-release-updates.html">Chrome 82 was cancelled</a>.</p>
+
+<h3 id="chrome81" data-text="Chrome 81" tabindex="-1">Chrome 81</h3>
+
+<li><a href="/blog/new-in-devtools-81#motog4">Moto G4 support in Device Mode</a></li>
+<li><a href="/blog/new-in-devtools-81#cookies">Cookie-related updates</a></li>
+<li><a href="/blog/new-in-devtools-81#manifesticons">More accurate web app manifest icons</a></li>
+<li><a href="/blog/new-in-devtools-81#content">Hover over CSS <code translate="no" dir="ltr">content</code> properties to see unescaped values</a></li>
+<li><a href="/blog/new-in-devtools-81#sourcemaperrors">Source map errors in the Console</a></li>
+<li><a href="/blog/new-in-devtools-81#scrolling">Setting for disabling scrolling past the end of a file</a></li>
+
+<h3 id="chrome80" data-text="Chrome 80" tabindex="-1">Chrome 80</h3>
+
+<li><a href="/blog/new-in-devtools-80#redeclarations">Support for <code translate="no" dir="ltr">let</code> and <code translate="no" dir="ltr">class</code> redeclarations in the Console</a></li>
+<li><a href="/blog/new-in-devtools-80#webassembly">Improved WebAssembly debugging</a></li>
+<li><a href="/blog/new-in-devtools-80#initiators">Request Initiator Chains in the Initiator tab</a></li>
+<li><a href="/blog/new-in-devtools-80#overview">Highlight the selected network request in the Overview</a></li>
+<li><a href="/blog/new-in-devtools-80#columns">URL and path columns in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-80#useragents">Updated User-Agent strings</a></li>
+<li><a href="/blog/new-in-devtools-80#config">New Audits panel configuration UI</a></li>
+<li><a href="/blog/new-in-devtools-80#modes">Per-function or per-block code coverage modes</a></li>
+<li><a href="/blog/new-in-devtools-80#reload">Code coverage must now be initiated by a page reload</a></li>
+
+<h3 id="chrome79" data-text="Chrome 79" tabindex="-1">Chrome 79</h3>
+
+<li><a href="/blog/new-in-devtools-79#blockedcookies">Debug why a cookie was blocked</a></li>
+<li><a href="/blog/new-in-devtools-79#cookiepreviews">View cookie values</a></li>
+<li><a href="/blog/new-in-devtools-79#userpreferences">Simulate different prefers-color-scheme and prefers-reduced-motion preferences</a></li>
+<li><a href="/blog/new-in-devtools-79#coverage">Code coverage updates</a></li>
+<li><a href="/blog/new-in-devtools-79#initiator">Debug why a network resource was requested</a></li>
+<li><a href="/blog/new-in-devtools-79#indentation">Console and Sources panels respect indentation preferences again</a></li>
+<li><a href="/blog/new-in-devtools-79#console">New shortcuts for cursor navigation</a></li>
+
+<h3 id="chrome78" data-text="Chrome 78" tabindex="-1">Chrome 78</h3>
+
+<li><a href="/blog/new-in-devtools-78#multiclient">Multi-client support in the Audits panel</a></li>
+<li><a href="/blog/new-in-devtools-78#payments">Payment Handler debugging</a></li>
+<li><a href="/blog/new-in-devtools-78#audits">Lighthouse 5.2 in the Audits panel</a></li>
+<li><a href="/blog/new-in-devtools-78#LCP">Largest Contentful Paint in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-78#issues">File DevTools issues from the Main Menu</a></li>
+
+<h3 id="chrome77" data-text="Chrome 77" tabindex="-1">Chrome 77</h3>
+
+<li><a href="/blog/new-in-devtools-77#copystyles">Copy element styles</a></li>
+<li><a href="/blog/new-in-devtools-77#layoutshifts">Visualize layout shifts</a></li>
+<li><a href="/blog/new-in-devtools-77#audits">Lighthouse 5.1 in the Audits panel</a></li>
+<li><a href="/blog/new-in-devtools-77#theming">OS theme syncing</a></li>
+<li><a href="/blog/new-in-devtools-77#breakpointeditor">Keyboard shortcut for opening the Breakpoint Editor</a></li>
+<li><a href="/blog/new-in-devtools-77#prefetch">Prefetch cache in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-77#privateclassfields">Private properties when viewing objects</a></li>
+<li><a href="/blog/new-in-devtools-77#backgroundservices">Notifications and push messages in the Application panel</a></li>
+
+<h3 id="chrome76" data-text="Chrome 76" tabindex="-1">Chrome 76</h3>
+
+<li><a href="/blog/new-in-devtools-76#values">Autocomplete with CSS values</a></li>
+<li><a href="/blog/new-in-devtools-76#settings">A new UI for network settings</a></li>
+<li><a href="/blog/new-in-devtools-76#websocket">WebSocket messages in HAR exports</a></li>
+<li><a href="/blog/new-in-devtools-76#HAR">HAR import and export buttons</a></li>
+<li><a href="/blog/new-in-devtools-76#memory">Real-time memory usage</a></li>
+<li><a href="/blog/new-in-devtools-76#ports">Service worker registration port numbers</a></li>
+<li><a href="/blog/new-in-devtools-76#background">Inspect Background Fetch and Background Sync events</a></li>
+<li><a href="/blog/new-in-devtools-76#puppeteer">Puppeteer for Firefox</a></li>
+
+<h3 id="chrome75" data-text="Chrome 75" tabindex="-1">Chrome 75</h3>
+
+<li><a href="/blog/new-in-devtools-75#presets">Meaningful presets when autocompleting CSS functions</a></li>
+<li><a href="/blog/new-in-devtools-75#clear">Clear site data from the Command Menu</a></li>
+<li><a href="/blog/new-in-devtools-75#indexeddb">View all IndexedDB databases</a></li>
+<li><a href="/blog/new-in-devtools-75#uncompressed">View a resource's uncompressed size on hover</a></li>
+<li><a href="/blog/new-in-devtools-75#inline">Inline breakpoints in the Breakpoints pane</a></li>
+<li><a href="/blog/new-in-devtools-75#counts">IndexedDB and Cache resource counts</a></li>
+<li><a href="/blog/new-in-devtools-75#inspect">Setting for disabling the detailed Inspect tooltip</a></li>
+<li><a href="/blog/new-in-devtools-75#tab">Setting for toggling tab indentation in the Editor</a></li>
+
+<h3 id="chrome74" data-text="Chrome 74" tabindex="-1">Chrome 74</h3>
+
+<li><a href="/blog/new-in-devtools-74#highlight">Highlight all nodes affected by CSS property</a></li>
+<li><a href="/blog/new-in-devtools-74#lighthouse">Lighthouse v4 in the Audits panel</a></li>
+<li><a href="/blog/new-in-devtools-74#binary">WebSocket binary message viewer</a></li>
+<li><a href="/blog/new-in-devtools-74#screenshot">Capture area screenshot in the Command Menu</a></li>
+<li><a href="/blog/new-in-devtools-74#swfilters">Service worker filters in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-74#perf">Performance panel updates</a></li>
+<li><a href="/blog/new-in-devtools-74#longtasks">Long tasks in Performance panel recordings</a></li>
+<li><a href="/blog/new-in-devtools-74#FP">First Paint in the Timing section</a></li>
+<li>Bonus tip: <a href="https://youtu.be/I14fXc7sXdU?t=221">Shortcut for viewing RGB and HSL color codes</a> (video)</li>
+
+<h3 id="chrome73" data-text="Chrome 73" tabindex="-1">Chrome 73</h3>
+
+<li><a href="/blog/new-in-devtools-73#logpoints">Logpoints</a></li>
+<li><a href="/blog/new-in-devtools-73#inspect">Detailed tooltips in Inspect Mode</a></li>
+<li><a href="/blog/new-in-devtools-73#coverage">Export code coverage data</a></li>
+<li><a href="/blog/new-in-devtools-73#keyboard">Navigate the Console with a keyboard</a></li>
+<li><a href="/blog/new-in-devtools-73#AAA">AAA contrast ratio line in the Color Picker</a></li>
+<li><a href="/blog/new-in-devtools-73#geolocation">Save custom geolocation overrides</a></li>
+<li><a href="/blog/new-in-devtools-73#folding">Code folding</a></li>
+<li><a href="/blog/new-in-devtools-73#messages">Frames tab renamed to Messages tab</a></li>
+<li>Bonus tip: <a href="https://youtu.be/uddZX9ZK6wY?t=338">Network panel filtering by property</a> (video)</li>
+
+<h3 id="chrome72" data-text="Chrome 72" tabindex="-1">Chrome 72</h3>
+
+<li><a href="/blog/new-in-devtools-72#metrics">Visualize performance metrics</a> in the Performance panel</li>
+<li><a href="/blog/new-in-devtools-72#highlight">Highlight text nodes</a> in the DOM Tree</li>
+<li><a href="/blog/new-in-devtools-72#copy">Copy the JS path</a> to a DOM node</li>
+<li><a href="/blog/new-in-devtools-72#audits">Audits panel updates</a>, including a new audit
+that detects JS libraries and new keywords for accessing the Audits panel from the Command Menu</li>
+<li>Bonus tip: <a href="https://youtu.be/XVJxlEdB230?t=155">Use Device Mode to inspect media queries</a> (video)</li>
+
+<h3 id="chrome71" data-text="Chrome 71" tabindex="-1">Chrome 71</h3>
+
+<li><a href="/blog/new-in-devtools-71#hover">Hover over a Live Expression result</a> to highlight a DOM node</li>
+<li><a href="/blog/new-in-devtools-71">Store DOM nodes as global variables</a></li>
+<li><a href="/blog/new-in-devtools-71">Initiator and priority information now in HAR imports and exports</a></li>
+<li><a href="/blog/new-in-devtools-71">Access the Command Menu from the Main Menu</a></li>
+<li><a href="/blog/new-in-devtools-71">Picture-in-Picture breakpoints</a></li>
+<li>Bonus tip: <a href="https://youtu.be/fJxFZO8OEEs?t=154">Use <code translate="no" dir="ltr">monitorEvents()</code> to log a node's fired events in the
+Console</a> (video)</li>
+
+<h3 id="chrome70" data-text="Chrome 70" tabindex="-1">Chrome 70</h3>
+
+<li><a href="/blog/new-in-devtools-70#watch">Live Expressions</a> in the Console</li>
+<li><a href="/blog/new-in-devtools-70#nodes">Highlight DOM nodes during Eager Evaluation</a></li>
+<li><a href="/blog/new-in-devtools-70#performance">Performance panel optimizations</a></li>
+<li><a href="/blog/new-in-devtools-70#debugging">More reliable debugging</a></li>
+<li><a href="/blog/new-in-devtools-70#throttling">Enable network throttling from the Command Menu</a></li>
+<li><a href="/blog/new-in-devtools-70#autocomplete">Autocomplete Conditional Breakpoints</a></li>
+<li><a href="/blog/new-in-devtools-70#audiocontext">Break on AudioContext events</a></li>
+<li><a href="/blog/new-in-devtools-70#ndb">Debug Node.js apps with ndb</a></li>
+<li>Bonus tip: <a href="/blog/new-in-devtools-70#bonus">Measure real world user interactions with the User Timing API</a></li>
+
+<h3 id="chrome68" data-text="Chrome 68" tabindex="-1">Chrome 68</h3>
+
+<li><a href="/blog/new-in-devtools-68#eagerevaluation">Eager Evaluation</a></li>
+<li><a href="/blog/new-in-devtools-68#hints">Argument hints</a></li>
+<li><a href="/blog/new-in-devtools-68#autocomplete">Function autocompletion</a></li>
+<li><a href="/blog/new-in-devtools-68#keywords">ES2017 keywords</a></li>
+<li><a href="/blog/new-in-devtools-68#lh3">Lighthouse 3.0 in the Audits panel</a></li>
+<li><a href="/blog/new-in-devtools-68#bigint">BigInt support</a></li>
+<li><a href="/blog/new-in-devtools-68#watch">Adding property paths to the Watch pane</a></li>
+<li><a href="/blog/new-in-devtools-68#timestamps">"Show timestamps" moved to Settings</a></li>
+<li>Bonus tip: <a href="https://youtu.be/br4JZ5qz_20?t=199">Lesser-known Console methods</a> (video)</li>
+
+<h3 id="chrome67" data-text="Chrome 67" tabindex="-1">Chrome 67</h3>
+
+<li><a href="/blog/new-in-devtools-67#network-search">Search across all network headers</a></li>
+<li><a href="/blog/new-in-devtools-67#vars">CSS variable value previews</a></li>
+<li><a href="/blog/new-in-devtools-67#fetch">Copy as fetch</a></li>
+<li><a href="/blog/new-in-devtools-67#audits">New audits, desktop configuration options, and viewing traces</a></li>
+<li><a href="/blog/new-in-devtools-67#stop">Stop infinite loops</a></li>
+<li><a href="/blog/new-in-devtools-67#tabs">User Timing in the Performance tabs</a></li>
+<li><a href="/blog/new-in-devtools-67#vm">JavaScript VM instances clearly listed in the Memory panel</a></li>
+<li><a href="/blog/new-in-devtools-67#page">Network tab renamed to Page tab</a></li>
+<li><a href="/blog/new-in-devtools-67#dark">Dark theme updates</a></li>
+<li><a href="/blog/new-in-devtools-67#security">Certificate transparency information in the Security panel</a></li>
+<li><a href="/blog/new-in-devtools-67#site-isolation">Site isolation features in the Performance panel</a></li>
+<li>Bonus tip: <a href="https://youtu.be/4EdPq9Nw6uI?t=184">Layers panel + Animations Inspector</a> (video)</li>
+
+<h3 id="chrome66" data-text="Chrome 66" tabindex="-1">Chrome 66</h3>
+
+<li><a href="/blog/new-in-devtools-66#blackboxing">Blackboxing in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-66#auto-adjust">Auto-adjust zooming in Device Mode</a></li>
+<li><a href="/blog/new-in-devtools-66#pretty-printing">Pretty-printing in the Preview and Response tabs</a></li>
+<li><a href="/blog/new-in-devtools-66#previews">Previewing HTML content in the Preview tab</a></li>
+<li><a href="/blog/new-in-devtools-66#overrides">Local Overrides support for styles inside of HTML</a></li>
+<li>Bonus tip: <a href="/blog/new-in-devtools-66#tip">Blackbox framework scripts to make Event Listener Breakpoints more useful</a></li>
+
+<h3 id="chrome65" data-text="Chrome 65" tabindex="-1">Chrome 65</h3>
+
+<li><a href="/blog/new-in-devtools-65#overrides">Local Overrides</a></li>
+<li><a href="/blog/new-in-devtools-65#a11y">New accessibility tools</a></li>
+<li><a href="/blog/new-in-devtools-65#changes">The Changes tab</a></li>
+<li><a href="/blog/new-in-devtools-65#audits">New SEO and performance audits</a></li>
+<li><a href="/blog/new-in-devtools-65#recordings">Multiple recordings in the Performance panel</a></li>
+<li><a href="/blog/new-in-devtools-65#stepping">Reliable code stepping with workers in async code</a></li>
+<li>Bonus tip: <a href="https://youtu.be/D1pV7ermy6w?t=342">Automate DevTools actions with Puppeteer</a> (video)</li>
+
+<h3 id="chrome64" data-text="Chrome 64" tabindex="-1">Chrome 64</h3>
+
+<li><a href="/blog/new-in-devtools-64#perf-monitor">Performance Monitor</a></li>
+<li><a href="/blog/new-in-devtools-64#console-sidebar">Console Sidebar</a></li>
+<li><a href="/blog/new-in-devtools-64#group-similar">Group similar Console messages</a></li>
+<li>Bonus tip: <a href="https://youtu.be/90wNAn05Cf4?t=159">Toggle hover pseudo-class</a> (video)</li>
+
+<h3 id="chrome63" data-text="Chrome 63" tabindex="-1">Chrome 63</h3>
+
+<li><a href="/blog/new-in-devtools-63#multi-client">Multi-client remote debugging support</a></li>
+<li><a href="/blog/new-in-devtools-63#workspaces">Workspaces 2.0</a></li>
+<li><a href="/blog/new-in-devtools-63#audits">4 new audits</a></li>
+<li><a href="/blog/new-in-devtools-63#push">Simulate push notifications with custom data</a></li>
+<li><a href="/blog/new-in-devtools-63#sync">Trigger background sync events with custom tags</a></li>
+<li>Bonus tip: <a href="https://youtu.be/Eyw_mwbABIQ?t=217">Event listener breakpoints</a> (video)</li>
+
+<h3 id="chrome62" data-text="Chrome 62" tabindex="-1">Chrome 62</h3>
+
+<li><a href="/blog/new-in-devtools-62#await">Top-level await in the Console</a></li>
+<li><a href="/blog/new-in-devtools-62#screenshots">New screenshot workflows</a></li>
+<li><a href="/blog/new-in-devtools-62#css-grid-highlighting">CSS Grid highlighting</a></li>
+<li><a href="/blog/new-in-devtools-62#query-objects">A new Console API for querying objects</a></li>
+<li><a href="/blog/new-in-devtools-62#console-filters">New Console filters</a></li>
+<li><a href="/blog/new-in-devtools-62#har-imports">HAR imports in the Network panel</a></li>
+<li><a href="/blog/new-in-devtools-62#cache-previews">Previewable cache resources</a></li>
+<li><a href="/blog/new-in-devtools-62#cache-debugging">More predictable cache debugging</a></li>
+<li><a href="/blog/new-in-devtools-62#coverage">Block-level code coverage</a></li>
+
+<h3 id="chrome61" data-text="Chrome 61" tabindex="-1">Chrome 61</h3>
+
+<li><a href="/blog/new-in-devtools-61#throttling">Mobile device throttling simulation</a></li>
+<li><a href="/blog/new-in-devtools-61#storage">View storage usage</a></li>
+<li><a href="/blog/new-in-devtools-61#time-cached">View when a service worker cached responses</a></li>
+<li><a href="/blog/new-in-devtools-61#fps-meter">Enable the FPS meter from the Command Menu</a></li>
+<li><a href="/blog/new-in-devtools-61#mousewheel">Set mousewheel behavior to zoom or scroll</a></li>
+<li><a href="/blog/new-in-devtools-61#modules">Debugging support for ES6 modules</a></li>
+
+<h3 id="chrome60" data-text="Chrome 60" tabindex="-1">Chrome 60</h3>
+
+<li><a href="/blog/new-in-devtools-60#lighthouse">New Audits panel</a></li>
+<li><a href="/blog/new-in-devtools-60#badges">3rd-Party Badges</a></li>
+<li><a href="/blog/new-in-devtools-60#continue">A new gesture for Continue To Here</a></li>
+<li><a href="/blog/new-in-devtools-60#step-into-async">Step into async</a></li>
+<li><a href="/blog/new-in-devtools-60#object-previews">More informative object previews in the Console</a></li>
+<li><a href="/blog/new-in-devtools-60#context">More informative context selection in the Console</a></li>
+<li><a href="/blog/new-in-devtools-60#coverage">Real-time updates in the Coverage tab</a></li>
+<li><a href="/blog/new-in-devtools-60#network-throttling">Simpler network throttling options</a></li>
+<li><a href="/blog/new-in-devtools-60#async-stacks">Async stacks on by default</a></li>
+
+<h3 id="chrome59" data-text="Chrome 59" tabindex="-1">Chrome 59</h3>
+
+<li><a href="/blog/new-in-devtools-59#coverage">CSS and JS code coverage</a></li>
+<li><a href="/blog/new-in-devtools-59#screenshots">Full-page screenshots</a></li>
+<li><a href="/blog/new-in-devtools-59#block-requests">Block requests</a></li>
+<li><a href="/blog/new-in-devtools-59#async">Step over async await</a></li>
+<li><a href="/blog/new-in-devtools-59#command-menu">Unified Command Menu</a></li>
+
+</ul>
+</div>
+</devsite-filter>
+</div>
+
+  
+
+  
+</div>
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2025-07-22 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-07-22 UTC."],[],[],null,[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Follow</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/static/blog/feed.xml"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            RSS
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        
+          aria-current="true">English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;blog&#34;, &#34;projectName&#34;: &#34;Blog&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="aqGItWiBp8yR6Tj80GFGpHBJaf5b7b">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d","https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/vd661722dc0bf89538e3b1471bfa72ffd39d274bea13001a4422eac953971d84d/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Cloud__enable_free_trial_server_call","MiscFeatureFlags__enable_appearance_cookies","Search__enable_ai_search_summaries_for_all","Search__enable_ai_eligibility_checks","Search__enable_page_map","Cloud__cache_serialized_dynamic_content","Profiles__enable_purchase_prompts","MiscFeatureFlags__emergency_css","Concierge__enable_actions_menu","Profiles__enable_complete_playlist_endpoint","Profiles__enable_public_developer_profiles","Profiles__enable_stripe_subscription_management","DevPro__enable_nvidia_credits_card","DevPro__enable_google_payments_buyflow","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__gdp_dashboard_reskin_enabled","MiscFeatureFlags__enable_firebase_utm","DevPro__remove_eu_tax_intake_form","MiscFeatureFlags__enable_view_transitions","BookNav__enable_tenant_cache_key","TpcFeatures__enable_unmirrored_page_left_nav","Profiles__enable_callout_notifications","Profiles__enable_playlist_community_acl","Experiments__reqs_query_experiments","Search__enable_suggestions_from_borg","Search__enable_dynamic_content_confidential_banner","Profiles__enable_completequiz_endpoint","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_release_notes_notifications","DevPro__enable_vertex_credit_card","DevPro__enable_enterprise","Concierge__enable_pushui","TpcFeatures__proxy_prod_host","DevPro__enable_developer_subscriptions","Cloud__enable_cloud_dlp_service","DevPro__enable_google_payments","Profiles__enable_user_type","Profiles__enable_awarding_url","MiscFeatureFlags__developers_footer_dark_image","CloudShell__cloud_code_overflow_menu","DevPro__enable_google_one_card","Cloud__enable_legacy_calculator_redirect","Profiles__enable_profile_collections","MiscFeatureFlags__enable_variable_operator","Profiles__enable_recognition_badges","Profiles__enable_page_saving","MiscFeatureFlags__enable_explain_this_code","DevPro__enable_embed_profile_creation","MiscFeatureFlags__enable_variable_operator_index_yaml","DevPro__enable_code_assist","MiscFeatureFlags__enable_project_body_class","Profiles__enable_join_program_group_endpoint","Analytics__enable_clearcut_logging","Cloud__enable_cloudx_experiment_ids","Cloud__enable_cloud_shell_fte_user_flow","DevPro__enable_cloud_innovators_plus","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__enable_explicit_template_dependencies","Cloud__fast_free_trial","Profiles__enable_developer_profiles_callout","Cloud__enable_llm_concierge_chat","CloudShell__cloud_shell_button","MiscFeatureFlags__enable_project_variables","DevPro__enable_free_benefits","Profiles__enable_completecodelab_endpoint","DevPro__enable_devpro_offers","Concierge__enable_remove_info_panel_tags","Cloud__enable_cloud_shell","Profiles__require_profile_eligibility_for_signin","OnSwitch__enable","Profiles__enable_developer_profile_benefits_ui_redesign","MiscFeatureFlags__enable_framebox_badge_methods","DevPro__enable_firebase_workspaces_card"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4,null,"https://developerprofiles-pa.googleapis.com",[53,"chrome","Chrome for Developers","developer.chrome.com",null,"chrome-dot-devsite-v2-prod-3p.appspot.com",null,null,[null,null,null,null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],null,null,null,null,[1,null,1],[1,1,null,1,1]],null,[69,null,null,null,null,null,"/images/lockup.svg","/images/touchicon-180.png",null,null,null,1,1,null,null,null,null,null,null,null,null,2,null,null,null,"/images/lockup-dark-theme.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[[],[1,1]],[[null,null,null,null,null,["GTM-5QF3RT2"],null,null,null,null,null,[["GTM-5QF3RT2",1]],1]],null,4],null,null,1,1,"https://developerscontentinsights-pa.googleapis.com","AIzaSyC11xEGtFhkmSh_iF6l_itbxnFz2GrIBOg","AIzaSyAXJ10nRF73mmdSDINgkCNX5bbd2KPcWm8","https://developers.googleapis.com",null,null,null,null,"https://developerslogging.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

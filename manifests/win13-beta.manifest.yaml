@@ -1,0 +1,88 @@
+# sim://manifests/win13-beta.manifest.yaml
+apiVersion: bithub.aln/v1
+kind: BetaRollout
+metadata:
+  name: windows13-developer-beta
+  designation: Win13-Dev-Beta
+  labels:
+    stream: insider
+    domain: os-preview
+    persona: developer
+spec:
+  realityBoundary:
+    namespace: sim://
+    promotionGate: prod-signing-required
+  vmSpec:
+    image: windows13-insider.iso
+    vCPU: 6
+    memoryGB: 20
+    gpuAccel: true
+    snapshots:
+      preBoot: true
+      autoEveryMinutes: 15
+  quantumCoprocessors:
+    - name: qpu-primary
+      provider: sim.quantum.local
+      mode: co-processing
+      channels:
+        - type: qbit-sim
+          latencyBudgetMs: 8
+          isolation: hard
+    - name: qtensor-offload
+      provider: sim.tensor.local
+      role: classical-bridge
+      isolation: soft
+  dataPipelines:
+    lakehouse:
+      engine: deltacore
+      catalog: sim://lakehouse/catalog
+      checkpoints: sim://lakehouse/checkpoints/win13
+      parallelStreams: 16
+      qos:
+        minThroughputMBps: 500
+        jitterMaxMs: 20
+    data_lake:
+      buckets:
+        - name: artifacts
+          path: sim://dl/artifacts/win13
+        - name: telemetry
+          path: sim://dl/telemetry/win13
+      retention:
+        artifactsDays: 30
+        telemetryDays: 7
+  ide:
+    name: VSC-Artemis
+    extensions:
+      - ms-vscode.powershell
+      - alnfantasia.visual-trace
+      - bithub.manifest-lens
+      - quantum.qbit-inspector
+    devContainers:
+      - name: win13-sdk-lab
+        image: sim://containers/win13-sdk:latest
+        mounts:
+          - sim://repo:/workspace
+  policies:
+    codeSigning: required
+    mediaHashVerify: sha256
+    networkEgress: proxied
+    bciRespect: true
+    quantumExclusion: classical-gates-exclude-entangled
+  bciDeescalation:
+    preflight: required
+    signals:
+      - stress
+      - fatigue
+      - overload
+    action: pause-noncritical
+    log: sim://traces/bci
+  celebration:
+    hooks:
+      - on: boot-complete
+        emit: visual-trace
+      - on: test-suite-pass
+        emit: governance-token
+  observability:
+    traces: sim://traces/win13
+    metrics: sim://metrics/win13
+    logs: sim://logs/win13

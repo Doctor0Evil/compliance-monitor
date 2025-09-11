@@ -1,0 +1,8 @@
+path:/meta/equitable-data-streams.meta
+---
+"principles": [
+  "Consent tagging (every packet)",
+  "Purpose declaration",
+  "Community-auditable streaming",
+  "Universal reversibility"
+]

@@ -1,0 +1,90 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+  attributes:
+    actions:
+      - key: deployment.env
+        value: "production"
+        action: insert
+
+exporters:
+  loki:
+    endpoint: "https://loki.bit-hub.internal/loki/api/v1/push"
+    headers:
+      "X-Scope-OrgID": "bit-hub-prod"
+  elastic:
+    endpoints: ["https://es-sentinel.bit-hub.internal:9200"]
+    dataset: "sentinel-audit"
+
+service:
+  pipelines:
+    logs:
+      receivers: [otlp]
+      processors: [attributes, batch]
+      exporters: [loki, elastic]
+
+version: '3.9'
+
+services:
+  sentinel-guard:
+    build:
+      context: .
+      dockerfile: docker/sentinel-guard/Dockerfile
+    ports:
+      - "80:8080"
+      - "443:8443"
+    volumes:
+      - ./configs/waf:/etc/sentinel/waf:ro
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+
+  falco-monitor:
+    image: falcosecurity/falco:latest
+    volumes:
+      - /var/run/docker.sock:/host/var/run/docker.sock:ro
+      - /dev:/host/dev
+      - /proc:/host/proc:ro
+      - ./configs/falco:/etc/falco
+    security_opt:
+      - apparmor:unconfined
+    privileged: false
+    restart: unless-stopped
+
+  canary-pod:
+    build:
+      context: .
+      dockerfile: docker/canary-pod/Dockerfile
+    environment:
+      - CANARY_ID=trap-alpha-01
+      - TRAP_PORT=8081
+    expose:
+      - "8081"
+    restart: unless-stopped
+
+  otel-collector:
+    build:
+      context: .
+      dockerfile: docker/otel-collector/Dockerfile
+    ports:
+      - "4317:4317" # OTLP gRPC
+      - "4318:4318" # OTLP HTTP
+    volumes:
+      - ./configs/otel:/etc/otel:ro
+    command: ["--config=/etc/otel/collector-config.yaml"]
+    restart: unless-stopped
+
+networks:
+  default:
+    name: sentinel-net
+    driver: bridge

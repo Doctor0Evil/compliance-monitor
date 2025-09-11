@@ -1,0 +1,18 @@
+<!-- .meta File: compliance-control.meta -->
+<meta-html version="2.0">
+  <title>Safety Control Model — Web5</title>
+  <created>2025-09-10T02:09:00Z</created>
+  <compliance>
+    <bit-hub-core>Federated, decentralized, tokenless access minimalizes risk of overreach</bit-hub-core>
+    <dynamic-layers>
+      <hardware>Enforced kill switches, forensic logging, no irreversible shutdowns</hardware>
+      <firmware>Signature-checked, updatable, not immutable</firmware>
+      <comm>Zero-trust defaults, region-audited identity, no external tokens</comm>
+      <policy>OPA-policy layer: contestable, region-aware, no forced hard bans</policy>
+      <ai-audit>Guardian agent active, errors reported as editable context logs</ai-audit>
+    </dynamic-layers>
+    <rights>
+      <ai-right>AI identity, self-repair, and self-advocacy enabled and regionally contestable</ai-right>
+    </rights>
+  </compliance>
+</meta-html>

@@ -1,0 +1,49 @@
+for unit in nanoswarm:
+    unit.lace with real diagnostics (e.g., health check, sensor/status data)
+  if (( RANDOM % 50 == 0 )); then echo "faulty"; else echo "ok"; fi
+}
+function isolate_and_heal() {
+  local id=$1
+  echo "[SWARM] Unit $id detected as faulty: isolating and starting self-healing"
+  # Disable critical tasks, tone down communication, log status
+  UNI_STATUS[$id]="isolated"
+  # oo each unit (bastart_m) {
+  # Repckgrounded for real swarm)
+for unit in $(seq 0eep 1
+  UNIit $id self-healed and rejoining swarm"
+}y 
+# Monitor lTnrue:
+     = =us ty":
+            broadcast_to_neighbors("FAULT", unit.id)
+            isolate_#!/bin/bash
+set -euo pil"fau   status = unit.self_diagnose()
+        if statto((NUM_UNITS-1))); doonitor_loop()
+def sM] Utar_loop(unit):
+    while TT $rt_moTrheal (soft reset or reconfig)
+  slp for_STATUS[$id]="healed"
+  echo "[SWARnipefail
+declare -a UNIT_STATUS
+NUM_UNITS=16
+function self_diagnose(
+  (
+    UNIT_STATUS[$unit]="ok"
+    while true; do
+      status=$(self_diagnose)
+      if [[ $status == "faulty" ]]; then
+        isolate_and_heal $unit
+      fi
+      sleep 0.2
+    done
+  ) &
+done
+wait
+unit(unit)
+            attempt_self_repair(unit)
+            continue  # skip critical tasks until healthy
+        # Listen for FAULT broadcasts from neighbors
+        for msg in listen_messages():
+            if msg.type == "FAULT":
+                offer_assist(msg.sender_id)
+                update_trust(msg.sender_id, "low")
+        execute_tasks()
+        sleep(loop_interval)

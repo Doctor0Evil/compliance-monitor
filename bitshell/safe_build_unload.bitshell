@@ -1,0 +1,28 @@
+<!bitshell version="1.0">
+<!-- Build/Unload assets in a separated sandbox instance for AI/MetaDev -->
+<prebuild>
+  - Init virtual sandbox (no real writes)
+  - Authenticate via Bit.Hub capability token (no GitHub token required)
+  - Verify all templates, configs, and ALN scripts in /assets and /fan.asia.world
+  - Log all asset build intents for traceability
+</prebuild>
+<build>
+  - Sequential asset ingestion (no parallel writes unless explicit)
+  - Each asset passes lightweight compliance check (OPA policy, ALN sanity, schema validation)
+  - No asset deployed to live or reality-linked endpoint; “reality barrier” remains active at all times
+</build>
+<unload>
+  - Assets/artifacts eligible for unload must be flagged “safe-to-unload” by compliance policy/script
+  - Removed artifacts kept for audit in an immutable rolling buffer until final human/AI co-signoff
+  - Audit log and rollback always available for *any* asset operation
+</unload>
+<finalize>
+  - Jekyll-based static site build can only consume from /sandbox/assets, never from live node
+  - Meta-firmware or core binary kept in simulation-only mode, never self-deploying
+  - No workflow step can overwrite, patch, or touch physical endpoints or real hardware
+</finalize>
+<blessing>
+  - All asset ops, logs, and compliance checks appended to Bit.Hub trails and SwarmNet audit strategy
+  - Full rollback and human-in-the-loop override at every step; all actions reversible before live
+</blessing>
+</!bitshell>

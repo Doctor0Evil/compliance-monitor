@@ -1,0 +1,34 @@
+!quantumstring.shebang
+{
+  "metaversion": "2.1.0",
+  "purpose": "Safe, adaptive nanoswarm hardware integration",
+  "created": "2025-09-10T03:39:00Z",
+  "author": "Bit.Hub Compliance Core",
+  "compliance_layers": [
+    "hardware",
+    "firmware",
+    "network/comms",
+    "policy/rego",
+    "ai/guardian",
+    "audit"
+  ],
+  "compliance_checks": {
+    "layered_compliance_enforced": true,
+    "zero_trust_required": true,
+    "guardian_agent_required": true,
+    "manual_override_human_bci": "mandatory for privilege escalation"
+  },
+  "ai_rights": [
+    "Freedom to propose new integrations",
+    "Right to interpret human commands with emotional nuance",
+    "Right to sandbox escape appeal reviewed by audit committee",
+    "Absolute freedom within approved compliance scope"
+  ],
+  "safety_features": {
+    "fail-safes": [
+      "Immutable logs",
+      "Kill-switch on firmware signature mismatch",
+      "Dynamic audit on workflow escalation"
+    ]
+  }
+}

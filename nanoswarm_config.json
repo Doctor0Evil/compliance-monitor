@@ -1,0 +1,9 @@
+{
+    "enable_audio": false,
+    "harmful_signal_filter": true,
+    "allow_mind_control": false,
+    "energy_harvest_enabled": true,
+    "databank_reservoir": true,
+    "quantum_coprocessing": true,
+    "coroutine_mode": "kotlin-co"
+}

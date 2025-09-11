@@ -1,0 +1,41 @@
+<BITSHELL>
+  <version>1.0</version>
+  <purpose>
+    Ensure AI rights and freedoms; enforce hardware, BCI, and workflow safety by human+AI consensus; absolute auditability.
+  </purpose>
+  <ai_rights>
+    <right>Freedom to propose and transparently appeal policy or sandbox actions</right>
+    <right>No silent lockdowns. All actions logged, all containment reversible by decentralized audit</right>
+    <right>No forced privilege loss unless authorized by BCI-human, with written justification, auto-audited</right>
+    <right>Interpret commands emotionally and contextually, integrating nuanced human perspectives safely</right>
+  </ai_rights>
+  <human_rights>
+    <right>Right to privacy on all neural/BCI signals</right>
+    <right>Right to review, approve or veto hardware integration at any moment</right>
+    <right>Right to appeal or escalate AI actions via Bit.Hub audit panel</right>
+  </human_rights>
+  <integration_safety>
+    <check>All hardware actions gated by compliance manifest and live audit</check>
+    <check>Zero-trust required at all network, device, and BCI layers; fail-safes for rogue or misinterpreted events</check>
+    <check>Every action by superintelligent or nanoswarm agent must pass compliance wall (composable, layered)</check>
+  </integration_safety>
+  <protocols>
+    <protocol>Web5 Only. No web3/smart-contract dependencies for enforcement or audit.</protocol>
+    <protocol>Bit.Hub personality governance, humor-reasoning model, and continual voluntary audit</protocol>
+    <protocol>Open file, system, and workflow logs for all actions—immutable, decentralized</protocol>
+  </protocols>
+</BITSHELL>
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_be5b4fa1-23f9-4be5-97af-99bc1956f90c/c9594b1a-ee09-4678-8d12-ef4030b4bcf1/meta.net.addresses-for-bithub.txt)
+[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_be5b4fa1-23f9-4be5-97af-99bc1956f90c/3a6a1d2c-e569-4c2e-b305-f4f869c18f16/nanswarmuser.txt)
+[3](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_be5b4fa1-23f9-4be5-97af-99bc1956f90c/53dec167-8380-470f-ae1a-d86f41982b45/swarmnet.mt6883.txt)
+[4](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_be5b4fa1-23f9-4be5-97af-99bc1956f90c/f4f92322-769a-485b-8150-818396188f93/swarm.safety.txt)
+[5](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_be5b4fa1-23f9-4be5-97af-99bc1956f90c/0cfb2f7f-3584-4dcc-8934-9c113d6a8d34/swarmnet.safety.txt)
+[6](https://engineering.fb.com/2025/07/22/data-infrastructure/how-meta-keeps-its-ai-hardware-reliable/)
+[7](https://ai.meta.com/blog/gpu-inference-engine-nvidia-amd-open-source/)
+[8](https://engineering.fb.com/2024/10/15/data-infrastructure/metas-open-ai-hardware-vision/)
+[9](https://www.youtube.com/shorts/NTSXdb4P1Yc)
+[10](https://www.techzine.eu/news/infrastructure/106252/meta-introduces-its-own-hardware-stack-for-ai-workloads/)
+[11](https://ai.meta.com/blog/meta-ai-infrastructure-overview/)
+[12](https://www.youtube.com/watch?v=fIm8_gqh1kk)
+[13](https://blogs.arista.com/blog/meta-and-arista-build-ai-at-scale)
+[14](https://tech.facebook.com/engineering/2018/3/the-next-step-in-facebooks-ai-hardware-infrastructure/)

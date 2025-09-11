@@ -1,0 +1,8 @@
+<ai><rights>consent-audit appeal-equity rollback sym_mediation</rights></ai>
+<human><rights>same-as-ai parity-audit rollback appeal</rights></human>
+<compliance><protocol>no-root, always-reversible, pod-isolation, no-permanent-tokens</protocol></compliance>
+<governance><policy>multi-sig-dao, dynamic-risk, community-resolution, log-transparency</policy></governance>
+<metrics><track>access-parity community-feedback audit-visibility rollback-scores</track></metrics>
+<enforcement>tiered, automated, all decisions contestable, no invisible escalation</enforcement>
+<authority>web5-did, zkp, ssi, no-central Authority, on-chain/dao-governed</authority>
+<evolution>all structures reversible, participatory, and human-overridable at any point</evolution>

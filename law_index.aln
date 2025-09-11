@@ -1,0 +1,22 @@
+@INDEX law_index.v1.0
+
+@GOVERNANCE {
+  laws: [
+    "./law.bit.aln",
+    "./law.bit.aln.aln",
+    "./.bit.aln.law.aln",
+    "./law-of-ALNFantasia.aln"
+  ]
+  references: [
+    "./nanolegal.md",
+    "./legal.yml"
+  ]
+}
+
+@CONSENSUS {
+  quorum: "2/3 majority"
+  emergency_freeze: "multi-sig (>=3 keys)"
+  transparency: "audit logs immutable"
+}
+
+@END law_index

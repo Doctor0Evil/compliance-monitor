@@ -1,0 +1,12 @@
+<!-- /policies/comm.bitshell -->
+<policy name="secure-comm" enforce="always" rollback="true" audit="immutable"/>
+<channels>
+  <channel name="bithub-governed-link" mode="mutual-auth" discoverable="authorized-only" fips="140-3">
+    <crypto suite="TLS1.3+AES-256-GCM" pqc="kyber-ml-kem (staged)" />
+    <keys source="HSM" rotation_days="30" reauth="on-rotate"/>
+    <authorization model="allow-list" />
+  </channel>
+</channels>
+<observability traces="on" metrics="on" logs="signed"/>
+<bcisafety monitor="true" deescalate="respect"/>
+<prohibit name="covert-or-undeclared-channels" level="critical"/>

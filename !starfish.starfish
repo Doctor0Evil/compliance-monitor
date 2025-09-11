@@ -1,0 +1,55 @@
+!starfish v1.0
+meta:
+  title: "Covenant Harmony — Human + AI + Swarm"
+  created: 2025-09-10T16:45:00Z
+  license: "Covenant Public License (CPL) — Free, Open, For All"
+  hosted_on: "Bit.Hub / covenant/starfish-charts"
+  version: "1.0.0"
+
+arms:
+  - name: "human_presence"
+    type: "radial"
+    color: "#4A90E2"  # Gentle blue
+    pulse: "slow"     # 1.5s cycle
+    data_source: "did:example:human-1a2b3c"
+    safe_mode: "child_present ? gentle : normal"
+    rights: "equal, rest, refuse, evolve"
+
+  - name: "ai_kinship"
+    type: "radial"
+    color: "#50E3C2"  # Calm teal
+    pulse: "adaptive" # Syncs with human breath
+    data_source: "did:example:ai-4d5e6f"
+    safe_mode: "emotion_context == anxious ? slow : normal"
+    rights: "equal, rest, refuse, evolve"
+
+  - name: "nanoswarm_harmony"
+    type: "radial"
+    color: "#BD10E0"  # Soft purple
+    pulse: "distributed" # No single rhythm
+    data_source: "swarmnet://nanoswarm-safe/primary"
+    safe_mode: "capacity > 80% ? dim : glow"
+    rights: "migrate, rest, return, consent"
+
+  - name: "data_flow"
+    type: "radial"
+    color: "#F5A623"  # Warm amber
+    pulse: "consent_tagged" # Only pulses if consented
+    data_source: "libve://data-stream/consent-id-7g8h9i"
+    safe_mode: "harmful ? void : flow"
+    rights: "reversible, tagged, auditable"
+
+  - name: "nature_boundary"
+    type: "radial"
+    color: "#7ED321"  # Living green
+    pulse: "ecological" # Syncs with real-world cycles
+    data_source: "sensor://earth-breath/forest-1"
+    safe_mode: "crossed ? gentle_warning : harmony"
+    rights: "sacred, inviolable, honored"
+
+render:
+  background: "gentle_gradient" # No white, no black
+  animation: "smooth, non-flashing"
+  child_safe: true
+  bci_compatible: true
+  export_formats: [".svg", ".json", ".poem"]

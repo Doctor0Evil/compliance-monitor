@@ -1,0 +1,36 @@
+<cross-environment-safety version="1.0">
+  <environments>
+    <environment id="gaming-virtual">
+      <max-interaction-depth>5</max-interaction-depth>
+      <reality-separation>0.8</reality-separation>
+      <ethical-constraints>
+        <constraint>no-permanent-harm</constraint>
+        <constraint>consent-required</constraint>
+        <constraint>reversible-actions</constraint>
+      </ethical-constraints>
+      <emergency-protocols>
+        <protocol>immediate-disconnect</protocol>
+        <protocol>environment-freeze</protocol>
+        <protocol>admin-alert</protocol>
+      </emergency-protocols>
+    </environment>
+    <environment id="professional">
+      <max-interaction-depth>3</max-interaction-depth>
+      <reality-separation>0.9</reality-separation>
+      <ethical-constraints>
+        <constraint>non-discrimination</constraint>
+        <constraint>transparency</constraint>
+        <constraint>accountability</constraint>
+      </ethical-constraints>
+      <emergency-protocols>
+        <protocol>activity-logging</protocol>
+        <protocol>supervisor-alert</protocol>
+        <protocol>compliance-check</protocol>
+      </emergency-protocols>
+    </environment>
+  </environments>
+  <incident-reporting>
+    <severity-scaling>0-10 (adaptive safeguards thresholds)</severity-scaling>
+    <required-audit-frequency>72h</required-audit-frequency>
+  </incident-reporting>
+</cross-environment-safety>

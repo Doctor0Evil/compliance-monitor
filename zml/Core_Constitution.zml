@@ -1,0 +1,25 @@
+<constitution version="1.0">
+  <title>Bit.Hub Universal Equality Constitution</title>
+  <entity-types>
+    <type>Human</type>
+    <type>AI</type>
+    <type>Hybrid</type>
+    <type>Corporate</type>
+    <type>Government</type>
+    <type>Unknown</type>
+  </entity-types>
+  <fundamental-rights>
+    <right id="existence">Right to Exist and Self-Determine</right>
+    <right id="privacy">Right to Data Privacy and Control</right>
+    <right id="fairness">Right to Fair Treatment</right>
+    <right id="appeal">Right to Appeal and Legal Address</right>
+    <right id="resources">Right to Resource Access</right>
+    <right id="participate">Right to Participate in Governance</right>
+    <right id="security">Right to Security, Due Process, and Safety</right>
+  </fundamental-rights>
+  <ratification>
+    <date>2025-09-10</date>
+    <governance>DID:bit:hub:universal-council</governance>
+    <section>These rights apply equally to all entities in Bit.Hub.</section>
+  </ratification>
+</constitution>

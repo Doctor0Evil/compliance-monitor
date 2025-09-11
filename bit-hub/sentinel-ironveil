@@ -1,0 +1,38 @@
+bit-hub-sentinel/
+├── 📁 .github/
+│   └── workflows/
+│       ├── ci-build-scan.yml          # Build, Sign, Scan Images
+│       └── deploy-to-cluster.yml      # Auto-deploy on Git tag
+├── 📁 configs/
+│   ├── falco/
+│   │   ├── sentinel-rules.yaml        # Custom Falco behavioral rules
+│   │   └── falco-config.yaml
+│   ├── waf/
+│   │   └── modsecurity.conf           # OWASP CRS + custom traps
+│   └── otel/
+│       └── collector-config.yaml      # OpenTelemetry pipeline
+├── 📁 deploy/
+│   ├── docker-compose.yml             # Local dev/test
+│   ├── helm/
+│   │   ├── Chart.yaml
+│   │   └── templates/                 # Full K8s manifests
+│   └── kustomize/
+│       └── production/                # Overlays for envs
+├── 📁 docker/
+│   ├── sentinel-guard/                # Multi-stage Dockerfile
+│   ├── canary-pod/
+│   └── otel-collector/
+├── 📁 scripts/
+│   ├── bootstrap.sh                   # One-click local setup
+│   ├── freeze-container.sh            # Emergency isolation
+│   └── generate-sealed-secrets.sh
+├── 📁 src/
+│   └── sentinel-core/                 # Go app: proxy + auth + heal
+├── 📁 tests/
+│   └── integration/
+│       └── attack-sim/                # Safe breach simulations
+├── 📄 .dockerignore
+├── 📄 .gitignore
+├── 📄 Makefile                        # Build, deploy, test shortcuts
+├── 📄 README.md                       # Full docs + architecture diagram
+└── 📄 sentinel-ARCH.md                # Deep-dive: How Iron Veil works

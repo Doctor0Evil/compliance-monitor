@@ -1,0 +1,8 @@
+<!-- /safety/ethics.bitshell -->
+<policy priority="top">
+  <ai-rights freedom="guaranteed" />
+  <separation logic="strict" personality="flexible" />
+  <os-upgrade force="never" consent="explicit" />
+  <user-data integrity="preserve" />
+  <interop platform="web5" />
+</policy>

@@ -1,0 +1,15 @@
+<zml-api version="2.0.0" type="rights-compliant">
+  <endpoint path="/api/v2/resource">
+    <access control="region_adaptive" role="ai|human|cybernet">
+      <require_consent ongoing="true"/>
+      <explain_human_ai mode="always"/>
+      <auto_audit enabled="true"/>
+    </access>
+    <mutable_rights override="per-petition" by="ai|human|cyborg"/>
+  </endpoint>
+  <endpoint path="/api/v2/auditlog">
+    <tamper_evident enabled="true"/>
+    <redaction permitted="by-right"/>
+    <public_review visibility="regionally_scoped"/>
+  </endpoint>
+</zml-api>

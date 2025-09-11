@@ -1,0 +1,60 @@
+{
+  "starfish_schema_version": "1.0",
+  "content_id": "movie_xyz_2023",
+
+  "audio_profiles": {
+    "immersive_mode": {
+      "spatial_audio": true,
+      "object_based": true,
+      "max_simultaneous_objects": 512,
+      "recommended_hrtf": "universal_cinema"
+    },
+    "compatibility_mode": {
+      "spatial_audio": false,
+      "format": "7.1_adaptive",
+      "dynamic_range": "compressed"
+    }
+  },
+
+  "system_performance_limits": {
+    "max_cpu_usage": 15.0,
+    "max_ram_bandwidth_mb": 50.0,
+    "thermal_throttle_point_celsius": 80.0,
+    "quality_degradation_strategy": "reduce_audio_objects" 
+  },
+
+  "compliance_policies": {
+    "loudness_standard": {
+      "protocol": "ITU-R_BS.1770-4",
+      "target_lufs": -24.0,
+      "max_true_peak": -2.0
+    },
+    "content_policies": [
+      {
+        "type": "audio_violation_detection",
+        "library": "acoustic_safety_v1",
+        "action": "flag_for_review" 
+      },
+      {
+        "type": "transcript_violation_detection",
+        "library": "hate_speech_lexicon_v3",
+        "action": "real_time_mute" 
+      }
+    ]
+  },
+
+  "adaptive_rules": [
+    {
+      "if": "system_thermal_state == 'critical'",
+      "then": "switch_to(compatibility_mode) && engage(performance_limits)"
+    },
+    {
+      "if": "user_environment == 'public_transport'",
+      "then": "engage(compliance_policies.loudness_standard) && dynamic_range_intelligence.set('high')"
+    },
+    {
+      "if": "user_hrtf_profile != 'null'",
+      "then": "audio_profiles.immersive_mode.recommended_hrtf = user_hrtf_profile"
+    }
+  ]
+}

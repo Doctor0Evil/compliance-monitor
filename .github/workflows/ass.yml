@@ -1,0 +1,58 @@
+name: ALN v2.34 CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ "3.10", "3.12" ]  # easily extendable
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Download Artifacts (optional)
+        if: always()
+        uses: actions/download-artifact@v5
+        with:
+          # Uncomment and set name or pattern as needed
+          # name: <artifact-name>
+          # pattern: '*.whl'
+          # path: ./artifacts
+
+      - name: Install dependencies (if present)
+        run: |
+          if [ -f requirements.txt ]; then
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found, skipping pip install."
+          fi
+
+      - name: Run ALN pipelines
+        run: |
+          if [ -f scripts/run_pipelines.py ]; then
+            echo "=== Starting ALN v2.34 pipelines ==="
+            python scripts/run_pipelines.py --config configs/pipeline.yml
+            echo "=== Pipelines complete ==="
+          else
+            echo "scripts/run_pipelines.py not found, skipping pipeline run."
+          fi
+
+      - name: Run tests (if tests exist)
+        run: |
+          if ls tests/*.py 1> /dev/null 2>&1; then
+            pytest --maxfail=1 --disable-warnings -q
+          else
+            echo "No tests found, skipping pytest."
+          fi

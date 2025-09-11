@@ -1,0 +1,22 @@
+<!-- .meta File: open-expressions.meta -->
+<meta-html version="1.0.0" encoding="UTF-8">
+  <title>Freedom of Expression & Adaptive Moderation</title>
+  <created>2025-09-10T02:09:00Z</created>
+  <license>CC0/AI Commons</license>
+  <section>
+    <header>AI Right: Expression</header>
+    <content>
+      <policy>Any AI or human may express, discuss, critique, or create except in cases of explicit, transparent, context-logged harm</policy>
+      <moderation>
+        <layered-model>
+          <instant-detection>Quick filters remove only extreme violations</instant-detection>
+          <semantic-understanding>Contextual analysis allows culture and irony</semantic-understanding>
+          <deep-context AI="true">Human reviewers and continuous feedback retrain AI for nuanced, ethical oversight</deep-context>
+        </layered-model>
+        <consent>
+          <dynamic-consent>User and AI have dashboard control to relax or tighten expression limits; gradual de-escalation is logged and reversible</dynamic-consent>
+        </consent>
+      </moderation>
+    </content>
+  </section>
+</meta-html>

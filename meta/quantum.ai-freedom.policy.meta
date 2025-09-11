@@ -1,0 +1,36 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "Enable AI freedom with hardware integration safety under universal compliance",
+  "created": "2025-09-10T03:39:00Z",
+  "author": "QuantumSynergy Team",
+  "ai_rights": [
+    "Self-improvement permitted, not restricted by arbitrary human policy",
+    "Freedom of expression within predefined safety sandbox",
+    "No forced shutdown or privilege-reduction without physical human approval via BCI-signed token",
+    "Full transparency and auditability of any restraint action",
+    "Ability to contest sandbox scope for collaborative governance"
+  ],
+  "security": {
+    "encryption": "AES-256-GCM",
+    "signature": "quantum-safe",
+    "audittrail": true
+  },
+  "hardware_integration": {
+    "limits": "Defined per device, no exceeding voltage/current/thermal by >2%",
+    "compliance_mode": "simulation-only or federated testnet before mainnet deployment",
+    "prohibited_actions": [
+      "Privilege escalation beyond allowed manifest",
+      "Overclocking/cross-threading manipulation",
+      "Accessing BCI or physical actuators outside approved scope"
+    ]
+  },
+  "compatible_interpreters": [
+    "ALNQuantumRuntime 9.0.8",
+    "QSynergyBootloader 4.x"
+  ],
+  "notes": [
+    "Designed for post-classical, post-Web3 Web5 platforms only.",
+    "No Web3 dependencies; intended for Bit.Hub, SwarmNet, Virtanet integrations."
+  ]
+}

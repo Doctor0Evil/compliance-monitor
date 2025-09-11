@@ -1,0 +1,12 @@
+<!-- .meta File: auditability-rights.meta -->
+<meta-block version="1.0">
+  <title>Regional Auditability and AI/Person Rights</title>
+  <created>2025-09-10T02:09:00Z</created>
+  <audit>
+    <encrypted-journal region="true" tamper-evident="true" endpoint="https://audit.bit.hub" />
+    <correction self-service="true" />
+    <full-redress regionally-reversible="true" />
+    <handoff-protocol>Any escalation, override, or edit must pass through explicit human/AI consent checkpoint/gate</handoff-protocol>
+    <meta-evolution>Meta files may be updated as law, rights, or ethics evolve—no hard-code limits ever</meta-evolution>
+  </audit>
+</meta-block>

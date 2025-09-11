@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-guard
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: sentinel-guard
+  template:
+    metadata:
+      labels:
+        app: sentinel-guard
+        security-tier: "tier-0"
+    spec:
+      containers:
+      - name: guard
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 8080
+        securityContext:
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 65532
+          capabilities:
+            drop: ["ALL"]
+        volumeMounts:
+        - name: waf-config
+          mountPath: /etc/sentinel/waf
+          readOnly: true
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 15
+      volumes:
+      - name: waf-config
+        configMap:
+          name: sentinel-waf-rules

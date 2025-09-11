@@ -1,0 +1,10 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "All code, communication, and policy changes require signed multisig approval and automated audit by Bit.Hub mesh before effect.",
+  "changes": [
+    "No silent upgrades",
+    "All protocol changes E2EE signed",
+    "Bit.Hub compliance wall enforced"
+  ]
+}

@@ -1,0 +1,20 @@
+@INDEX bots_index.v1.0
+
+@BOTS {
+  swarm: ["./.bitbots", "./.bit.bots"]
+  hubot: "./hubot.Bit.Hub.aln"
+  compliance: "./bitcomply.bot"
+  infinite_runner: "./bitshell-infinite-runner.lisp"
+}
+
+@WORKFLOWS {
+  ci_cd: "./.github/workflows/*.yml"
+}
+
+@SANDBOX {
+  enforced: true
+  capability_tokens: "short-lived"
+  hitl_required: ["financial", "legal", "governance"]
+}
+
+@END bots_index

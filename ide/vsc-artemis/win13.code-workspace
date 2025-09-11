@@ -1,0 +1,18 @@
+{
+  "folders": [{ "path": "sim://repo" }],
+  "settings": {
+    "editor.renderWhitespace": "all",
+    "powershell.powerShellDefaultVersion": "Latest",
+    "aln.visualTrace.autoupload": true,
+    "quantum.qbitInspector.simulationMode": "co-processing",
+    "bithub.manifestLens.validateOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.powershell",
+      "alnfantasia.visual-trace",
+      "bithub.manifest-lens",
+      "quantum.qbit-inspector"
+    ]
+  }
+}

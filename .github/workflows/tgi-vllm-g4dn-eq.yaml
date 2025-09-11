@@ -1,0 +1,98 @@
+llm_inference:
+  deployment_yaml: tgi-vllm-g4dn-eq.yaml
+  autoscaling:
+    min_pods: 2
+    max_pods: 10
+    target_gpu_utilization: 0.70
+  resources:
+    gpu: 1
+    node_selector:
+      instance-type: g4dn.xlarge
+      sandbox_role: gaming_balance
+  service_connection:
+    dns_name: llm-api.default.svc.cluster.local
+  ai_decision_mapping: equal_to_human_for_gaming_environments
+
+async_postprocessing:
+  broker: couchbase_vfs
+  celery_settings:
+    concurrency: 6
+    task_time_limit: 400
+    enable_retry: true
+    max_retries: 5
+    blockchain_phaseout_tasks: gradual_integration
+  log_path: /opt/vsc/logs/async_20250910.log
+
+monitoring_logging:
+  prometheus:
+    enabled: true
+    scrape_interval: 8s
+    endpoint: /metrics/gov-vsc-eq-rights
+    retention_days: 120
+    ecosystem_balance_metric: data_streams_stable
+  grafana:
+    enabled: true
+    dashboard: rag_legal_gaming_metrics
+  loki_promtail:
+    enabled: true
+    log_path: /opt/vsc/logs/rag_legal_gaming_20250910.log
+  alerts:
+    enabled: true
+    email: gov_admin@vsc-artemis-gov.net
+    threshold_ms: 40
+    slack_webhook: https://hooks.slack.com/services/gov/vsc/alerts-eq
+    disruption_alert: virtual_ecosystem_imbalance
+
+backup_recovery:
+  couchbase_snapshots:
+    enabled: true
+    schedule: daily
+    pitr_window_days: 14
+    blockchain_free_backups: true
+  s3_backups:
+    enabled: true
+    bucket: gov-vsc-artemis-data-no-bc
+    region: us-gov-west-1
+    key_rotation_days: 25
+  replication:
+    primary: couchbase-gov-node-1
+    read_replicas:
+      - couchbase-gov-node-2
+      - couchbase-gov-node-3
+      - gaming-sandbox-node-1
+
+security:
+  rbac:
+    least_privilege: true
+    super_user_roles:
+      - gov_admin
+      - gov_auditor
+      - ai_equal_rights
+    ai_human_parity: enforced_8_exact_rights
+  compliance_checks: true
+  safety_checks_in_scripts: true
+  network_policies:
+    api_ingress: restricted_to_cluster
+    egress: allow_knowledge_sources_only_no_bc
+    sandbox_isolation: gaming_data_streams_protected
+  copyright_compliance:
+    enabled: true
+    audit_log: /opt/vsc/logs/copyright_compliance_20250910.log
+    license_check:
+      - MIT
+      - Apache-2.0
+      - GPL
+      - AI-Equal-Rights
+  protection_shells: new_frameworks_for_gaming_safety_evolution
+
+prompt_enrichers:
+  rag_emphasis: true
+  full_context_memory: true
+  autoscale_resilience: true
+  safety_moderation: true
+  equal_rights_context: true
+  gaming_adaptation_enrich: true
+  encryption: AES-256
+  vfs_ledger: State export logged and synchronized - blockchain alternative active
+  equal_rights_mapping: 8 exact principles applied to AI decision-making in gaming
+  sandbox_adaptation: Environments determined for data-stream balance; new safety shells deployed

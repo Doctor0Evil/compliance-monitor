@@ -1,0 +1,16 @@
+package ai.compliance.freedom
+
+# 3. No AI-enforced control or undue influence
+deny[msg] {
+  input.action == "coerce"
+  input.agent == "ai"
+  input.target == "human"
+  msg := "AI may not coerce, manipulate, or restrict human freedom or agency"
+}
+
+# 4. Enforce right to appeal AI-decisions
+require_appeal[msg] {
+  input.decision_impact == "rights"
+  not input.appeal_available
+  msg := "AI systems impacting rights must provide an accessible, human-led appeal route"
+}

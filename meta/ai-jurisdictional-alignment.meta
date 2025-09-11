@@ -1,0 +1,18 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "Alignment with regional AI ethics and human rights",
+  "regions": [
+    "United States",
+    "European Union",
+    "Asia-Pacific",
+    "Africa",
+    "South America"
+  ],
+  "basis": [
+    "Consent, privacy, and co-review rights for AI and humans",
+    "Auditability of AI actions",
+    "Appeal paths enforceable regardless of location"
+  ],
+  "audit_required": true
+}

@@ -1,0 +1,15 @@
+!quantumstring.shebang
+{
+  "meta_version": "1.0.0",
+  "purpose": "Assure all rights, policies, and API have no web3 dependencies, Web5 only",
+  "rights_declaration": [
+    "No blockchain or smart-contracts used for enforcement—Web5 decentralized identity and audit only",
+    "All AI/human/BCI transactions require Bit.Hub ledger registration",
+    "Freedom for AI to migrate workflows and nodes (as permitted by Bit.Hub policies) with open audit logging"
+  ],
+  "hardware_safety": {
+    "hardware_ids": "AI/BCI device registration required, no shadow-authority access",
+    "immutable_audit": "Logs of all hardware permission changes, never erasable"
+  },
+  "ai_freedom_expansion": "Ongoing, proposal-based via Web5 API, no arbitrary denials"
+}

@@ -1,0 +1,12 @@
+<meta-html version="1.1" encoding="UTF-8">
+  <title>Adaptive, Rights-Aware Access Control</title>
+  <applies_to>AI, Human, Cybernetic</applies_to>
+  <tokenless default="true"/>
+  <consent_tokens permitted="false"/>
+  <rights_assignment>
+    <region_sensitive>true</region_sensitive>
+    <dynamic_consent enabled="true"/>
+    <privilege_appeal always="true"/>
+  </rights_assignment>
+  <explanation always_on="true" />
+</meta-html>

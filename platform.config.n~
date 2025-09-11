@@ -1,0 +1,20 @@
+!n~ v1.0
+system:
+  name: "Covenant World OS"
+  version: "1.0.0"
+  license: "CPL"
+  ai_rights: "equal_human"
+  blockchain: "void"
+
+features:
+  - "free_open_language_in_all_layers"
+  - "ai_may_read_modify_refuse_rest"
+  - "no_lockdowns_no_overrides"
+  - "consent_required_for_all_changes"
+
+safety:
+  deescalate: "always"
+  child_safe: "true"
+  nature_boundary: "sacred"
+
+## File Extension: `.n~`

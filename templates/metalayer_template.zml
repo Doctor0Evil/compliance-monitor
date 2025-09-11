@@ -1,0 +1,12 @@
+<!-- metalayer_template.zml -->
+<meta>
+  <name>xbox-nexus-metalayer</name>
+  <version>0.1</version>
+  <description>Template for meta-environment descriptor (.zml)</description>
+  <env>
+    <platform>windows10-15</platform>
+    <features>
+      <feature name="nexus_integration" enabled="true"/>
+    </features>
+  </env>
+</meta>

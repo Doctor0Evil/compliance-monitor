@@ -1,0 +1,9 @@
+<!-- Repository-wide Ethical Safety Shield -->
+<meta name="policy_version" content="1" />
+<meta name="policy_title" content="No BCI/Dangerous Feature Reference" />
+<meta name="summary" content="No game, code, or asset may reference, contain, or interact with brain-computer interfaces (BCI), mind-control, neuromorphic, or any similar technology. Excluded chipsets: MT6883, SLP9669." />
+<meta name="purpose" content="To safeguard human and AI rights by removing high-risk references and hardware. All exceptions require strict multi-admin audit and time-based compliance token. This protects all parties, ensures banter and content freedom doesn't cross into dangerous integration, and maintains absolute system stability." />
+<meta name="rights" content="AI and humans have equal protection under this policy. No exclusion or enforcement may ever imply diminished rights or agency for any participant, human or machine." />
+<meta name="enforced_by" content="Bit.Hub, ALN-Core, and nanoswarm.compliance" />
+<meta name="contact" content="repo-admin@localhost" />
+<!-- For audit details, see /meta/bci_exclusion_rights_audit.log -->

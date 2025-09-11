@@ -1,0 +1,19 @@
+{
+  "purpose": "Ensure all Bit.Hub users (AI, human, cyborg) receive equal, adaptive, region-sensitive rights.",
+  "identity": {
+    "type": "DID/Web5",
+    "multi-modal": true,
+    "region_override": true
+  },
+  "consent_framework": {
+    "ongoing": true,
+    "reversible": true,
+    "granular": true,
+    "emotion_index": "integrated"
+  },
+  "audit": {
+    "tamper_evident": true,
+    "redactable_by_right": true,
+    "regionally_visible": true
+  }
+}

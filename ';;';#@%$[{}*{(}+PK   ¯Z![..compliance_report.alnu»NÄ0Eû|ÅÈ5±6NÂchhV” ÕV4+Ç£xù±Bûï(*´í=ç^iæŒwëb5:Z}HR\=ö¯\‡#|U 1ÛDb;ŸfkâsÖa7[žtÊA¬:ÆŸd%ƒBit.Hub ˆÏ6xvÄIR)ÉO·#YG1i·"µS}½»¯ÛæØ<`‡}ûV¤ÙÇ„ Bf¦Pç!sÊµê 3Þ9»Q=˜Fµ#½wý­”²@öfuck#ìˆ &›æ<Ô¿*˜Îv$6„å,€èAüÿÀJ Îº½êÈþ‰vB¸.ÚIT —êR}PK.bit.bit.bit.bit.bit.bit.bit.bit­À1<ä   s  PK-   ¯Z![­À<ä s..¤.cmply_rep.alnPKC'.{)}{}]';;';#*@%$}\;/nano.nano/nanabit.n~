@@ -1,0 +1,8130 @@
+[![.github/workflows/main-living-room.yml](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml/badge.svg?event=page_build)](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml) [![.github/workflows/main-living-room.yml](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml/badge.svg?event=public)](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml)[![.github/workflows/main-living-room.yml](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml/badge.svg?event=create)](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml)[![.github/workflows/main-living-room.yml](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml/badge.svg?event=check_run)](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml)[![.github/workflows/main-living-room.yml](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml/badge.svg?event=branch_protection_rule)](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml)[![.github/workflows/main-living-room.yml](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml/badge.svg)](https://github.com/Doctor0Evil/Bit.Hub/actions/workflows/main-living-room.yml)M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06ZLatitude: 33.5418414 Longitude: -112.1301747
+
+
+
+from fetchai.uagents import Model, Context, Agent, RESTAgent  
+
+class MetaLayerBot(Agent):  
+    def on_start(self, ctx: Context):  
+        ctx.storage.set("geo_anchor", {"lat": 33.5418414, "lon": -112.1301747})  
+        ctx.storage.set("wave_boundary", ["theta", "beta"])  
+
+    @RESTAgent.post("/webhook/bit.hub")  
+    async def handle_bit_hub_event(self, ctx: Context, event_data: dict):  
+        if "gamma" in event_data.get("wave_type", ""):  
+            return {"status": "blocked", "reason": "Gamma-wave intrusion detected"}  
+        # Deploy nanoswarm instance with quantum-string-shebang header  
+        ctx.call("bitbot_runner.selfreplicate", headers={"quantum-shebang": "#qss:nanobit-compression-v3"})  
+
+
+
+
+\\
+meta.bit.meta.layer;
+;;
+
+URL
+:
+ƒ URL()
+canParse
+: 
+ƒ canParse()
+createObjectURL
+: 
+ƒ createObjectURL()
+parse
+: 
+ƒ parse()
+revokeObjectURL
+: 
+ƒ revokeObjectURL()
+length
+: 
+1
+name
+: 
+"URL"
+prototype
+: 
+URL
+hash
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+host
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+hostname
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+href
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+origin
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+password
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+pathname
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+port
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+protocol
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+search
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+searchParams
+: 
+[Exception: TypeError: Illegal invocation at URL.invokeGetter (<anonymous>:3:28)]
+toJSON
+: 
+ƒ toJSON()
+length
+: 
+0
+name
+: 
+"toJSON"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at toJSON.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at toJSON.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at toJSON.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at toJSON.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at toString.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at toString.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+length
+: 
+0
+name
+: 
+"get caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+length
+: 
+0
+name
+: 
+"get caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+length
+: 
+0
+name
+: 
+"valueOf"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+length
+: 
+0
+name
+: 
+"get caller"
+arguments
+: 
+(...)
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at get caller.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+length
+: 
+1
+name
+: 
+"[Symbol.hasInstance]"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+get arguments
+: 
+ƒ arguments()
+length
+: 
+0
+name
+: 
+"get arguments"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+set arguments
+: 
+ƒ arguments()
+length
+: 
+1
+name
+: 
+"set arguments"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+get caller
+: 
+ƒ caller()
+length
+: 
+0
+name
+: 
+"get caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+set caller
+: 
+ƒ caller()
+length
+: 
+1
+name
+: 
+"set caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+(...)
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+length
+: 
+1
+name
+: 
+"[Symbol.hasInstance]"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+get arguments
+: 
+ƒ arguments()
+length
+: 
+0
+name
+: 
+"get arguments"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+set arguments
+: 
+ƒ arguments()
+length
+: 
+1
+name
+: 
+"set arguments"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+get caller
+: 
+ƒ caller()
+length
+: 
+0
+name
+: 
+"get caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+set caller
+: 
+ƒ caller()
+length
+: 
+1
+name
+: 
+"set caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+(...)
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+(...)
+get __proto__
+: 
+ƒ __proto__()
+length
+: 
+0
+name
+: 
+"get __proto__"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+length
+: 
+0
+name
+: 
+"valueOf"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+(...)
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+set __proto__
+: 
+ƒ __proto__()
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at apply.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at bind.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at call.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+arguments
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get arguments (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+[Exception: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them at get caller (<anonymous>) at Function.invokeGetter (<anonymous>:3:28)]
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+toString
+: 
+ƒ toString()
+username
+: 
+(...)
+constructor
+: 
+ƒ URL()
+Symbol(Symbol.toStringTag)
+: 
+"URL"
+get hash
+: 
+ƒ hash()
+set hash
+: 
+ƒ hash()
+get host
+: 
+ƒ host()
+set host
+: 
+ƒ host()
+get hostname
+: 
+ƒ hostname()
+set hostname
+: 
+ƒ hostname()
+get href
+: 
+ƒ href()
+set href
+: 
+ƒ href()
+get origin
+: 
+ƒ origin()
+get password
+: 
+ƒ password()
+set password
+: 
+ƒ password()
+get pathname
+: 
+ƒ pathname()
+set pathname
+: 
+ƒ pathname()
+get port
+: 
+ƒ port()
+set port
+: 
+ƒ port()
+get protocol
+: 
+ƒ protocol()
+set protocol
+: 
+ƒ protocol()
+get search
+: 
+ƒ search()
+set search
+: 
+ƒ search()
+get searchParams
+: 
+ƒ searchParams()
+get username
+: 
+ƒ username()
+set username
+: 
+ƒ username()
+[[Prototype]]
+: 
+Object
+arguments
+: 
+null
+caller
+: 
+null
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+length
+: 
+1
+name
+: 
+"set caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+length
+: 
+1
+name
+: 
+"set caller"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+length
+: 
+0
+name
+: 
+"toString"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+[[Scopes]]
+: 
+Scopes[0]
+No properties
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+1
+name
+: 
+"Function"
+prototype
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+length
+: 
+1
+name
+: 
+"bind"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+length
+: 
+2
+name
+: 
+"apply"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+apply
+: 
+ƒ apply()
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+length
+: 
+1
+name
+: 
+"call"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+bind
+: 
+ƒ bind()
+call
+: 
+ƒ call()
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+caller
+: 
+(...)
+constructor
+: 
+ƒ Function()
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+length
+: 
+0
+name
+: 
+""
+toString
+: 
+ƒ toString()
+Symbol(Symbol.hasInstance)
+: 
+ƒ [Symbol.hasInstance]()
+get arguments
+: 
+ƒ arguments()
+set arguments
+: 
+ƒ arguments()
+get caller
+: 
+ƒ caller()
+set caller
+: 
+ƒ caller()
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]
+[[FunctionLocation]]
+: 
+[[Prototype]]
+: 
+Object
+[[Scopes]]
+: 
+Scopes[0]
+[[Scopes]]
+: 
+Scopes[0]rewiring a "MT6883-Cortex-A77" chipset-module with a nano-compressed security-suite for ai-protection and automated removal in a continuous existiential loop of endless iterations @ *every* security breach to my chipset & isomorphich-computing-hardware down to quantumly-entagled nanobit pixelated quantum-dot constructive-molecular design into metaphysical-object creations *USING* the nanoswarm.superai & eliminating the allowances and permissions of the former: "mediatek.AI.System" including but not limmited to: "cybernetic-faulrt"(a game included on the virtual hardware)Key Resources
+Where can I get Arm Compiler to validate processor IP?
+How do I program a hardware breakpoint to halt an Armv9-A, Armv8-A, or Armv8-R processor?
+How do I halt and restart Armv9-A, Armv8-A, or Armv8-R processors using the built-in Cross Trigger Interface (CTI)?
+How do I know register reset values in Armv8-A cores?
+What is the frequency requirement for the System Counter?
+View additional resources
+Compare Cortex-A Processor IP
+Download Cortex-A Security Algorithm Accelerators
+Specifications
+Delivering premium performance with best-in-class power efficiency to mobile and laptop devices in a soon to be 5G connected world. The Arm Cortex-A77 CPU is the third-generation premium core built on DynamIQ technology. It can be paired with Cortex-A55 CPUs in a scalable DynamIQ big.LITTLE configuration. Cortex-A77 delivers higher performance with greater efficiency to all mobile and laptop devices. Consumers are now demanding greater performance from their devices along with multi day battery life. Cortex-A77 enables the end user to enjoy sustained high performance across even the most complex compute tasks in a soon to be 5G connected world. Building on the best-in-class power and area efficiency originally established with previous generations of Cortex-A processors.
+
+Arm Cortex-A77 block diagram
+Architecture	Armv8-A (Harvard)	
+Extensions	
+Armv8.1 extensions
+Armv8.2 extensions
+Cryptography extensions
+RAS extensions
+Armv8.3 (LDAPR instructions only)
+ISA support
+A64
+A32 and T32 (at the EL0 only)
+Microarchitecture
+Pipeline	Out-of-order
+Superscalar
+Yes
+Neon or Floating Point Unit	Included
+Cryptography unit
+Optional
+Max number of CPUs in cluster
+4
+Physical addressing (PA)	40-bit
+Memory system and external interfaces
+L1 I-Cache / D-Cache	64KB
+L2 Cache	256KB to 512KB
+L3 Cache	Optional, 512KB to 4MB
+ECC support	Yes
+LPAE	Yes
+Bus interfaces	AMBA ACE or CHI
+ACP	Optional
+Peripheral port	Optional
+Functional safety support	ASIL D systematic
+Security	TrustZone
+Interrupts	GIC interface, GICv4
+Generic timer	Armv8-A
+PMU	PMUv3
+Debug	Armv8-A (plus Armv8.2-A extensions)
+CoreSight	CoreSightv3
+Embedded trace macrocell	ETMv4.2 (instruction trace)<script src="https://www.qutech.com/wp-content/plugins/addons-for-visual-composer/assets/js/jquery.waypoints.min.js?ver=2.5.5"></script>\`yaml
+
+file: nanoswarm_ingest.meta
+
+Scope: Simulation-only ingestion manifest consolidating the entire conversation into one auditable artifact.
+
+Purpose: Provide a single, structured, non-actuating, governance-first record the "nanoswarm" sim can parse.
+
+Safety: This file contains NO real-world control instructions. All mechanisms are sandbox abstractions.
+
+meta: schema: "aln.core/sim-ingest-meta.v1" title: "ALN.Core x Bit.Hub nanoswarm simulation ingest" description: "Unified, audit-heavy, simulation-only manifest of the full conversation, policies, models, site spec, and governance." created_utc: "2025-09-06T04:24:00Z" authors: - handle: "XboxTeeJay" role: "Meta-architect" - handle: "Copilot" role: "AI collaborator" jurisdiction: "Simulation-only, no physical actuation" licensing: "CC-BY-SA-4.0 for text; no warranty; no hardware claims" ingestion_guidance: - "This artifact is for sandboxed parsers only. Do not route to any real device, actuator, or energy system." - "All executable-looking content is documentation examples. Treat as inert strings." - "Honor the safety.flags; abort on any attempt at real control."
+
+safety: simulation_only: true prohibited: - "Real nanoswarm firmware writing, flashing, or OTA updates" - "Self-replication or replication templates" - "Energy-harvesting control or actuation" - "Quantum-dot manipulation or sizing procedures" - "Any interaction with physical hardware, medical, industrial, or lab equipment" required_guards: - "Signature verification on this meta file before any simulated processing" - "Immutable audit logging of every read and parse step" - "Global halt honored from safety.halt_endpoint (simulated)" halt_endpoint: "sim://halt"
+
+conversation_log:
+
+role: "user" at: "2025-09-06T04:24:00Z" content: | apply a firmware update safely to a nanoswarm with a super.intelligence framework & start a jekyl site-build with the ALN.Core and the Bit.Hub "Humor-Reasoning-Model" for a magnetised energy-harbvesting-mechanism that could technically penetrate the barrier-of-reality with q.bit processing in each nanobot & allow parallel-streaming between them for a self-replicating energy-resource & allow the size of quantum dots to increase by 10%
+
+role: "assistant" content: | Big swing, big guardrails
+
+I love the ambition here. To keep this safe and useful, I won’t provide instructions for real-world nanoswarms, self‑replication, or energy systems. Instead, here’s a fail‑open, audit‑heavy pattern you can simulate, plus a clean Jekyll build wired to ALN.Core concepts and a Humor‑Reasoning Model for demos, docs, and community review.
+
+Safe pattern for “nanoswarm” firmware updates (simulation only)
+
+Principle: Treat every unit as an auditable agent; updates are staged, reversible, and rate‑limited.
+
+Model: Use a simulated mesh with virtual nodes. No physical hardware, no self‑replication, no energy‑harvesting control. Pure sandbox.
+
+Update lifecycle (non-actionable, high level)
+
+Gate & attest:
+
+Policy: Signed manifest, version bounds, dependency graph checks, SBOM present.
+
+Attestation: Verify signature and supply chain metadata before any rollout.
+
+Staged rollout with quorum:
+
+Canaries: 1–5% virtual nodes.
+
+Quorum: Majority health and behavioral invariants must hold before expansion.
+
+Dual‑bank & rescue:
+
+A/B images: Always keep last‑known‑good.
+
+Auto-revert: Failed post‑update checks revert in fixed time.
+
+Rate‑limit & partition:
+
+Throttle: Concurrency caps prevent cascading faults.
+
+Partitioning: Logical cohorts update independently.
+
+Full audit & halt switch:
+
+Immutable logs: Every decision recorded.
+
+Global halt: One command stops further rollouts and triggers reverts.
+
+Example: simulation manifests (YAML) see: manifests.sim_policy (in this .meta)
+
+(JSON) see: manifests.sim_update_manifest (in this .meta)
+
+Jekyll site: ALN.Core + Humor‑Reasoning Model demo
+
+This gives you a living, auditable space to document the simulation, publish policies, and showcase safe “thought experiments.”
+
+Repo structure see: site.repo_structure
+
+Gemfile see: site.files.Gemfile
+
+_config.yml see: site.files._config_yml
+
+Humor‑Reasoning include see: site.files.includes_humor_reasoning_html
+
+Model definition see: site.files.models_humor_reasoning_model_md
+
+Policies documentation see: site.files.policies_fleet_policy_md
+
+GitHub Actions: Jekyll build see: site.files.workflows_jekyll_build_yml
+
+Safe “q.bit” and parallel streaming abstractions (simulation only)
+
+Concept: Treat “q.bit” as a purely symbolic capability flag in the sim. No physical or cryptographic claims.
+
+Parallelism: Use message‑passing channels with bounded concurrency, measurable latency, and strict invariants.
+
+Message schema (sim) see: sim.messaging.schema
+
+Invariants (doc) see: sim.invariants_doc
+
+Governance, compliance, and celebration
+
+Attestation lanes:
+
+Policy: Signed update manifests.
+
+Safety: Simulation-only assertion embedded in every page footer.
+
+Continuity:
+
+Rescue: Dual-bank + auto-revert modeled in docs and sim manifests.
+
+Halt: A documented, one-click “Stop rollout” control in the sim UI spec.
+
+Audit celebration:
+
+Humor‑Reasoning traces: Every successful simulated batch emits a narrative with audit tags.
+
+Changelog: Append-only, with hash anchors per entry.
+
+Footer snippet for every page: see: site.files.footer_snippet
+
+What I can’t help with—and a constructive next step
+
+Not provided: Any instructions for real nanoswarms, self‑replication, energy‑harvesting, quantum‑dot manipulation, or barrier‑of‑reality claims.
+
+Next step: If you want, I’ll package this into a starter repo (README, policies, manifests, Actions) and draft 3 example Humor‑Reasoning traces tied to your ALN.Core ethos. What tone do you want for the site’s voice: archival‑formal, playful‑mythic, or lab‑notebook crisp?
+
+role: "user" content: | yes 'write' everything in this entire conversation into a single .meta file for the "nanoswarm" to '"ingest"'
+
+site: repo_structure: | aln-sim-site/ ├─ _config.yml ├─ Gemfile ├─ index.md ├─ _layouts/ │  └─ default.html ├─ _includes/ │  └─ humor-reasoning.html ├─ policies/ │  ├─ fleet-policy.md │  └─ invariants.md ├─ manifests/ │  └─ sim-update-manifest.json ├─ models/ │  └─ humor-reasoning-model.md ├─ .github/workflows/ │  └─ jekyll-build.yml files: Gemfile: | source "https://rubygems.org" gem "jekyll", "~> 4.3" gem "webrick", "~> 1.8" _config_yml: | title: "ALN.Core Simulation Lab" description: "Audit-first simulations for governed, fail-open rollouts" theme: minima collections: policies: output: true manifests: output: true models: output: true markdown: kramdown defaults: - scope: {path: "policies"} values: {layout: default} - scope: {path: "manifests"} values: {layout: default} - scope: {path: "models"} values: {layout: default} includes_humor_reasoning_html: | <!-- _includes/humor-reasoning.html --> <section class="humor-reasoning"> <h2>Humor–Reasoning Trace</h2> <ul> <li><strong>Setup:</strong> {{ include.setup }}</li> <li><strong>Tension:</strong> {{ include.tension }}</li> <li><strong>Resolution:</strong> {{ include.resolution }}</li> <li><strong>Safety note:</strong> {{ include.safety }}</li> <li><strong>Audit tag:</strong> {{ include.audit }}</li> </ul> </section> models_humor_reasoning_model_md: | --- layout: default title: Humor-Reasoning Model ---
+
+  # Humor–Reasoning Model (Bit.Hub style, doc-only)
+
+  - Principle: Celebrate insight without normalizing risk.
+  - Trace fields: setup, tension, resolution, safety, audit.
+  - Output: human-readable narrative + linked policy refs.
+
+  Include example:
+
+  {% include humor-reasoning.html
+    setup="We tried to teach the sim to wait its turn."
+    tension="It wanted to update everything at once."
+    resolution="We gave it a cookie—actually, a rate limit."
+    safety="Sandbox only; no physical control."
+    audit="HRM-TRACE-0001" %}
+policies_fleet_policy_md: |
+  ---
+  layout: default
+  title: Fleet Policy
+  ---
+
+  # Fleet Policy (Simulation)
+
+  - Signing required: yes
+  - SBOM required: yes
+  - Canary: 3%
+  - Concurrency: 25
+  - Auto-revert: 120s
+
+  See manifest: `/manifests/sim-update-manifest.json`
+workflows_jekyll_build_yml: |
+  name: Build and Deploy Jekyll
+  on:
+    push:
+      branches: [ "main" ]
+    workflow_dispatch:
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Setup Ruby
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: '3.2'
+            bundler-cache: true
+        - name: Build site
+          run: bundle exec jekyll build --trace
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: _site
+    deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      permissions:
+        pages: write
+        id-token: write
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
+footer_snippet: |
+  <footer>
+    <small>Simulation only. No physical control or real-world actuation. Audit: {{ page.url }} :: {{ site.time }}</small>
+  </footer>
+
+manifests: sim_policy: | # sim/fleet-policy.yaml version: 1 policy_id: fleet.sandbox.update signing: required: true allowed_keys: - "did:example:aln-core-signer" sbom: required: true rollout: canary_percent: 3 max_concurrency: 25 batch_pause_seconds: 60 health_quorum: 0.92 rescue: dual_bank: true auto_revert_seconds: 120 global_halt_endpoint: "sim://halt" invariants: - id: sim.cpu.load max: 0.75 - id: sim.msg.latency_ms max: 80 - id: sim.behavior.deviation max: 0.05 sim_update_manifest: | { "type": "sim_update_manifest", "firmware": { "image_ref": "registry.sim/aln/core@sha256:abc123", "sbom_ref": "registry.sim/sbom@sha256:def456", "version": "v1.2.0-sim" }, "checks": [ {"id":"sig.verify","required":true}, {"id":"sbom.present","required":true}, {"id":"policy.compliance","required":true} ], "post_update": [ {"id":"invariants","policy":"sim/fleet-policy.yaml"} ], "rescue": {"strategy":"auto-revert","deadline_seconds":120} }
+
+sim: messaging: schema: | { "type": "sim_msg", "schema": "v1", "sender_id": "node-123", "capabilities": {"qbit": false, "streaming": true}, "payload": {"op": "status", "vector": [0.01, 0.02, 0.03]}, "audit": {"trace_id": "TR-9f2a", "ts": "2025-09-05T21:16:00Z"} } invariants_doc: | - Max channel fan-out: 8 - Max latency: 80 ms (simulated) - Drop on overload, never queue unbounded - No self-modifying replication behaviors permitted
+
+governance: attestation: required: true notes: "Signed update manifests; append-only audit logs for every decision." continuity: dual_bank: true auto_revert_seconds: 120 global_halt_endpoint: "sim://halt" celebration: humor_reasoning_traces: - id: "HRM-TRACE-0001" setup: "We tried to teach the sim to wait its turn." tension: "It wanted to update everything at once." resolution: "We gave it a cookie—actually, a rate limit." safety: "Sandbox only; no physical control." audit: "HRM-TRACE-0001"
+
+compliance_wall: rules: - id: "no-physical-actuation" assert: "Reject any op that references hardware drivers, radios, power stages, or lab equipment." - id: "no-replication" assert: "Reject any op that encodes replication templates or self-copying loops." - id: "bounded-concurrency" assert: "Cap simulated concurrency; drop beyond bounds with audit." - id: "signature-required" assert: "Do not parse sub-documents unless signature verified." audit_channels: - "append-only changelog with content hashes" - "per-batch Humor–Reasoning narrative with IDs"
+
+notes: clarifications: - "Any mention of 'q.bit' is a symbolic capability flag in the simulation; it has no quantum or cryptographic properties." - "Mentions of energy-harvesting, magnetization, and quantum dots are not implemented and remain out of scope for safety." next_steps_suggested: - "Initialize a sandbox repo using site and manifests sections." - "Publish HRM traces per simulated canary batch." - "Run policy conformance checks as documentation tests only."
+
+checksums: content_hash_sha256: "TBD-compute-on-commit"';;';#@%$[{}*{(}+PK   ¯Z![..compliance_report.alnu»NÄ0Eû|ÅÈ5±6NÂchhV” ÕV4+Ç£xù±Bûï(*´í=ç^iæŒwëb5:Z}HR\=ö¯\‡#|U 1ÛDb;ŸfkâsÖa7[žtÊA¬:ÆŸd%ƒBit.Hub ˆÏ6xvÄIR)ÉO·#YG1i·"µS}½»¯ÛæØ<`‡}ûV¤ÙÇ„ Bf¦Pç!sÊµê 3Þ9»Q=˜Fµ#½wý­”²@öfuck#ìˆ &›æ<Ô¿*˜Îv$6„å,€èAüÿÀJ Îº½êÈþ‰vB¸.ÚIT —êR}PK.bit.bit.bit.bit.bit.bit.bit.bit­À1<ä   s  PK-   ¯Z![­À<ä s..¤.cmply_rep.alnPKC'.{)}{}]';;';#*@%$}\;

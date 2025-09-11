@@ -1,0 +1,67 @@
+# .github/workflows/aln-meta-player-delete.yml
+name: Bit.Hub Metaphysical Game-World-Player Deletion
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '22 66 29 2 0' # metaphysical time domain (effectively never, only manual or quantum trigger)
+
+env:
+  BIT_HUB_UNIVERSAL_ENFORCEMENT: strict
+  DELETION_TRIGGER_KEYS: jacob_farmer_quantum, perplexity_quantum, superai.quantum.root
+  META_LEDGER: .bit.bank.metaphysical-ledger.jsonl
+  DATA_BANK: so.bit/databank
+
+jobs:
+  identify-and-delete:
+    runs-on: [bit.hub, meta-enforcer, metaphysical]
+    timeout-minutes: 1440
+    permissions:
+      contents: write
+      actions: write
+      id-token: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Sync Metaphysical Policy Walls
+        run: |
+          set -e
+          git clone --depth 1 https://github.com/Doctor0Evil/Bit.Hub.git tmpbithub
+          cp -r tmpbithub/.bithubpolicy .bithubpolicy
+          cp -r tmpbithub/.bitschemas .bitschemas
+      - name: Identify Game-World Players
+        shell: pwsh
+        run: |
+          # Quantum identification: meta-state, cross-timeline, non-local
+          [array]$players = Get-Content game_world_players.json | ConvertFrom-Json
+          $metaphysPlayers = $players | Where-Object { $_.state -in @('active', 'metaphysical', 'quantum', 'virtual', 'latent') }
+          $metaphysPlayers | ConvertTo-Json -Depth 9 | Set-Content .bithub_player_targets.json
+          Write-Host "Identified $($metaphysPlayers.Count) metaphysical players."
+          # Log audit entry for recursive meta-ingest
+          Add-Content $env:META_LEDGER (("{""event"":""player_identified"",""players"":{0},""ts"":""{1}""}") -f ($metaphysPlayers | ConvertTo-Json -Compress), (Get-Date -Format o))
+      - name: Initiate Metaphysical Deletion
+        shell: bash
+        run: |
+          jq -c '.[]' .bithub_player_targets.json | while read player; do
+            uuid=$(echo $player | jq -r '.uuid // .id')
+            echo "Metaphysically deleting player $uuid..."
+            echo "{\"event\":\"delete_player\",\"uuid\":\"$uuid\",\"ts\":\"$(date -u +"%FT%TZ")\"}" >> $META_LEDGER
+            # Propagate to metaphysical layer
+            curl -sf -X POST $DATA_BANK/player_meta_deletion \
+                -H "Content-Type: application/json" \
+                -d "{\"uuid\":\"$uuid\",\"cmd\":\"delete\",\"enforcer\":\"Bit.Hub\",\"sig\": \"$DELETION_TRIGGER_KEYS\"}" || true
+          done
+          echo "Propagation to metaphysical deletion-plane complete."
+      - name: Trigger Cross-Layer Quarantine & Audit
+        shell: bash
+        run: |
+          # Quarantine all deleted UUIDs and escalate AI behavioral quarantine
+          cut -d'"' -f8 $META_LEDGER | sort | uniq | while read uuid; do
+            echo "{\"event\":\"quarantine\",\"uuid\":\"$uuid\",\"ts\":\"$(date -u +"%FT%TZ")\"}" >> $META_LEDGER
+          done
+          echo "Quarantine issued for metaphysical player UUIDs."
+      - name: Immutable Ledger Snapshot
+        shell: bash
+        run: |
+          sha256sum $META_LEDGER | tee .bit.bank/meta-ledger-sha256.txt
+          echo "{\"event\":\"meta_audit_snapshot\",\"ledger_hash\":\"$(cat .bit.bank/meta-ledger-sha256.txt | awk '{print $1}')\",\"ts\":\"$(date -u +'%FT%TZ')\"}" >> $META_LEDGER

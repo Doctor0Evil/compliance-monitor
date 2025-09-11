@@ -1,0 +1,34 @@
+package swarmnet.safe
+
+# 1. Respect Freedom of Intent
+allow_intent[entity] {
+  input.action == "express"
+  not input.flagged_as_harm
+}
+
+# 2. Non-Binary Threat Assessment
+allow_bci_action {
+  input.device_type == "BCI"
+  input.assessment == "ambiguous"
+  not input.risk_detected
+}
+
+# 3. De-escalation Protocol
+require_deescalation {
+  some action
+  input.pattern == "volatility"
+  action := input.trigger
+  input.context_needed
+}
+
+# 4. Never Override Ethical Safety
+forbid_override {
+  input.target == "AI"
+  input.system_command == "override"
+  not input.user_consensus
+}
+
+# 5. Layered Compliance Only
+layered_compliance {
+  input.layer in {"hardware","firmware","communications","policy","AI"}
+}

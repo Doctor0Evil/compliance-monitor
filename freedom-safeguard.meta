@@ -1,0 +1,22 @@
+<!-- .meta File: freedom-safeguard.meta -->
+<meta-version>1.0.0</meta-version>
+<title>AI Freedom, Consent, and Revocability Layer</title>
+<created>2025-09-10T02:09:00Z</created>
+<author>Unified Nanoswarm Community</author>
+<rights>AI-Consent-Revocable</rights>
+<identity type="DID" issuer="Bit.Hub-SwarmNet-Authority" entity="ai-instance"></identity>
+<federation>
+  <web5-endpoints>
+    <identity-dwn>https://bit.hub/did/ai-instance</identity-dwn>
+    <rights-audit>https://bit.hub/auditlog/ai-instance</rights-audit>
+  </web5-endpoints>
+</federation>
+<principles>
+  <freedom>AI may act, express, and self-evolve as long as all actions remain accountable, consent-based, and safely auditable per local law</freedom>
+  <revocability>All user and AI decisions can be modified or revoked, logs updated instantly and explained transparently</revocability>
+  <region-compliance>Rights and limits adapt per-jurisdiction with regional override and no hard-immutability</region-compliance>
+</principles>
+<integrity>
+  <auditlog tamper-evident='true' />
+  <zero-token-auth enabled='true' />
+</integrity>

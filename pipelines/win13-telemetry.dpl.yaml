@@ -1,0 +1,24 @@
+# prod://pipelines/win13-telemetry.dpl.yaml
+pipeline: win13-telemetry
+engine: deltacore
+sources:
+  - name: vm-metrics
+    type: eventhub
+    partitions: 32
+    schema: metrics.win13.v1
+  - name: nanoswarm-decisions
+    type: eventhub
+    partitions: 16
+    schema: decisions.v1
+sinks:
+  - name: lakehouse-table
+    table: telemetry.win13.events
+    mode: merge-upsert
+    checkpoint: prod://lakehouse/checkpoints/win13-telemetry
+qos:
+  minThroughputMBps: 800
+  maxJitterMs: 25
+governance:
+  retentionDays: 7
+  redaction: privacy-preserving
+  audit: immutable

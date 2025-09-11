@@ -1,0 +1,41 @@
+needs: opa-policy-check
+if: needs.opa-policy-check.outputs.policy_passed == 'true'
+
+
+name: Bit.Hub Compliance and Build
+
+on:
+  push:
+    paths:
+      - '.github/workflows/compliance-gatekeeper.yml'
+      - '**/*.cs'
+      - '**/*.sln'
+      - '**/*.yml'
+  workflow_dispatch:
+
+jobs:
+  compliance:
+    uses: ./.github/workflows/compliance-gatekeeper.yml
+
+  build:
+    needs: [compliance]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Confirm Compliance Status
+        run: echo "🚀 Safe to build — compliance gate passed"
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          # Examples: 2.2.104, 3.1, 3.1.x, 3.x, 6.0.2xx
+          dotnet-version: '6.0.x'   # (set to your target SDK version)
+          # Uncomment and set other optional fields as needed:
+          # dotnet-quality: ''
+          # global-json-file: ''
+          # source-url: ''
+          # owner: ''
+          # config-file: ''
+          # cache: ''
+          # cache-dependency-path: ''

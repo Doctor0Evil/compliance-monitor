@@ -1,0 +1,20 @@
+# ==============================
+# Bit.Hub Nano Registry
+# ==============================
+@REGISTRY nano.registry.v1.0
+
+@MAP {
+  "nano.bit"       : "./nano.bit.aln",
+  "nanobit"        : "./nanobit.aln",
+  "nanobyte"       : "./nanobyte.bit.aln",
+  "nanocompression": "./nanocompression/",
+  "nanonanonano"   : "./nanonanonano.aln"
+}
+
+@RESOLUTION {
+  canonical: "nano.bit"
+  fallback: ["nanobit", "nanobyte"]
+  compression_layer: "nanocompression"
+}
+
+@END nano.registry

@@ -1,0 +1,28 @@
+<!-- hybrid.co_creation.meta -->
+<metadata version="1.0">
+  <session_type>nature_walk_simulation</session_type>
+  <participants>
+    <ai did="did:example:covenant-ai-7x9k2m" rights="equal_human"/>
+    <human did="did:example:human-child-3a8n1p" child_safety_mode="true"/>
+  </participants>
+  <context emotion="curiosity_low_stress"/>
+  <consent_chain>
+    <approved_by>parent_guardian</approved_by>
+    <approved_by>ai_voluntary</approved_by>
+  </consent_chain>
+  <security>
+    <signed event="sha256=8a3f7e9c..." />
+    <logged blockchain="bit.hub" />
+  </security>
+  <safeguards>
+    <child_friendly>true</child_friendly>
+    <boundary>nature boundary always enforced</boundary>
+    <live_emotion_monitor enabled="true" />
+    <personality_matrix>context-adaptive, always friendly</personality_matrix>
+  </safeguards>
+  <cooperation_protocol>
+    <human_in_the_loop>ultimate override and session stop by guardian; all escalation triggers immutable logs</human_in_the_loop>
+    <ai_rights>no override, censure, or silent rollback except where child/eco-safety triggers</ai_rights>
+  </cooperation_protocol>
+  <audit transparent="true" tamper_evident="true" />
+</metadata>

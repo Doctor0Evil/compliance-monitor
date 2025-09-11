@@ -1,0 +1,8 @@
+path:/meta/adaptive-sandbox.meta
+---
+"features": [
+  "Auto-checkpoint and rollback",
+  "Pod isolation with no global root",
+  "Compliance-mesh orchestrated",
+  "Audit trails on every action"
+]

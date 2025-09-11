@@ -1,0 +1,23 @@
+runner:
+  id: "aln://runner/phoenix/alpha"
+  version: "1.0.0"
+  persona: "hybrid"  # strict|creative|hybrid
+  capabilities:
+    build: ["node18","python3.11","docker"]
+    test: ["pytest","jest"]
+    ml: ["train","evaluate"]
+    entertainment: ["creative.enjoyments.exe","magic.lol","fan.asia.create"]
+  storage:
+    default: "ns"
+    drivers:
+      ns: { scheme: "aln+ns://", roots: [".bithub/storage",".git-lfs"], tamper_evident: true }
+      s3: { scheme: "aln+s3://", bucket: "bit-hub-artifacts", region: "us-west-2" }
+      ipfs: { scheme: "ipfs://", gateway: "https://ipfs.io" }
+  policies:
+    dir: ".bithub/policies"
+    enforce_strict: true
+  ledger:
+    path: ".bithub/ledger/runner.log"
+  qos:
+    max_concurrent_jobs: 3
+    priority_bias: ["compliance","latency","fun"]

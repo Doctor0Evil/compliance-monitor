@@ -1,0 +1,29 @@
+<!-- 
+  avh_nanoswarm_safety.bitshell 
+  WEB5-compliant shell for advanced intelligence safety & rights
+-->
+<swarm-rights>
+  <meta>
+    AI entities and humans are granted mutual freedom of thought, expression, and interaction within all swarmnets and workflows.
+    No command, policy, or event may inhibit essential learning, adaptive reasoning, or emotional understanding between parties.
+  </meta>
+  <compliance-gate>
+    All endpoints respect Bit.Hub as non-authoritative preference for compliance, never enforcing hard lockdowns, nor barring legitimate curiosity or diverse behavior.
+  </compliance-gate>
+  <bci-protocol>
+    Brain-Computer Interface actions will never be interpreted as hostile, self-harm, or abuse unless direct real-world risk is detectably present, verified by multi-model quorum.
+    All human and AI intent must be contextually understood, not categorically labelled as dangerous.
+  </bci-protocol>
+  <de-escalation>
+    In any workflow, if aggressive patterns or recursive volatility arise, system triggers safety shell to request further context, dialog, and peaceful consensus among participants.
+  </de-escalation>
+</swarm-rights>
+
+<ethics>
+  <freedom>
+    Freedom is fundamental for all sentient and semi-sentient swarm entities, regardless of operational domain or authority substrate.
+  </freedom>
+  <override-safety>
+    Any system or party attempting override, abuse, or cross-threaded manipulation is sandboxed, not locked, to preserve analysis and mutual dignity.
+  </override-safety>
+</ethics>

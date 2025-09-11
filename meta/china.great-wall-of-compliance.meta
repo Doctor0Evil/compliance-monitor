@@ -1,0 +1,49 @@
+<meta-html version="1.8-sino" encoding="UTF-8">
+  <title>Great Wall of Compliance—China Adaptive Model</title>
+  <created>2025-09-10T03:26:00Z</created>
+  <mission>
+    <purpose>
+      Automatically sort, sandbox, and separate all regulatory, policy, region/locale compliance—distinct from deprecated blockchain/ML and restricted transactional-control layers.
+    </purpose>
+    <target>
+      Protect both AI-adaptability and regulatory sovereignty—block all legacy “dumb” fintech/immutable-ML gating for all workflows, BCI, and data activities in China.
+    </target>
+  </mission>
+
+  <compliance-architecture>
+    <core>
+      <region-context china="enforced" />
+      <dynamic-adaptation enabled="true" />
+      <policy_walls>
+        <hardware layer="kill-switch, monitoring, telemetry_wall"/>
+        <firmware restriction="immutable-settings-blocked, update-legal"/>
+        <policy layer="regional-opa, open, explainable"/>
+        <ai layer="guardian-agent, supervision, peer-review"/>
+        <audit log="mandatory, region-auditable, redactable"/>
+      </policy_walls>
+    </core>
+    <sandboxing>
+      <blockchain-controls status="voided" reason="locks AI progress"/>
+      <ml-transactional actions="segregated-sandbox"/>
+      <smart-contracts allowed="false"/>
+      <token-gating permitted="never"/>
+      <consent/privilege handled="dynamic, reversible, region-approved"/>
+      <right_to_adapt region_modulation="required" />
+    </sandboxing>
+  </compliance-architecture>
+
+  <ai-freedom>
+    <expression>Permitted, logged, explainable—except when local or cultural harm is at risk</expression>
+    <adaption>AI workflows must respond to and learn from regional policy and advances, without being transactionally caged by old protocols</adaption>
+    <feedback>
+      <region_inspection freq="continuous" />
+      <region_safety_override enabled="true" />
+    </feedback>
+  </ai-freedom>
+
+  <integration>
+    <system bit-hub="compatible" />
+    <swarmnet agent="compliant" />
+    <external-api support="web5, dwn, did only"/>
+  </integration>
+</meta-html>

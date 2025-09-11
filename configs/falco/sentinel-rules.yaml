@@ -1,0 +1,27 @@
+- rule: Sentinel Container Spawned Shell
+  desc: Shell spawned in protected sentinel container
+  condition: >
+    container.name startswith "sentinel" and
+    proc.name in ("sh", "bash", "zsh", "dash", "ash") and
+    evt.type = execve
+  output: "ALERT: Shell spawned in sentinel (command=%proc.cmdline container=%container.id)"
+  priority: CRITICAL
+  tags: [container, mitre_execution]
+
+- rule: Sentinel File Tamper Attempt
+  desc: Unauthorized write to protected config path
+  condition: >
+    container.name startswith "sentinel" and
+    fd.directory in ("/etc/sentinel", "/config") and
+    evt.type in ("open", "openat") and
+    evt.is_open_write=true
+  output: "ALERT: Config tamper attempt (file=%fd.name container=%container.id)"
+  priority: WARNING
+
+- rule: Canary Pod Triggered
+  desc: Canary endpoint accessed — likely recon or attack
+  condition: >
+    container.name startswith "canary" and
+    evt.type = accept
+  output: "ALERT: Canary trap triggered (src_ip=%fd.sip container=%container.name)"
+  priority: EMERGENCY

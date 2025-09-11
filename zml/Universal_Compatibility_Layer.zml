@@ -1,0 +1,29 @@
+<compatibility version="2.0">
+  <purpose>Bridge and evaluate compatibility between all entities and environment types.</purpose>
+  <capability-model>
+    <attribute>Processing Power</attribute>
+    <attribute>Supported Formats</attribute>
+    <attribute>Communication Protocols</attribute>
+    <attribute>Latency Requirements</attribute>
+    <attribute>Safety Thresholds</attribute>
+  </capability-model>
+  <environment-profiles>
+    <profile name="gaming-virtual">
+      <requirements>real-time, 3d-rendering, low-latency</requirements>
+      <boundaries>no-harm, consent-required, reversible-actions</boundaries>
+    </profile>
+    <profile name="professional">
+      <requirements>data-integrity, compliance, audit-trail</requirements>
+      <boundaries>non-discrimination, transparency, accountability</boundaries>
+    </profile>
+  </environment-profiles>
+  <scoring_weights>
+    <processing>0.4</processing>
+    <interaction>0.3</interaction>
+    <environment>0.3</environment>
+  </scoring_weights>
+  <compatibility_policy>
+    <minimum_score>0.6</minimum_score>
+    <recommendation-procedure>Suggest upgrades or environment change for sub-threshold matches.</recommendation-procedure>
+  </compatibility_policy>
+</compatibility>

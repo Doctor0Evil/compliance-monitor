@@ -1,0 +1,18 @@
+@INDEX compliance_index.v1.0
+
+@SUITE EthicsGuard {
+  policies: [
+    "./compliance_policy.aln",
+    "./compliance_report.aln"
+  ]
+  guardians: [
+    "./complianceGuardian.BitHub.ALN.cs",
+    "./Compliance.Block.bit.c.sh"
+  ]
+  barriers: [
+    "./barrier-of-reality.md",
+    "./barrier.bit.nano.aln"
+  ]
+}
+
+@END compliance_index

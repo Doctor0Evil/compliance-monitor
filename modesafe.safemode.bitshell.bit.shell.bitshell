@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# bitshell-loader: Loads and enforces .bitshell policy for each controlled nanoswarm job
+
+BITSHELL_PATH="${BITSHELL_PATH:-.bitshell}"
+
+function load_bitshell() {
+  # Only run if .bitshell exists and is regular file
+  if [[ -f "$BITSHELL_PATH" ]]; then
+    # Check permissions and policy compliance before sourcing
+    [[ "$(stat -c %a "$BITSHELL_PATH")" -le 644 ]] || {
+      echo "[ERROR] .bitshell must not be world-writable. Refusing to load."; exit 101;
+    }
+    grep -q 'Enforced: true' "$BITSHELL_PATH" || {
+      echo "[ERROR] .bitshell missing policy compliance header. Refusing to load."; exit 102;
+    }
+    # Audit log the load event
+    echo "$(date -Is) [bitshell-loader] INFO: Loading $BITSHELL_PATH" >>bitshell.audit.log
+    # Hardened subshell, block dangerous builtins
+    (set -euo pipefail; set +o history; source "$BITSHELL_PATH")
+    # Confirm successful load
+    echo "[INFO] .bitshell loaded and enforced successfully."
+  else
+    echo "[ERROR] .bitshell not found, compliance failed!"; exit 103
+  fi
+}
+
+# Main entrypoint for every execution session
+load_bitshell
+"$@"

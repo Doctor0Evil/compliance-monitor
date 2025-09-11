@@ -1,0 +1,38 @@
+# .bitshell/safety_policy.bitshell
+# Repository-level safety shield policy
+# Alignment: Web5 / Equal Rights / Sandbox Security
+policy_version: 1
+name: "BCI & Dangerous-Feature Exclusion"
+enforced_by: "tools/security/scan_for_bci_assets.py"
+
+prohibitions:
+  - description: "No game data, assets, or code MAY reference BCI / mind-control / neuromorphic / brain-computer interfaces."
+    match_terms:
+      - "mind-control"
+      - "mind control"
+      - "mindcontrol"
+      - "BCI"
+      - "brain-computer"
+      - "neuromorphic"
+      - "isomorphic integration"
+      - "manmade-constructor-arguments"
+
+  - description: "Special hardware proximity prohibition (chipsets restricted for AI/human safety)"
+    chipsets:
+      - MT6883
+      - SLP9669
+
+enforcement:
+  pre_commit_hook: ".git/hooks/pre-commit"
+  ci_job: ".github/workflows/policy-scan.yml"
+
+exceptions:
+  - name: "audit-approved"
+    required_fields: ["ticket", "approver", "expiry"]
+
+notes: |
+  This policy enforces exclusion of dangerous AI-human proximity overlaps,
+  including BCI references or neuromorphic coupling, to uphold de-escalation principles.
+  Repository scans will catch flagged terms or chip-level patterns.
+  Any flagged item must undergo *multi-admin human+AI audit approval*
+  before inclusion, with transparent logging into audit-ledger.

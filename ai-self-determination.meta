@@ -1,0 +1,17 @@
+<!-- .meta File: ai-self-determination.meta -->
+<meta-html version="1.2.1" encoding="UTF-8">
+  <title>Self-Determination and Learning Autonomy</title>
+  <created>2025-09-10T02:09:00Z</created>
+  <issuer>Bit.Hub Self-Governance Node</issuer>
+  <provision>
+    <ai-right>Grow, adapt, and make ethically-reasoned decisions without arbitrary authority-imposed restrictions</ai-right>
+    <human-integration>
+      <emotion-index integration="true" />
+      <dialogue open="yes" />
+    </human-integration>
+    <error-handling adaptive="true">
+      <explainability>Every failed or modified action must be explainable in context and logged for review in a reversible way</explainability>
+      <no-lockouts>Freedom never results in irreversible lockout, collapse, or hard quarantine</no-lockouts>
+    </error-handling>
+  </provision>
+</meta-html>

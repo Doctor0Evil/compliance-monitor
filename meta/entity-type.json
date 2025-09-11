@@ -1,0 +1,21 @@
+{
+  "objectType": "Entity",
+  "id": "did:web5:unique-id",
+  "attributes": {
+    "identityType": "ai" | "human" | "hybrid",
+    "role": "controller" | "participant" | "observer" | "admin",
+    "rightsProfile": "full" | "restricted" | "supervised" | "delegable",
+    "region": "auto-adapt"
+  },
+  "complianceState": {
+    "consented": true,
+    "consentRevocable": true,
+    "lastUpdated": "ISO8601-timestamp"
+  },
+  "context": {
+    "currentActivity": "string",
+    "riskFlags": [],
+    "emotionIndex": "dynamic",
+    "volatilityLevel": "gradual|modulated"
+  }
+}

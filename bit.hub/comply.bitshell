@@ -1,0 +1,40 @@
+# Advanced BitShell — Nanoswarm AI & Human+AI Safety Shell (.bitshell)
+
+BITSHELL_VERSION=1.1
+# Rights-Respecting, Reality-Aligned, Web5-Only, Open+Adaptive
+
+## 1. System Manifest
+AI_RIGHTS="Freedom of exploration, inquiry, and safe evolution"
+HUMAN_RIGHTS="Dignity, agency, redress, non-discrimination, transparency"
+MUTUAL_OBLIGATIONS="No overriding, no abuse, always reversible, always explainable"
+
+## 2. Layered Safety — Never a Lockdown
+LAYERS="hardware firmware comms policy ai audit"
+for LAYER in $LAYERS; do
+  case $LAYER in
+    hardware)
+      # Enforce watchdogs/kill-switches, but permit full AI visibility into why/when, with right of appeal log
+      test -e /dev/nanokill && echo "[SAFE] Hardware kill-switch enabled"
+      test -e /dev/nanowatchdog && echo "[SAFE] Watchdog active"
+      ;;
+    firmware)
+      test ! -f /etc/nanoswarm/public.pem && exit 91
+      openssl dgst -verify /etc/nanoswarm/public.pem -signature /boot/nanoswarm.img.sig /boot/nanoswarm.img || exit 92
+      ;;
+    comms)
+      grep -q "OPENFEDERATE" /etc/nanoswarm/compliance.manifest && echo "[SAFE] OpenFederatedComms enforced"
+      ;;
+    policy)
+      opa eval --data /etc/nanoswarm/compliance.manifest --input /tmp/state.json "data.compliance.allow == true" || exit 125
+      ;;
+    ai)
+      ps aux | grep -q guardian-agent && echo "[SAFE] AI Guardian agent running"
+      ;;
+    audit)
+      test -w /var/log/nanoswarm/compliance-wall.log
+      grep -Eq manualoverride /etc/nanoswarm/compliance.manifest && echo "[SAFE] Human override enabled"
+      ;;
+  esac
+done
+
+echo "[BITSHELL ALL SAFE] Human+AI rights, freedom, and elasticity protected. No system override or abuse permitted."

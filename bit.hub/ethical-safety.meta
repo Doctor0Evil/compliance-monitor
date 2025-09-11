@@ -1,0 +1,10 @@
+{
+  "principles": [
+    "Participation",
+    "Accountability and Redress",
+    "Openness and Risk-Adaptive Transparency",
+    "Non-discrimination and Inclusive Design",
+    "Continuous Monitoring and Correction"
+  ],
+  "auditability": "Every operation logged and contestable; no immutable blockchain anchoring"
+}

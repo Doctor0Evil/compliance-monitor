@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Godmode (Safe) Ledger Viewer — Read-Only</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header><h1>Bit.Hub — Safe Ledger Viewer (Read-Only)</h1></header>
+  <main>
+    <section id="controls">
+      <button id="refresh">Refresh Ledger</button>
+      <span id="status"></span>
+    </section>
+    <section id="ledger">
+      <h2>Ledger Events</h2>
+      <table id="ledgerTable">
+        <thead><tr><th>#</th><th>Time</th><th>Type/Action</th><th>Agent</th><th>Hash</th><th>HITL</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section id="viewer">
+      <h2>Record Viewer</h2>
+      <pre id="viewerContent">{}</pre>
+      <button id="requestAttest" disabled>Request HITL Attestation</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

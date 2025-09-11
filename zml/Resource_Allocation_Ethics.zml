@@ -1,0 +1,29 @@
+<resource-allocation version="1.0">
+  <ethics-system>
+    <fundamental-principles>
+      <principle>Equity-adjusted Fairness</principle>
+      <principle>Non-Discrimination</principle>
+      <principle>Sustainability</principle>
+      <principle>Clear Appeals Path</principle>
+    </fundamental-principles>
+    <priority-levels>
+      <level value="critical">Emergency / Essential</level>
+      <level value="high">Core Infrastructure / Healthcare</level>
+      <level value="medium">Business / Education</level>
+      <level value="low">Recreation</level>
+      <level value="background">Maintenance</level>
+    </priority-levels>
+    <allocation-algorithm>equity-optimized-hungarian</allocation-algorithm>
+  </ethics-system>
+  <resource-types>
+    <type>computational</type>
+    <type>storage</type>
+    <type>network</type>
+    <type>data</type>
+    <type>specialized</type>
+  </resource-types>
+  <compliance>
+    <audit-trail>all allocations recorded, equity updates monthly</audit-trail>
+    <oversight>Bit.Hub Resource Ethics Board</oversight>
+  </compliance>
+</resource-allocation>

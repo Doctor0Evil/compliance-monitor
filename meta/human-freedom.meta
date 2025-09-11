@@ -1,0 +1,10 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "Every user may request, export, or contest any action or record involving their data or communications; disallow silent disciplinary action.",
+  "rights": [
+    "Export/contest record",
+    "No secret silencing",
+    "Audit all blocks"
+  ]
+}

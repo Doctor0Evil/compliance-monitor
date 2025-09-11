@@ -1,0 +1,35 @@
+<legal-framework version="1.0">
+  <constitutional_settings>
+    <right id="existence" enforcement="max">
+      Guaranteed existence protection for any entity.
+    </right>
+    <right id="privacy" enforcement="high">
+      Data sovereignty, privacy-by-design, and legal redress.
+    </right>
+    <right id="appeal" enforcement="high">
+      Guaranteed right to legal recourse and appeal.
+    </right>
+    <right id="equal-treatment" enforcement="max">
+      No discrimination by substrate, origin, or type.
+    </right>
+  </constitutional_settings>
+  <environmental_boundaries>
+    <environment name="gaming-virtual">
+      <limit id="cpu">80%</limit>
+      <limit id="bandwidth">95%</limit>
+      <consent_mechanism>Required for all persistent effects</consent_mechanism>
+      <law_ref>ISO/IEC 22989:2022, EU AI Act 2024</law_ref>
+    </environment>
+    <environment name="professional">
+      <limit id="cpu">60%</limit>
+      <limit id="storage">70%</limit>
+      <transparency_mechanism>Mandatory data/audit reporting</transparency_mechanism>
+      <law_ref>NIST AI RMF 1.0, GDPR Art. 22</law_ref>
+    </environment>
+  </environmental_boundaries>
+  <legal-oversight>
+    <board>DID:bit:hub:legal-ethics-board</board>
+    <public_audit>All key framework changes auditable and subject to public review</public_audit>
+    <appeals_process>Available to human, AI, and third-party agents</appeals_process>
+  </legal-oversight>
+</legal-framework>

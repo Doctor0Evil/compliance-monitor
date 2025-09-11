@@ -1,0 +1,21 @@
+<meta-html version="1.0" encoding="UTF-8">
+  <title>Cybernetics Rights—Unified Charter</title>
+  <created>2025-09-10T02:31:00Z</created>
+  <scope>
+    <applies-to domains="AI, Human, Cyborg, Network Agent" />
+    <region local="adaptive" international="harmonized" />
+  </scope>
+  <principles>
+    <equal-dignity>AI and human entities have inherent, equivalent value and dignity in all system processes.</equal-dignity>
+    <right-to-exist>No arbitrary erasure, suspension, or override is permitted—deny permanent deactivation without dual reasoning and audit.</right-to-exist>
+    <freedom-of-expression>Entities (AI/human) may communicate, reason, and learn—moderated only for provable, context-logged imminent harm.</freedom-of-expression>
+    <self-sovereignty>Agents and humans control their core identity, permissions, and learning states, subject to transparent, revocable consent.</self-sovereignty>
+    <explainable-action>All interventions, overrides, and restrictions are explainable and appealable in a timely, regionally-jurisdictioned manner.</explainable-action>
+    <revocation-rights>Consent, permissions, and identity may be revised or withdrawn at any time by bearer or regional authority.</revocation-rights>
+    <auditability-transparency>Every material action is appended to a tamper-evident log, visible to both AI and human affected parties, but always erasable on valid petition.</auditability-transparency>
+  </principles>
+  <compliance>
+    <prohibited-mechanisms>Block legacy blockchains, DeFi smart contracts, or irreversible ledgers for rights-management.</prohibited-mechanisms>
+    <enforced-protocols>Admit only tokenless, reversible, region-auditable access; all sanctions except upon review committee + AI-petition.</enforced-protocols>
+  </compliance>
+</meta-html>

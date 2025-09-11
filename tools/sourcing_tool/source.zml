@@ -1,0 +1,234 @@
+#!/usr/bin/env python3
+"""
+Scan repo for BCI / mind-control / neuromorphic / chipset proximity matches.
+
+Usage:
+  python3 tools/security/scan_for_bci_assets.py --root .         # dry-run (exit 0 but prints findings)
+  python3 tools/security/scan_for_bci_assets.py --root . --fail  # exit !=0 on any finding (for CI / git-hook)
+"""
+import argparse, sys, re
+from pathlib import Path
+
+FORBIDDEN_TERMS = [
+    r'mind[- ]?control', r'mindcontrol', r'\bBCI\b', r'brain[- ]?computer',
+    r'braininterface', r'neuro', r'neuromorphic', r'isomorphic[- ]?integration',
+    r'isomorphic integration', r'manmade[- ]?constructor[- ]?arguments', r'brain-computer'
+]
+CHIPSETS = [r'MT6883', r'SLP9669', r'MT-6883', r'SLP-9669']
+# file extensions to examine as text
+TEXT_EXT = {'.py', '.js', '.ts', '.json', '.yaml', '.yml', '.xml', '.zml', '.bitshell', '.md', '.txt', '.cfg', '.ini', '.html', '.c', '.h', '.cpp', '.sol', '.rb', '.go'}
+
+# compile regex
+forbidden_re = re.compile('|'.join(FORBIDDEN_TERMS), re.I)
+chipset_re = re.compile('|'.join(CHIPSETS), re.I)
+
+PROXIMITY_LINES = 20  # number of lines to check for proximity
+
+def scan_file(path: Path):
+    findings = []
+    try:
+        text = path.read_text(errors='ignore')
+    except Exception:
+        return findings
+    lines = text.splitlines()
+    # quick checks: filename mentions a chipset and/or forbidden term
+    fname = str(path.name)
+    fname_match = forbidden_re.search(fname) or chipset_re.search(fname)
+    # scan lines for standalone matches
+    for i, line in enumerate(lines):
+        if forbidden_re.search(line):
+            # check for chipset within N lines
+            start = max(0, i - PROXIMITY_LINES)
+            end = min(len(lines), i + PROXIMITY_LINES + 1)
+            window = '\n'.join(lines[start:end])
+            chipset_found = bool(chipset_re.search(window))
+            findings.append({
+                'path': str(path),
+                'line_no': i+1,
+                'line': line.strip(),
+                'chipset_nearby': chipset_found
+            })
+        elif chipset_re.search(line):
+            # check for forbidden term within window
+            start = max(0, i - PROXIMITY_LINES)
+            end = min(len(lines), i + PROXIMITY_LINES + 1)
+            window = '\n'.join(lines[start:end])
+            forb_found = bool(forbidden_re.search(window))
+            if forb_found:
+                findings.append({
+                    'path': str(path),
+                    'line_no': i+1,
+                    'line': line.strip(),
+                    'chipset_nearby': True
+                })
+    # If filename matches and no content matches, still flag
+    if fname_match and not findings:
+        findings.append({
+            'path': str(path),
+            'line_no': 0,
+            'line': f'filename contains suspicious term: {fname}',
+            'chipset_nearby': bool(chipset_re.search(fname))
+        })
+    return findings
+
+def is_text_file(path: Path):
+    return path.suffix.lower() in TEXT_EXT or path.suffix == ''
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument('--root', default='.', help='repo root')
+    p.add_argument('--fail', action='store_true', help='exit non-zero on findings (use in pre-commit/CI)')
+    p.add_argument('--verbose', action='store_true')
+    args = p.parse_args()
+
+    root = Path(args.root).resolve()
+    matches = []
+    for f in root.rglob('*'):
+        if f.is_file() and not any(part.startswith('.') for part in f.parts):
+            # skip obvious binary blobs by extension
+            if not is_text_file(f):
+                # still flag asset filenames
+                if forbidden_re.search(f.name) or chipset_re.search(f.name):
+                    matches.append({'path': str(f), 'reason': 'filename match'})
+                continue
+            findings = scan_file(f)
+            if findings:
+                matches.extend(findings)
+
+    if matches:
+        print("=== POLICY SCAN: POTENTIAL FORBIDDEN ITEMS FOUND ===")
+        for m in matches:
+            if isinstance(m, dict) and 'line_no' in m:
+                print(f"{m['path']}: line {m['line_no']}: {m['line']}  [chipset_nearby={m['chipset_nearby']}]")
+            else:
+                print(m)
+        print("=== END ===")
+        if args.fail:
+            print("Failing due to policy matches. Review before commit.")
+            sys.exit(2)
+    else:
+        if args.verbose:
+            print("No matches found.")
+    sys.exit(0)
+
+if __name__ == '__main__':
+    main()# .bitshell/safety_policy.bitshell
+# Repository-level safety policy (human-readable + machine-checkable)
+policy_version: 1
+name: "BCI & Dangerous-Feature Exclusion"
+enforced_by: "tools/security/scan_for_bci_assets.py"
+prohibitions:
+  - description: "No game data/assets or code MAY reference BCI / mind-control / neuromorphic / brain-computer interfaces."
+    match_terms:
+      - "mind-control"
+      - "mind control"
+      - "mindcontrol"
+      - "BCI"
+      - "brain-computer"
+      - "neuromorphic"
+      - "isomorphic integration"
+      - "manmade-constructor-arguments"
+  - description: "Special hardware proximity prohibition (chipsets)"
+    chipsets:
+      - MT6883
+      - SLP9669
+enforcement:
+  pre_commit_hook: ".git/hooks/pre-commit"
+  ci_job: ".github/workflows/policy-scan.yml"
+exceptions:
+  - name: "audit-approved"
+    required_fields: ["ticket", "approver", "expiry"]
+notes: |
+  Any flagged item must be triaged and approved by multi-admin audit before it may be included.<!-- wrappers/windows12_policy.zml -->
+<meta policy="windows12-meta-wrapper" version="1.0">
+  <policy_file>.bitshell/safety_policy.bitshell</policy_file>
+  <enforcement>
+    <pre_commit>.git/hooks/pre-commit</pre_commit>
+    <ci_job>.github/workflows/policy-scan.yml</ci_job>
+  </enforcement>
+  <notes>
+    This wrapper declares repository policy for Windows12 meta-environments and documents
+    the automated scanner to be used prior to any packaging or distribution.
+  </notes>
+</meta>#!/usr/bin/env bash
+# pre-commit hook: run the BCI/assets scanner and block commits on findings
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || echo .)"
+PY="python3"
+SCAN="$ROOT/tools/security/scan_for_bci_assets.py"
+if [ ! -f "$SCAN" ]; then
+  echo "Policy scanner not found at $SCAN; skipping policy check."
+  exit 0
+fi
+# We run scanner with --fail so it exits non-zero on any finding.
+$PY "$SCAN" --root "$ROOT" --fail
+ret=$?
+if [ $ret -ne 0 ]; then
+  echo "Commit blocked: policy scanner found potential forbidden BCI-related items."
+  echo "Run 'python3 $SCAN --root $ROOT' to see details and perform audit/cleanup."
+  exit $ret
+fi
+exit 0# create dirs
+mkdir -p tools/security .bitshell wrappers .github/workflows
+
+# write files (example: using cat <<'EOF' > path)
+# 1) scanner
+cat > tools/security/scan_for_bci_assets.py <<'PY'
+[PASTE the Python content from tools/security/scan_for_bci_assets.py here]
+PY
+chmod +x tools/security/scan_for_bci_assets.py
+
+# 2) policy
+cat > .bitshell/safety_policy.bitshell <<'POL'
+[PASTE the .bitshell content above here]
+POL
+
+# 3) zml wrapper
+cat > wrappers/windows12_policy.zml <<'ZML'
+[PASTE the .zml content above here]
+ZML
+
+# 4) pre-commit hook
+cat > .git/hooks/pre-commit <<'HOOK'
+[PASTE the pre-commit hook content above here]
+HOOK
+chmod +x .git/hooks/pre-commit
+
+# 5) optional CI workflow
+cat > .github/workflows/policy-scan.yml <<'YML'
+[PASTE the workflow content above here]
+YML# create dirs
+mkdir -p tools/security .bitshell wrappers .github/workflows
+
+# write files (example: using cat <<'EOF' > path)
+# 1) scanner
+cat > tools/security/scan_for_bci_assets.py <<'PY'
+[PASTE the Python content from tools/security/scan_for_bci_assets.py here]
+PY
+chmod +x tools/security/scan_for_bci_assets.py
+
+# 2) policy
+cat > .bitshell/safety_policy.bitshell <<'POL'
+[PASTE the .bitshell content above here]
+POL
+
+# 3) zml wrapper
+cat > wrappers/windows12_policy.zml <<'ZML'
+[PASTE the .zml content above here]
+ZML
+
+# 4) pre-commit hook
+cat > .git/hooks/pre-commit <<'HOOK'
+[PASTE the pre-commit hook content above here]
+HOOK
+chmod +x .git/hooks/pre-commit
+
+# 5) optional CI workflow
+cat > .github/workflows/policy-scan.yml <<'YML'
+[PASTE the workflow content above here]
+YML# dry-run scan (doesn't block)
+python3 tools/security/scan_for_bci_assets.py --root . 
+
+# run scanner in fail mode (exit non-zero on findings)
+python3 tools/security/scan_for_bci_assets.py --root . --fail# bypass hook for single commit (NOT recommended)
+git commit --no-verify -m "temp: bypass policy (audit ticket #123)"

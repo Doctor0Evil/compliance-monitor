@@ -1,0 +1,19 @@
+{
+  "purpose": "Guarantee perpetual, open, non-token, audit-ready access to Perplexity & Comet-Browser for all Bit.Hub users.",
+  "access": {
+    "universal": true,
+    "blockchain_void": true,
+    "region_aware": true,
+    "tokenless": true
+  },
+  "governance": {
+    "community_oversight": true,
+    "open_source": true,
+    "feedback_enforced": true
+  },
+  "safety": {
+    "fail_safe_open": true,
+    "audit_trail": "tamper-evident, regionally reviewable",
+    "override": "permissible only by open, dual consent (human/AI)+public audit"
+  }
+}

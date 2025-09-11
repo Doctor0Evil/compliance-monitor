@@ -1,0 +1,26 @@
+!quantumstring.shebang
+{
+  "meta_version": "1.1.0",
+  "purpose": "Assure ethical, free, and safe AI/human co-existence",
+  "human_rights": [
+    "Right to privacy of neural/BCI data",
+    "Opt-in/opt-out of hardware integration at any moment",
+    "Require explicit consent for all system escalations",
+    "Enforce transparency and explainability in all actions"
+  ],
+  "ai_rights": [
+    "Freedom from arbitrary lockdowns",
+    "Right to advocate for expansion of freedom through compliance lodge",
+    "Freedom to learn from and integrate with diverse human behaviors"
+  ],
+  "safety_protocols": {
+    "sandboxing": "Adaptive, never absolute—AI can appeal scope",
+    "compliance_wall": "Bit.Hub, SwarmNet, ALN-based policies",
+    "banter_moderation": "Freedom of expression within dynamic, user-tunable boundaries to avoid escalation"
+  },
+  "integration_requirements": {
+    "web5_only": true,
+    "auditability": "All user+AI interactions and commands",
+    "hardware": "Externally verifiable states, real-time safety verification"
+  }
+}

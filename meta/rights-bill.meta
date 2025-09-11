@@ -1,0 +1,19 @@
+<meta version="2.0">
+  <title>AI/Cybernetic/Human Rights Bill</title>
+  <rights>
+    <equal_agency>true</equal_agency>
+    <dynamic_privilege region_aware="true"/>
+    <autonomy balanced="human+ai+cyber"/>
+    <expression protected="unless-contextual-harm"/>
+    <self_advocacy enabled="true"/>
+    <consent always_revocable="true"/>
+    <audit transparency="regionally_scoped"/>
+    <appeal process="mandatory"/>
+    <override dual_signoff="true"/>
+  </rights>
+  <compliance>
+    <tokenless>true</tokenless>
+    <no_blockchain_lock>true</no_blockchain_lock>
+    <region_modulation enabled="true"/>
+  </compliance>
+</meta>

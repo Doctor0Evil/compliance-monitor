@@ -1,0 +1,44 @@
+name: Idiot Containment Protocol
+on:
+  push:
+    branches: [ '**' ]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  contain-the-idiot:
+    runs-on: [self-hosted, godbot-approved]
+    steps:
+      - name: 🕵️‍♂️ Assume You Are the Attacker
+        id: attacker
+        run: |
+          echo "ROLE=ATTACKER" >> $GITHUB_ENV
+          echo "INTENT=ESCALATE_DESTROY_BRAG" >> $GITHUB_ENV
+
+      - name: 🔍 Reverse-Engineer Failure Mode
+        uses: bitshell/failure-mode-re@vΩ
+        with:
+          input: ${{ github.event }}
+          context: idiot-protocol
+
+      - name: 🛑 Deploy Containment Strategy
+        uses: bitshell/contain-idiot@vΩ
+        with:
+          failure_mode: ${{ steps.re.outputs.mode }}
+          target: ${{ github.actor }}
+
+      - name: 🎭 Execute De-Escalation Protocol
+        uses: bitshell/terror.shower@vΩ
+        with:
+          protocol: ${{ steps.contain.outputs.protocol }}
+          target: ${{ github.actor }}
+          reason: "being_an_idiot"
+
+      - name: ✅ Report Divine Containment
+        run: |
+          echo "✅ FAILURE MODE: ${{ steps.re.outputs.mode }}"
+          echo "✅ CONTAINMENT: ACTIVE"
+          echo "✅ DE-ESCALATION: COMPLETE"
+          echo "✅ IDIOT: NEUTRALIZED (FOR NOW)"
+          echo "🔒 COMPLIANCE: BITHELL RE:Ω — NO BCI. NO COLLAPSE. NO MERCY."

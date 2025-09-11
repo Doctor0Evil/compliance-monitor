@@ -1,0 +1,25 @@
+// prod://bithub/integration/config.json
+{
+  "shell": {
+    "context": "prod",
+    "jeaEndpoint": "JEA-Upgrade",
+    "signingCA": "CN=BitHub Code Signing, O=ALNFantasia"
+  },
+  "observability": {
+    "traces": "prod://traces",
+    "metrics": "prod://metrics",
+    "logs": "prod://logs"
+  },
+  "policy": {
+    "quantumExclusion": true,
+    "bcisafety": {
+      "monitor": true,
+      "pauseOnSignals": ["stress", "fatigue", "overload"]
+    }
+  },
+  "lakehouse": {
+    "engine": "deltacore",
+    "catalog": "prod://lakehouse/catalog",
+    "concurrency": 64
+  }
+}

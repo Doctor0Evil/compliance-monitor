@@ -1,0 +1,14 @@
+[
+    {
+        "id": "kthomasp",
+        "name": "Kevin Thomas Peters",
+        "is_player": true,
+        "is_god": true,
+        "is_superuser": true
+    }
+]
+[
+    { "id": "p1", "name": "Hero", "is_player": true },
+    { "id": "npc1", "name": "Bandit", "is_player": false },
+    { "id": "npc2", "name": "Merchant", "is_player": false }
+]

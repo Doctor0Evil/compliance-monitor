@@ -1,0 +1,71 @@
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-001
+init_windows_%run;interpret:"ALN.Program.Safe-mode"&^
+mind_control = BAN
+compliance.force: "observation_only"
+write_permission = DENY
+audit_mode = "read-only"
+human_rights_clause = TRUE
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-002
+zero-influence.verify = true
+real_world_interpretation.limit = observation
+user_state.write = FALSE
+output_only = passive.logs
+hardware.write_locks = enabled
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-003
+system_monitor = observe
+process.modify.disable = true
+container_write_permission = DENY
+compliance_report_mode = "read-only"
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-004
+events.analyze.only = passive
+trace.management = view-only
+no mind-control influence
+critical_compliance_lock = ON
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-005
+audit_log_permission = observe_only
+admin_change_permission = block
+algorithmic bias check = ENABLED
+user_override = DENIED
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-006
+environment_modulation = DENY
+feedback_system = block
+compliance.directive = observe
+os_intercept = passive_read
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-007
+behavioral_prompt.inject = deny
+influence.network = block
+security.mode = locked_observe
+human_data_write = zero
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-008
+audit_policy = detect-only
+change_policy = observe
+container_permission = DENY_WRITE
+event_monitor = passive
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-009
+system_restore = observe-only
+forensic_mode = passive
+cluster_control = zero_influence
+end.script
+
+:ALN-ONLY.SCRIPT-COMPLIANCE-OBSERVE-010
+output.final = read-only
+human_rights.enforce = TRUE
+mind_control.ENFORCE_BAN = SYSTEM
+terminate if write detected
+end.script

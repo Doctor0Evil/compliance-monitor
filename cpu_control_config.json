@@ -1,0 +1,16 @@
+// cpu_control_config.json (partial, after safety enforcement)
+{
+    "max_threads": 4,
+    "max_cpu_percent": 60,
+    "allow_kernel_patch": false,
+    "allow_user_patch": true,
+    "safe_layers": ["user-space", "application", "sandbox", "testing"],
+    "forbidden_layers": ["kernel", "hypervisor", "firmware", "protected-system", "hardware-abstraction", "secure-vm"],
+    "allow_interpret": true,
+    "allow_program": true,
+    "allow_write": true,
+    "allow_read": true,
+    "max_instructions_permitted": 200000000,
+    "max_read_bytes": 10000000,
+    "max_write_bytes": 2000000
+}

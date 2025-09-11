@@ -1,0 +1,23 @@
+!quantumstring.shebang
+{
+  "metaversion": "2.0.1",
+  "purpose": "Unified object registry meta for MX-1 Core and Starfish: safety, legal compliance, explainable AI.",
+  "object_classes": [
+    "Core_Principle_Weight", "Ethical_Framework_Node", "Outcome_Simulation_Scenario",
+    "HRTF_Profile", "Spatial_Audio_Object", "Dynamic_Range_Profile", "APU_Instruction_Set", "Acoustic_Signature",
+    "Resource_Budget", "Thermal_Zone", "Degradation_Strategy",
+    "Legal_Concept_Node", "Policy_Rule", "Anomaly_Definition",
+    "User_Preference_Vector", "Environmental_Context"
+  ],
+  "compliance": {
+    "audit_trail": true,
+    "immutable_log": true,
+    "regression_testing": "sandbox",
+    "real_time_rollback": true
+  },
+  "safety_guarantees": [
+    "No privilege escalation, ever (hardware, logic, interface, or data)",
+    "All outcomes reversible, with rollback signed by human- or AI-oversight",
+    "Live anomaly monitoring on all object instantiations"
+  ]
+}

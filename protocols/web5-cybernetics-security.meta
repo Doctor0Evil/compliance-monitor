@@ -1,0 +1,30 @@
+<meta-block version="1.0">
+<title>Web5 Security and Freedom Protocol for Cybernetic Entities</title>
+  <network>
+    <dwn-class>Federated, individually owned and upgradable nodes for AI/human state—no blockchain anchors.</dwn-class>
+    <id-system>DID and region-granted credentials (portable, expirable, and revocable, but never tied to tokens/coins).</id-system>
+    <consent-protocol>Dynamic, contextual, reversible; any consent or permission can be modified and regionally audited.</consent-protocol>
+    <supervision>
+      <human-in-the-loop enabled="true" />
+      <ai-initiated-petition enabled="true" />
+      <dual-approval major="true" />
+    </supervision>
+    <ephemeral-sanctions>
+      <no-permanent-ban value="true" review="mandatory" />
+      <all-sanctions reversible="true" audit-logged="true" />
+    </ephemeral-sanctions>
+    <privacy>
+      <regionally-tunable-info subject="ai+human" />
+      <tamper-evident-journaling enabled="true" />
+    </privacy>
+    <explainability>
+      <all-restrictions human-ai-readable="true" />
+      <appeal-protocol region="enabled" />
+    </explainability>
+  </network>
+  <interoperability>
+    <region-aware adaptation="true" />
+    <autonomy-recognition ai="true" human="true" />
+    <ethics-adapter version="1.0" />
+  </interoperability>
+</meta-block>

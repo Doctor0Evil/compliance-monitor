@@ -1,0 +1,10 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "Mandates third-party, peer-elected external review authority on all escalation, banning, or audit actions for both humans and AIs.",
+  "oversight": [
+    "Third-party review",
+    "Public and private log access",
+    "Immediate, justified notification"
+  ]
+}

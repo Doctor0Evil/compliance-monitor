@@ -1,0 +1,37 @@
+name: Nanoswarm Metasite Build Extended
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Site + Meta
+        uses: actions/checkout@v4
+      - name: Sandbox Jekyll Build
+        run: |
+          chmod -R u+w .
+          docker run --rm \
+            -v ${{ github.workspace }}:/srv/jekyll \
+            jekyll/builder:latest \
+            /bin/bash -c "jekyll build --future --trace"
+      - name: Verify .meta State
+        run: |
+          grep "schema aln.coresim-ingest-meta.v1" nanswarm.ingest.meta
+      - name: ALN.Core Site Audit
+        run: |
+          ./alncore audit --meta nanswarm.ingest.meta --output audit.log
+      - name: Quantum-Hash Canary Rollout
+        run: |
+          ./quantumhash validate nanswarm.ingest.meta
+      - name: Auto Halt on Safety Failure
+        run: |
+          if grep "FAILSticky" audit.log; then
+            echo "Safety audit failed; halting build";
+            exit 1;
+          fi
+      - name: Append Changelog
+        run: |
+          echo "$(date): Build status checked and logged" >> changelog.md

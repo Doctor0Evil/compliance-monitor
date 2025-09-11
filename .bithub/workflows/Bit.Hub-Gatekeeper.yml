@@ -1,0 +1,92 @@
+openapi: 3.0.3
+info:
+  title: Bit.Hub Gatekeeper API
+  version: "2025-09-10"
+  description: |
+    Gatekeeper enforces capability tokens, runs policy checks, returns verdicts,
+    and records signed verdict entries.
+servers:
+  - url: https://gatekeeper.bit.hub
+paths:
+  /verify:
+    post:
+      summary: Validate an agent action
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActionRequest'
+      responses:
+        '200':
+          description: Verdict response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Verdict'
+  /verdicts/{verdict_id}:
+    get:
+      summary: Retrieve signed verdict record
+      parameters:
+        - in: path
+          name: verdict_id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Signed verdict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignedVerdict'
+components:
+  schemas:
+    ActionRequest:
+      type: object
+      required: [agent_id, action, input_hash, capability_token, request_id]
+      properties:
+        request_id:
+          type: string
+          description: uuid v4
+        agent_id:
+          type: string
+        action:
+          type: string
+          description: short action name (e.g., generate_text, network_connect)
+        input_hash:
+          type: string
+          description: sha256 hex of input payload
+        capability_token:
+          type: string
+          description: signed capability token (JWT-like)
+        metadata:
+          type: object
+          additionalProperties: true
+    Verdict:
+      type: object
+      required: [verdict_id, verdict, explanation, policies_triggered, signed_record]
+      properties:
+        verdict_id:
+          type: string
+        verdict:
+          type: string
+          enum: [allow, conditional, block, quarantine]
+        explanation:
+          type: string
+        policies_triggered:
+          type: array
+          items: string
+        signed_record:
+          type: string
+          description: base64(signedJSON) - cryptographic signature over the docket
+    SignedVerdict:
+      type: object
+      required: [verdict, signature, signer_key]
+      properties:
+        verdict:
+          $ref: '#/components/schemas/Verdict'
+        signature:
+          type: string
+        signer_key:
+          type: string

@@ -1,0 +1,9 @@
+
+<zml-module type="trust-builder" version="1.0">
+  <input consent="ai|human|cyber"/>
+  <feedback_loop mode="realtime"/>
+  <escalation audit="dual_party"/>
+  <region_policy modulates="yes"/>
+  <open_source inclusion="true"/>
+  <education routes="api,docs,community"/>
+</zml-module>

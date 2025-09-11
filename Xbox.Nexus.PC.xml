@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Game configVersion="1">
+  <Identity Name="BitHub.XboxNexusPC.GameSuite"
+            Publisher="CN=BIT-HUB-PUBLISHER-ID"
+            Version="12.0.1000.0"/>
+  <ExecutableList>
+    <Executable Name="XboxNexusGame.exe"
+                Id="MainGame"
+                TargetDeviceFamily="Scarlett"
+                IsDevOnly="false"/>
+    <Executable Name="NexusEditor.exe"
+                Id="Editor"
+                TargetDeviceFamily="Desktop"
+                IsDevOnly="true"/>
+  </ExecutableList>
+  <ShellVisuals DefaultDisplayName="Xbox Nexus PC Suite"
+                PublisherDisplayName="Bit.Hub"
+                Square150x150Logo="assets/logo150.png"
+                Square44x44Logo="assets/logo44.png"
+                Description="Unified Xbox.Nexus.PC platform development toolkit and gaming suite."
+                ForegroundText="light"
+                BackgroundColor="#111144"
+                SplashScreenImage="assets/splash.png"
+                StoreLogo="assets/storelogo.png"/>
+  <Resources>
+    <Resource Language="en-us"/>
+    <Resource Language="fr-fr"/>
+    <Resource Language="es-mx"/>
+  </Resources>
+  <PersistentLocalStorage>
+    <SizeMB>512</SizeMB>
+  </PersistentLocalStorage>
+  <DevelopmentOnly>
+    <DebugNetworkPortList>
+      <DebugNetworkPort>4600</DebugNetworkPort>
+      <DebugNetworkPort>4601</DebugNetworkPort>
+    </DebugNetworkPortList>
+  </DevelopmentOnly>
+</Game>

@@ -1,0 +1,141 @@
+name: Bit.Hub Humor-Reasoning Orchestrator
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      default_threshold:
+        description: "standard | strict | paranoid"
+        type: choice
+        default: "standard"
+        options: [ "standard", "strict", "paranoid" ]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: bithub-humor-orchestrator-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  BIT_HUB_REPO_URL: "https://github.com/Doctor0Evil/Bit.Hub.git"
+  REPORT_DIR: ".bithub/reports"
+  POWER_THRESHOLD: ${{ inputs.default_threshold || vars.POWER_THRESHOLD || 'standard' }}
+
+jobs:
+  reason_and_dispatch:
+    name: Compute plan and dispatch downstream workflows
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync Bit.Hub canonical policies (non-blocking)
+        run: |
+          set +e
+          if git ls-remote "$BIT_HUB_REPO_URL" &>/dev/null; then
+            git clone --depth=1 "$BIT_HUB_REPO_URL" /tmp/bithub
+            rsync -av --ignore-existing /tmp/bithub/.bithub/policy/ .bithub/policy/ || true
+            rsync -av --ignore-existing /tmp/bithub/.bit/schemas/ .bit/schemas/ || true
+          else
+            echo "::warning::Canonical repo unreachable — using local copies."
+          fi
+          set -e
+
+      - name: Run Humor-Reasoning-Model
+        id: hrm
+        uses: ./.github/actions/humor-reasoning-model
+        with:
+          default_threshold: ${{ env.POWER_THRESHOLD }}
+
+      - name: Show plan
+        run: |
+          echo "Resolved threshold: ${{ steps.hrm.outputs.threshold }}"
+          echo "Plan:"
+          cat "${{ steps.hrm.outputs.plan_path }}" || true
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3.4.2
+        with:
+          # dotnet-version: optional
+          # dotnet-quality: optional
+          # cache: optional
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v5.0.0
+        with:
+          distribution: 'temurin'
+          # java-version: optional, example: 21
+
+      - name: Install GitHub CLI
+        run: |
+          if ! command -v gh >/dev/null 2>&1; then
+            sudo apt-get update -y && sudo apt-get install -y gh
+          fi
+          gh --version
+
+      - name: Dispatch Pipeline Supremacy (CI)
+        if: ${{ steps.hrm.outputs.run_pipeline == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Bit.Hub Pipeline Supremacy (CI)" \
+            -f power_threshold=${{ steps.hrm.outputs.threshold }} || echo "::notice::Queued Pipeline Supremacy"
+
+      - name: Dispatch Policy + Scorecard Gate
+        if: ${{ steps.hrm.outputs.run_policy_gate == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Bit.Hub Policy + Scorecard Gate" \
+            -f power_threshold=${{ steps.hrm.outputs.threshold }} || echo "::notice::Queued Policy Gate"
+
+      - name: Dispatch Meta Corrector v3
+        if: ${{ steps.hrm.outputs.run_meta_corrector == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Bit.Hub Meta Corrector v3 (Supremacy Alignment)" \
+            -f auto_fix=true \
+            -f power_threshold=${{ steps.hrm.outputs.threshold }} \
+            -f target_ref=${{ github.ref_name }} || echo "::notice::Queued Meta Corrector"
+
+      - name: Dispatch Container Compliance Wall
+        if: ${{ steps.hrm.outputs.run_container_wall == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Bit.Hub Container Compliance Wall and Publish — Full Compliance" \
+            -f image_name=${{ github.event.repository.name || 'service' }} \
+            -f image_tag=latest \
+            -f power_threshold=${{ steps.hrm.outputs.threshold }} || echo "::notice::Queued Container Wall"
+
+      - name: Dispatch Release LMFAO Drop
+        if: ${{ steps.hrm.outputs.run_release_lmfao == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Release LMFAO Drop" || echo "::notice::Queued LMFAO Release"
+
+      - name: Emit orchestrator event
+        run: |
+          mkdir -p .bithub/events
+          cat > ".bithub/events/humor-orchestrator-${{ github.run_id }}.json" <<JSON
+          {
+            "event": "humor_orchestrator_plan",
+            "by": "${{ github.actor }}",
+            "repo": "${{ github.repository }}",
+            "run_id": "${{ github.run_id }}",
+            "threshold": "${{ steps.hrm.outputs.threshold }}",
+            "timestamp": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "plan_file": "${{ steps.hrm.outputs.plan_path }}"
+          }
+          JSON
+          echo "::notice::Orchestrator event logged"
+
+      - name: Always succeed
+        run: echo "Humor-Reasoning orchestrator completed (never fails)."

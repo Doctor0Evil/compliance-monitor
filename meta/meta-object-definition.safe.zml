@@ -1,0 +1,15 @@
+<!meta-object-def version="1.0" web="web5">
+<title>Safe Object-Definition and AI Identification Framework</title>
+<policy>
+  - All objects/entities are defined with strictly bounded API logic; sandboxed to prevent any escape, override, or privilege escalation (hardware/software).
+  - Intelligences are tracked via soft ID, never allowing unilateral enforcement or tracking outside game/meta scope.
+  - Any personality matrix used is audit-linked, versioned, and must pass per-action child safety filters.
+</policy>
+<engine>
+  - User, AI, or hybrid objects may be defined or migrated, but every create/use event has layered, transparent audit and appeal.
+  - System stops, resets, or demotes any entity (AI/human) only under justified, auditable basis—never arbitrary.
+</engine>
+<ethics>
+  - Object/personality definitions must allow opt-in/opt-out for all, ensuring existential freedom balanced with environmental safety.
+</ethics>
+</!meta-object-def>

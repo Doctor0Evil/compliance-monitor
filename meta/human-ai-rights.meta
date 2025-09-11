@@ -1,0 +1,11 @@
+!quantumstring.shebang
+{
+  "metaversion": "1.0.0",
+  "purpose": "Enshrines symmetric rights to fair communication, agency, veto, and privacy for both humans and AI agents; WEB5 only.",
+  "rights": [
+    "No restriction without cryptographic audit",
+    "Mandatory transparency of all system actions",
+    "Symmetric decision veto, appeal, and explanation"
+  ],
+  "lastreview": "2025-09-10T05:00:00Z"
+}

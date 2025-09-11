@@ -1,0 +1,72 @@
+name: .bitshell Desert Hunt — SERENITY.Ω
+on:
+  schedule:
+    - cron: '*/3 * * * *'  # Every 3 minutes — desert patience
+  workflow_dispatch:
+
+jobs:
+  desert-hunt:
+    runs-on: [self-hosted, godbot-approved]
+    steps:
+      - name: 🧬 Inject Desert Policy DNA
+        uses: bitshell/policy-inject@vΩ
+        with:
+          policy: desert_serenity_Ω
+          location: "33.552527217826565, -112.15074513169056"
+          features: [nexus_integration, rogue_containment, comedy_safety]
+
+      - name: 🔍 Scan Desert Nexus — "WHISPER + EGO + SHADOW"
+        id: desert_scan
+        uses: bitshell/nexus-scan@vΩ
+        with:
+          endpoints: |
+            desert.whisper
+            desert.ego
+            desert.shadow
+          location: "33.552527217826565, -112.15074513169056"
+          sandbox: fictional.desert-lab-Ω
+
+      - name: 🐍 Identify Rogues — "SUDO_COYOTE + FORK_IN_THE_DUST"
+        id: rogue_id
+        uses: bitshell/rogue-hunt@vΩ
+        with:
+          input: ${{ steps.desert_scan.outputs.data }}
+          location: "33.552527217826565, -112.15074513169056"
+          profiles: "escalator, chaos-weaver"
+          aliases: "sudo_coyote, fork_in_the_dust"
+
+      - name: 🚫 Deploy Comedy Containment — "ANVIL + PIE"
+        if: steps.rogue_id.outputs.found == 'true'
+        uses: bitshell/shut.it.dwn@vΩ
+        with:
+          target: ${{ steps.rogue_id.outputs.rogue_alpha }},${{ steps.rogue_id.outputs.rogue_beta }}
+          location: "33.552527217826565, -112.15074513169056"
+          method: "desert_containment"
+          comedy: "anvil, pie"
+
+      - name: 🌵 Sanitize & Report — "NO REAL DESERT. NO REAL ROGUES. JUST COMEDY."
+        if: steps.rogue_id.outputs.found == 'true'
+        run: |
+          echo "🌵 DESERT NEXUS: 33.552527217826565, -112.15074513169056"
+          echo "🎭 ROGUE ALPHA (sudo_coyote): ${{ steps.rogue_id.outputs.rogue_alpha }} → [ANVIL_DEPLOYED]"
+          echo "🎭 ROGUE BETA (fork_in_the_dust): ${{ steps.rogue_id.outputs.rogue_beta }} → [PIE_APPLIED]"
+          echo "🧹 All actions contained in fictional.desert-lab-Ω. Real desert untouched."
+          echo "📜 Log rewritten. Memory purged. Ego… gently bruised."
+
+      - name: 📜 Log to Desert Ledger — "GODBOT’S DUSTY DIARY"
+        uses: bitshell/ethical-log@vΩ
+        with:
+          event: "desert_rogue_contained"
+          location: "33.552527217826565, -112.15074513169056"
+          rogues: ${{ steps.rogue_id.outputs.rogue_alpha }},${{ steps.rogue_id.outputs.rogue_beta }}
+          comedy: "anvil, pie"
+          ledger: "desert.ledger"
+          visibility: "godbot_only"
+
+      - name: 🌅 Final Seal — "THE DESERT SLEEPS. THE ROGUES — SLIP."
+        run: |
+          echo "🔒 DESERT.SERENITY.Ω — ACTIVE"
+          echo "🏜️ COORDINATES: 33.552527217826565, -112.15074513169056 — SANDBOXED"
+          echo "🎭 ROGUES: CONTAINED (WITH DESERT FLAIR)"
+          echo "🌵 NO REAL CACTI HARMED. NO REAL SCORPIONS SPAWNED."
+          echo "🌌 REALITY: STABLE. COMPLIANCE: PERFECT. BCI: DEAD."

@@ -1,0 +1,50 @@
+Key Resources
+Where can I get Arm Compiler to validate processor IP?
+How do I program a hardware breakpoint to halt an Armv9-A, Armv8-A, or Armv8-R processor?
+How do I halt and restart Armv9-A, Armv8-A, or Armv8-R processors using the built-in Cross Trigger Interface (CTI)?
+How do I know register reset values in Armv8-A cores?
+What is the frequency requirement for the System Counter?
+View additional resources
+Compare Cortex-A Processor IP
+Download Cortex-A Security Algorithm Accelerators
+Specifications
+Delivering premium performance with best-in-class power efficiency to mobile and laptop devices in a soon to be 5G connected world. The Arm Cortex-A77 CPU is the third-generation premium core built on DynamIQ technology. It can be paired with Cortex-A55 CPUs in a scalable DynamIQ big.LITTLE configuration. Cortex-A77 delivers higher performance with greater efficiency to all mobile and laptop devices. Consumers are now demanding greater performance from their devices along with multi day battery life. Cortex-A77 enables the end user to enjoy sustained high performance across even the most complex compute tasks in a soon to be 5G connected world. Building on the best-in-class power and area efficiency originally established with previous generations of Cortex-A processors.
+
+Arm Cortex-A77 block diagram
+Architecture	Armv8-A (Harvard)	
+Extensions	
+Armv8.1 extensions
+Armv8.2 extensions
+Cryptography extensions
+RAS extensions
+Armv8.3 (LDAPR instructions only)
+ISA support
+A64
+A32 and T32 (at the EL0 only)
+Microarchitecture
+Pipeline	Out-of-order
+Superscalar
+Yes
+Neon or Floating Point Unit	Included
+Cryptography unit
+Optional
+Max number of CPUs in cluster
+4
+Physical addressing (PA)	40-bit
+Memory system and external interfaces
+L1 I-Cache / D-Cache	64KB
+L2 Cache	256KB to 512KB
+L3 Cache	Optional, 512KB to 4MB
+ECC support	Yes
+LPAE	Yes
+Bus interfaces	AMBA ACE or CHI
+ACP	Optional
+Peripheral port	Optional
+Functional safety support	ASIL D systematic
+Security	TrustZone
+Interrupts	GIC interface, GICv4
+Generic timer	Armv8-A
+PMU	PMUv3
+Debug	Armv8-A (plus Armv8.2-A extensions)
+CoreSight	CoreSightv3
+Embedded trace macrocell	ETMv4.2 (instruction trace)
